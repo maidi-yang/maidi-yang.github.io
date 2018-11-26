@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="获取原微信公众号用户ID用微信公众号获取用户列表apihttps://mp.weixin.qq.com/wiki?t=resource/res_main&amp;amp;id=mp1421140840 或者在数据查询12$MemberModel = new MemberModel();$openid = $MemberModel-&amp;gt;order(&amp;apos;id&amp;apos;,&amp;apos;asc&amp;apo">
+<meta name="description" content="获取原微信公众号用户ID用微信公众号获取用户列表api https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;amp;id=mp1421140840 或者在数据查询12$MemberModel = new MemberModel();$openid = $MemberModel-&amp;gt;order(&amp;apos;id&amp;apos;,&amp;apos;asc&amp;ap">
 <meta name="keywords" content="微信公众号">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微信公众号迁移openid转换">
 <meta property="og:url" content="http://yangleiweb.top/2018/11/26/微信公众号迁移openid转换/index.html">
 <meta property="og:site_name" content="In my life">
-<meta property="og:description" content="获取原微信公众号用户ID用微信公众号获取用户列表apihttps://mp.weixin.qq.com/wiki?t=resource/res_main&amp;amp;id=mp1421140840 或者在数据查询12$MemberModel = new MemberModel();$openid = $MemberModel-&amp;gt;order(&amp;apos;id&amp;apos;,&amp;apos;asc&amp;apo">
+<meta property="og:description" content="获取原微信公众号用户ID用微信公众号获取用户列表api https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;amp;id=mp1421140840 或者在数据查询12$MemberModel = new MemberModel();$openid = $MemberModel-&amp;gt;order(&amp;apos;id&amp;apos;,&amp;apos;asc&amp;ap">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-26T10:05:37.209Z">
+<meta property="og:updated_time" content="2018-11-26T10:10:19.992Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信公众号迁移openid转换">
-<meta name="twitter:description" content="获取原微信公众号用户ID用微信公众号获取用户列表apihttps://mp.weixin.qq.com/wiki?t=resource/res_main&amp;amp;id=mp1421140840 或者在数据查询12$MemberModel = new MemberModel();$openid = $MemberModel-&amp;gt;order(&amp;apos;id&amp;apos;,&amp;apos;asc&amp;apo">
+<meta name="twitter:description" content="获取原微信公众号用户ID用微信公众号获取用户列表api https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;amp;id=mp1421140840 或者在数据查询12$MemberModel = new MemberModel();$openid = $MemberModel-&amp;gt;order(&amp;apos;id&amp;apos;,&amp;apos;asc&amp;ap">
 
 
 
@@ -373,17 +373,17 @@
       
 
       
-        <h2 id="获取原微信公众号用户ID"><a href="#获取原微信公众号用户ID" class="headerlink" title="获取原微信公众号用户ID"></a>获取原微信公众号用户ID</h2><p>用微信公众号获取用户列表api<br><code>https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140840</code></p>
+        <h2 id="获取原微信公众号用户ID"><a href="#获取原微信公众号用户ID" class="headerlink" title="获取原微信公众号用户ID"></a>获取原微信公众号用户ID</h2><p>用微信公众号获取用户列表api</p>
+<p><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140840" target="_blank" rel="noopener">https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140840</a></p>
 <p>或者在数据查询<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$MemberModel = new MemberModel();</span><br><span class="line">$openid = $MemberModel-&gt;order(&apos;id&apos;,&apos;asc&apos;)-&gt;limit(300,100)-&gt;column(&apos;wechat_openid&apos;);</span><br></pre></td></tr></table></figure></p>
-<p>##获取新公众号accessToken<br>官方api文档<br><code>https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140183</code></p>
+<h2 id="获取新公众号accessToken"><a href="#获取新公众号accessToken" class="headerlink" title="获取新公众号accessToken"></a>获取新公众号accessToken</h2><p>官方api文档<br><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140183" target="_blank" rel="noopener">https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140183</a></p>
 <p>php获取代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ch = curl_init();</span><br><span class="line">        curl_setopt($ch, CURLOPT_URL, &apos;https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=appid&amp;secret=appsecret&apos;);</span><br><span class="line">        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);</span><br><span class="line">        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);</span><br><span class="line">        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);</span><br><span class="line">        $output = curl_exec($ch);</span><br><span class="line">        curl_close($ch);</span><br><span class="line">        $jsoninfo = json_decode($output, true);</span><br></pre></td></tr></table></figure></p>
-<p>##获取新公众号openid<br>官方说明文档<br><code>http://kf.qq.com/faq/170221aUnmmU170221eUZJNf.html</code></p>
+<h2 id="获取新公众号openid"><a href="#获取新公众号openid" class="headerlink" title="获取新公众号openid"></a>获取新公众号openid</h2><p>官方说明文档<br><a href="http://kf.qq.com/faq/170221aUnmmU170221eUZJNf.html" target="_blank" rel="noopener">http://kf.qq.com/faq/170221aUnmmU170221eUZJNf.html</a></p>
 <p>php获取代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//获取新openid</span><br><span class="line">        $arr = array(</span><br><span class="line">            &apos;from_appid&apos;=&gt;&apos;原公众号appid&apos;,</span><br><span class="line">            &apos;openid_list&apos;=&gt;[&quot;oEmYbwN-n24jxvk4Sox81qedINkQ&quot;,&quot;oEmYbwH9uVd4RKJk7ZZg6SzL6tTo&quot;],</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        $data_string =  json_encode($arr);</span><br><span class="line">        //echo $data_string;</span><br><span class="line">        //curl验证成功</span><br><span class="line">        $ch = curl_init(&quot;http://api.weixin.qq.com/cgi-bin/changeopenid?access_token=&quot;.$jsoninfo[&apos;access_token&apos;]);</span><br><span class="line">        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, &quot;POST&quot;);</span><br><span class="line">        curl_setopt($ch, CURLOPT_POSTFIELDS,$data_string);</span><br><span class="line">        curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);</span><br><span class="line">        curl_setopt($ch, CURLOPT_HTTPHEADER, array(</span><br><span class="line">            &apos;Content-Type: application/json&apos;,</span><br><span class="line">            &apos;Content-Length: &apos; . strlen($data_string)</span><br><span class="line">        ));</span><br><span class="line"></span><br><span class="line">        $result = curl_exec($ch);</span><br><span class="line">        if (curl_errno($ch)) &#123;</span><br><span class="line">            print curl_error($ch);</span><br><span class="line">        &#125;</span><br><span class="line">        curl_close($ch);</span><br><span class="line">        $result = json_decode($result, true);</span><br></pre></td></tr></table></figure></p>
 <p>需要注意错误返回，一般只有63178这个错误码<br>原因有多样：</p>
 <p>1.传入参数有误，openid_list数目过多（最多100条）</p>
 <p>2.没有使用post json格式传参</p>
-<p>##把新openid写入数据库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">foreach ($result[&apos;result_list&apos;] as $k=&gt;$v)&#123;</span><br><span class="line">            if($v[&apos;ori_openid&apos;] &amp;&amp; $v[&apos;new_openid&apos;]) &#123;</span><br><span class="line">                $update = $MemberModel-&gt;where(&apos;wechat_openid&apos;, $v[&apos;ori_openid&apos;])-&gt;update([&apos;wechat_openid&apos; =&gt; $v[&apos;new_openid&apos;]]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="把新openid写入数据库"><a href="#把新openid写入数据库" class="headerlink" title="把新openid写入数据库"></a>把新openid写入数据库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">foreach ($result[&apos;result_list&apos;] as $k=&gt;$v)&#123;</span><br><span class="line">            if($v[&apos;ori_openid&apos;] &amp;&amp; $v[&apos;new_openid&apos;]) &#123;</span><br><span class="line">                $update = $MemberModel-&gt;where(&apos;wechat_openid&apos;, $v[&apos;ori_openid&apos;])-&gt;update([&apos;wechat_openid&apos; =&gt; $v[&apos;new_openid&apos;]]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -574,7 +574,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取原微信公众号用户ID"><span class="nav-number">1.</span> <span class="nav-text">获取原微信公众号用户ID</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取原微信公众号用户ID"><span class="nav-number">1.</span> <span class="nav-text">获取原微信公众号用户ID</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取新公众号accessToken"><span class="nav-number">2.</span> <span class="nav-text">获取新公众号accessToken</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取新公众号openid"><span class="nav-number">3.</span> <span class="nav-text">获取新公众号openid</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#把新openid写入数据库"><span class="nav-number">4.</span> <span class="nav-text">把新openid写入数据库</span></a></li></ol></div>
             
 
           </div>
