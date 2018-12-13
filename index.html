@@ -2,13 +2,15 @@
 
 
 
+  
 
-<html class="theme-next pisces" lang="zh-Hans">
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="theme-color" content="">
+<meta name="theme-color" content="#222">
 
 
 
@@ -36,16 +38,9 @@
 
 
 
-
-
-
-
-
-
-<link href="/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="//main.css?v=" rel="stylesheet" type="text/css">
-
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -53,6 +48,27 @@
 
 
 
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -77,27 +93,29 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    version: '',
-    sidebar: "",
-    fancybox: ,
-    tabs: ,
-    motion: "",
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
-      userId: 'undefined',
+      userId: '0',
       author: '博主'
     },
     algolia: {
       applicationID: '',
       apiKey: '',
       indexName: '',
-      hits: "",
-      labels: ""
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
 
+
+  <link rel="canonical" href="http://yangleiweb.top/">
 
 
 
@@ -119,8 +137,10 @@
 
   
   
+    
+  
 
-  <div class="container  
+  <div class="container sidebar-position-right 
   page-home">
     <div class="headband"></div>
     <a href="https://github.com/maidi-yang" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -153,6 +173,62 @@
 <nav class="site-nav">
   
 
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            总览
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
   
 
   
@@ -189,7 +265,7 @@
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="maidi yang">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -209,6 +285,16 @@
         <div class="post-meta">
           <span class="post-time">
             
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T17:48:07+08:00">
+                2018-11-26
+              </time>
+            
 
             
 
@@ -216,8 +302,51 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/微信/" itemprop="url" rel="index">
+                    <span itemprop="name">微信</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/26/微信公众号迁移openid转换/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/26/微信公众号迁移openid转换/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -245,18 +374,17 @@
       
         
           
-            <h2 id="获取原微信公众号用户ID"><a href="#获取原微信公众号用户ID" class="headerlink" title="获取原微信公众号用户ID"></a>获取原微信公众号用户ID</h2><p>用微信公众号获取用户列表api</p>
-<p><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140840" target="_blank" rel="noopener">https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140840</a></p>
-<p>或者在数据查询<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$MemberModel = new MemberModel();</span><br><span class="line">$openid = $MemberModel-&gt;order(&apos;id&apos;,&apos;asc&apos;)-&gt;limit(300,100)-&gt;column(&apos;wechat_openid&apos;);</span><br></pre></td></tr></table></figure></p>
-<h2 id="获取新公众号accessToken"><a href="#获取新公众号accessToken" class="headerlink" title="获取新公众号accessToken"></a>获取新公众号accessToken</h2><p>官方api文档<br><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140183" target="_blank" rel="noopener">https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140183</a></p>
-<p>php获取代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ch = curl_init();</span><br><span class="line">        curl_setopt($ch, CURLOPT_URL, &apos;https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=appid&amp;secret=appsecret&apos;);</span><br><span class="line">        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);</span><br><span class="line">        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);</span><br><span class="line">        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);</span><br><span class="line">        $output = curl_exec($ch);</span><br><span class="line">        curl_close($ch);</span><br><span class="line">        $jsoninfo = json_decode($output, true);</span><br></pre></td></tr></table></figure></p>
-<h2 id="获取新公众号openid"><a href="#获取新公众号openid" class="headerlink" title="获取新公众号openid"></a>获取新公众号openid</h2><p>官方说明文档<br><a href="http://kf.qq.com/faq/170221aUnmmU170221eUZJNf.html" target="_blank" rel="noopener">http://kf.qq.com/faq/170221aUnmmU170221eUZJNf.html</a></p>
-<p>php获取代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//获取新openid</span><br><span class="line">        $arr = array(</span><br><span class="line">            &apos;from_appid&apos;=&gt;&apos;原公众号appid&apos;,</span><br><span class="line">            &apos;openid_list&apos;=&gt;[&quot;oEmYbwN-n24jxvk4Sox81qedINkQ&quot;,&quot;oEmYbwH9uVd4RKJk7ZZg6SzL6tTo&quot;],</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        $data_string =  json_encode($arr);</span><br><span class="line">        //echo $data_string;</span><br><span class="line">        //curl验证成功</span><br><span class="line">        $ch = curl_init(&quot;http://api.weixin.qq.com/cgi-bin/changeopenid?access_token=&quot;.$jsoninfo[&apos;access_token&apos;]);</span><br><span class="line">        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, &quot;POST&quot;);</span><br><span class="line">        curl_setopt($ch, CURLOPT_POSTFIELDS,$data_string);</span><br><span class="line">        curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);</span><br><span class="line">        curl_setopt($ch, CURLOPT_HTTPHEADER, array(</span><br><span class="line">            &apos;Content-Type: application/json&apos;,</span><br><span class="line">            &apos;Content-Length: &apos; . strlen($data_string)</span><br><span class="line">        ));</span><br><span class="line"></span><br><span class="line">        $result = curl_exec($ch);</span><br><span class="line">        if (curl_errno($ch)) &#123;</span><br><span class="line">            print curl_error($ch);</span><br><span class="line">        &#125;</span><br><span class="line">        curl_close($ch);</span><br><span class="line">        $result = json_decode($result, true);</span><br></pre></td></tr></table></figure></p>
-<p>需要注意错误返回，一般只有63178这个错误码<br>原因有多样：</p>
-<p>1.传入参数有误，openid_list数目过多（最多100条）</p>
-<p>2.没有使用post json格式传参</p>
-<h2 id="把新openid写入数据库"><a href="#把新openid写入数据库" class="headerlink" title="把新openid写入数据库"></a>把新openid写入数据库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">foreach ($result[&apos;result_list&apos;] as $k=&gt;$v)&#123;</span><br><span class="line">            if($v[&apos;ori_openid&apos;] &amp;&amp; $v[&apos;new_openid&apos;]) &#123;</span><br><span class="line">                $update = $MemberModel-&gt;where(&apos;wechat_openid&apos;, $v[&apos;ori_openid&apos;])-&gt;update([&apos;wechat_openid&apos; =&gt; $v[&apos;new_openid&apos;]]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
-          
+          获取原微信公众号用户ID用微信公众号获取用户列表api
+https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140840
+或者在数据查询12$MemberModel = new MemberModel();$openid = 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/26/微信公众号迁移openid转换/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -310,7 +438,7 @@
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="maidi yang">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -330,6 +458,16 @@
         <div class="post-meta">
           <span class="post-time">
             
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-21T17:59:22+08:00">
+                2018-11-21
+              </time>
+            
 
             
 
@@ -337,8 +475,51 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Markdown/" itemprop="url" rel="index">
+                    <span itemprop="name">Markdown</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/21/Markdown语法一图流/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/21/Markdown语法一图流/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -366,9 +547,16 @@
       
         
           
-            <p><img src="/2018/11/21/Markdown语法一图流/1.png" alt="图片未加载"></p>
+          
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/21/Markdown语法一图流/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -422,7 +610,7 @@
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="maidi yang">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -442,6 +630,16 @@
         <div class="post-meta">
           <span class="post-time">
             
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-21T17:18:03+08:00">
+                2018-11-21
+              </time>
+            
 
             
 
@@ -449,8 +647,51 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/php/" itemprop="url" rel="index">
+                    <span itemprop="name">php</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/21/电商营销功能秒杀、砍价表设计逻辑处理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/21/电商营销功能秒杀、砍价表设计逻辑处理/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -478,14 +719,15 @@
       
         
           
-            <h2 id="秒杀"><a href="#秒杀" class="headerlink" title="秒杀"></a>秒杀</h2><h3 id="表结构"><a href="#表结构" class="headerlink" title="表结构"></a>表结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `seckill`  (</span><br><span class="line">  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT &apos;主键&apos;,</span><br><span class="line">  `goods_id` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT &apos;0&apos; COMMENT &apos;参与活动的商品&apos;,</span><br><span class="line">  `status` tinyint(1) NOT NULL DEFAULT 0 COMMENT &apos;活动状态(0:未开始，1进行中，2已结束)&apos;,</span><br><span class="line">  `price` decimal(7, 2) UNSIGNED NULL DEFAULT 0.00 COMMENT &apos;优惠价格&apos;,</span><br><span class="line">  `start_time` int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT &apos;开始时间&apos;,</span><br><span class="line">  `end_time` int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT &apos;结束时间&apos;,</span><br><span class="line">  `name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT &apos;0&apos; COMMENT &apos;活动名称&apos;,</span><br><span class="line">  `stock` int(10) NULL DEFAULT NULL COMMENT &apos;库存&apos;,</span><br><span class="line">  PRIMARY KEY (`id`) USING BTREE</span><br><span class="line">) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;</span><br></pre></td></tr></table></figure>
-<h3 id="业务逻辑"><a href="#业务逻辑" class="headerlink" title="业务逻辑"></a>业务逻辑</h3><p>1.后台添加活动，设定状态和开始时间<br>2.前台调用数据，判断活动状态，是否结束<br>3.秒杀分批次展示，优先展示最近进行中，通过时间算法判断。<br>4.进行中的活动通过<strong>结束时间</strong>减去<strong>现在时间</strong> 展示什么时间结束，未开始活动<strong>开始时间</strong>减去<strong>现在时间</strong>展示什么时候开始<br>5.下单，如有高并发使用队列，一般进行事务处理锁表判断库存，下单成功减去库存事务结束</p>
-<h2 id="砍价"><a href="#砍价" class="headerlink" title="砍价"></a>砍价</h2><h3 id="表结构-1"><a href="#表结构-1" class="headerlink" title="表结构"></a>表结构</h3><p>砍价活动主表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `bargain`  (</span><br><span class="line">  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT &apos;主键ID&apos;,</span><br><span class="line">  `goods_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT &apos;参与活动的商品&apos;,</span><br><span class="line">  `bargain_max` decimal(10, 2) NOT NULL DEFAULT 0.00 COMMENT &apos;单次最小砍价金额&apos;,</span><br><span class="line">  `bargain_min` decimal(10, 2) UNSIGNED NOT NULL DEFAULT 0.00 COMMENT &apos;单次最大砍价金额&apos;,</span><br><span class="line">  `min_price` decimal(10, 2) UNSIGNED NOT NULL DEFAULT 0.00 COMMENT &apos;最低价格&apos;,</span><br><span class="line">  `stock` int(10) NULL DEFAULT 0 COMMENT &apos;库存&apos;,</span><br><span class="line">  `status` tinyint(1) NOT NULL DEFAULT 0 COMMENT &apos;活动状态(0:未开始，1进行中，2已结束)&apos;,</span><br><span class="line">  `start_time` datetime(0) NULL DEFAULT NULL COMMENT &apos;开始时间&apos;,</span><br><span class="line">  `end_time` datetime(0) NULL DEFAULT NULL COMMENT &apos;结束时间&apos;,</span><br><span class="line">  `created_at` datetime(0) NULL DEFAULT NULL COMMENT &apos;添加时间&apos;,</span><br><span class="line">  `updated_at` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT &apos;更新时间&apos;,</span><br><span class="line">  `deleted_at` datetime(0) NULL DEFAULT NULL COMMENT &apos;删除时间&apos;,</span><br><span class="line">  `least_count` smallint(5) NULL DEFAULT NULL COMMENT &apos;最小砍价次数&apos;,</span><br><span class="line">  PRIMARY KEY (`id`) USING BTREE</span><br><span class="line">) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;</span><br></pre></td></tr></table></figure></p>
-<p>发起砍价表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `bargain_order`  (</span><br><span class="line">  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT &apos;主键ID&apos;,</span><br><span class="line">  `activity_id` int(10) UNSIGNED NOT NULL COMMENT &apos;活动id&apos;,</span><br><span class="line">  `goods_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT &apos;参与活动的商品&apos;,</span><br><span class="line">  `member_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT &apos;砍价商品发起的用户ID&apos;,</span><br><span class="line">  `bargain_count` smallint(5) UNSIGNED NOT NULL DEFAULT 0 COMMENT &apos;被砍价次数&apos;,</span><br><span class="line">  `price` decimal(7, 2) UNSIGNED NOT NULL DEFAULT 0.00 COMMENT &apos;最终交易价格&apos;,</span><br><span class="line">  `is_addorder` tinyint(1) NOT NULL DEFAULT 0 COMMENT &apos;是否下单(0:未下单，1已下单)&apos;,</span><br><span class="line">  `created_at` datetime(0) NULL DEFAULT NULL COMMENT &apos;添加时间&apos;,</span><br><span class="line">  `updated_at` datetime(0) NULL DEFAULT NULL COMMENT &apos;更新时间&apos;,</span><br><span class="line">  `deleted_at` datetime(0) NULL DEFAULT NULL COMMENT &apos;删除时间&apos;,</span><br><span class="line">  PRIMARY KEY (`id`) USING BTREE</span><br><span class="line">) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;</span><br></pre></td></tr></table></figure></p>
-<p>帮忙砍价记录表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `bargain_order_list`  (</span><br><span class="line">  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT &apos;主键ID&apos;,</span><br><span class="line">  `bargain_order_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT &apos;砍价表id&apos;,</span><br><span class="line">  `assistor_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT &apos;帮助者ID&apos;,</span><br><span class="line">  `nick_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT &apos;帮助者Nickname&apos;,</span><br><span class="line">  `head_img` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT &apos;帮助者头像&apos;,</span><br><span class="line">  `bargain_money` decimal(5, 2) UNSIGNED NOT NULL DEFAULT 0.00 COMMENT &apos;砍掉价格&apos;,</span><br><span class="line">  `ip` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT &apos;ip&apos;,</span><br><span class="line">  `created_at` datetime(0) NULL DEFAULT NULL COMMENT &apos;添加时间&apos;,</span><br><span class="line">  `updated_at` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT &apos;更新时间&apos;,</span><br><span class="line">  `deleted_at` datetime(0) NULL DEFAULT NULL COMMENT &apos;删除时间&apos;,</span><br><span class="line">  PRIMARY KEY (`id`) USING BTREE</span><br><span class="line">) ENGINE = InnoDB AUTO_INCREMENT = 31 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;</span><br></pre></td></tr></table></figure></p>
-<h3 id="业务逻辑-1"><a href="#业务逻辑-1" class="headerlink" title="业务逻辑"></a>业务逻辑</h3><p>1.后台设定砍价活动，设定好砍价区间<br>2.商品详情砍价入口进入砍价活动，如不带用户ID，默认此用户发起砍价，新建砍价订单<br>3.分享页面进行砍价，新进用户判断是否有账号，没有创建账号，点击砍价，进行砍价<br>4.砍价逻辑，判断活动，订单状态正常，随机砍价数目，<strong>最终交易价格</strong>减去<strong>最低价格</strong>等于可砍价区间，当砍价数大与砍价区间，砍价数重置等于砍价区间<br>5.到达条件就可以下单（<strong>最少砍价次数</strong>大于<strong>被砍价次数</strong>），（达到<strong>最低价格</strong>）<br>6.下单，需要先判断库存是否够才能下单，下单事务进行，锁活动表，事务完成减去库存</p>
-
-          
+          秒杀表结构1234567891011CREATE TABLE `seckill`  (  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT &apos;主键&apos;,  `goods_id` varchar(200) CHARACTER 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/21/电商营销功能秒杀、砍价表设计逻辑处理/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -541,7 +783,7 @@
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="maidi yang">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -561,6 +803,16 @@
         <div class="post-meta">
           <span class="post-time">
             
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-09T08:57:44+08:00">
+                2018-11-09
+              </time>
+            
 
             
 
@@ -568,8 +820,51 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/php/" itemprop="url" rel="index">
+                    <span itemprop="name">php</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/09/php框架对比/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/09/php框架对比/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -597,15 +892,16 @@
       
         
           
-            <h2 id="TP"><a href="#TP" class="headerlink" title="TP"></a>TP</h2><h3 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h3><p>TP框架是我们中国人自己开发的框架,各种资料比较齐全,国内用的比较多,比较简单和方便,而且是免费开源的</p>
-<h3 id="特性："><a href="#特性：" class="headerlink" title="特性："></a>特性：</h3><p>  1.多表查询非常方便,在model中几句代码就可以完成对多表的关联操作<br>    2.融合了smarty模板,使前后台分离<br>    3.支持多种缓存技术,尤其对memcache技术支持非常好<br>    4.命名规范,模型,视图,控制器严格遵循命名规则,通过命名一一对应<br>    5.支持多种url模式<br>    6.内置ajax返回方法,包括xml,json,html等<br>    7.支持应用扩展,类库扩展,驱动扩展等</p>
-<h2 id="laravel"><a href="#laravel" class="headerlink" title="laravel"></a>laravel</h2><h3 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h3><p>laravel框架的设计思想比较先进,非常适合应用各种开发模式,作为一个框架,它为你准备好了一切,composer是php的未来,没有composer,php肯定要走向没落<br>    laravel框架最大的特点和优秀之处就是集合了php比较新的特点,以及各种各样的设计模式,Ioc模式,依赖注入等</p>
-<h3 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h3><p>一:      1.强大的rest router:用简单的回调函数就可以调用,快速绑定controller和router<br>           2.artisan:命令行工具,很多手动的工作都自动化<br>           3.可继承的模板,简化view的开发和管理<br>           4.blade模板:渲染速度更快<br>           5.ORM操作数据库<br>           6.migration:管理数据库和版本控制<br>           7.测试功能也很强大<br>           8.composer也是亮点</p>
-<p>二:      laravel框架引入了门面,依赖注入,Ioc模式,以及各种各样的设计模式等</p>
-<h2 id="YII"><a href="#YII" class="headerlink" title="YII"></a>YII</h2><h3 id="优点：-1"><a href="#优点：-1" class="headerlink" title="优点："></a>优点：</h3><p>纯OOP<br>用于大规模Web应用<br>模型使用方便<br>开发速度快，运行速度也快。性能优异且功能丰富<br>使用命令行工具。</p>
-<h3 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h3><p>对Model层的指导和考虑较少<br>文档实例较少<br>英文太多<br>要求PHP技术精通，OOP编程要熟练！<br>View并不是理想view，理想中的view可能只是html代码，不会涉及PHP代码。</p>
-
-          
+          TP优点：TP框架是我们中国人自己开发的框架,各种资料比较齐全,国内用的比较多,比较简单和方便,而且是免费开源的
+特性：  1.多表查询非常方便,在model中几句代码就可以完成对多表的关联操作    2.融合了smarty模板,使前后台分离    3.支持多种缓存技术,尤其对memcache技术支
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/09/php框架对比/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -659,7 +955,7 @@
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="maidi yang">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -679,6 +975,16 @@
         <div class="post-meta">
           <span class="post-time">
             
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-08T08:46:48+08:00">
+                2018-11-08
+              </time>
+            
 
             
 
@@ -686,8 +992,51 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/liunx/" itemprop="url" rel="index">
+                    <span itemprop="name">liunx</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/08/vim编辑器常用命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/08/vim编辑器常用命令/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -715,26 +1064,16 @@
       
         
           
-            <h2 id="删除："><a href="#删除：" class="headerlink" title="删除："></a>删除：</h2><p>vim启动进入普通模式，处于插入模式或命令行模式时只需要按Esc或者Ctrl+[(这在vim课程环境中不管用)即可进入普通模式。普通模式中按i（插入）或a（附加）键都可以进入插入模式，普通模式中按:进入命令行模式。命令行模式中输入wq回车后保存并退出vim。</p>
-<p>进入普通模式，使用下列命令可以进行文本快速删除：</p>
-<p>x 删除游标所在的字符<br>X 删除游标所在前一个字符<br>Delete 同x<br>dd 删除整行<br>dw 删除一个单词（不适用中文）<br>d$或D 删除至行尾<br>d^ 删除至行首<br>dG 删除到文档结尾处<br>d1G 删至文档首部<br>除此之外，你还可以在命令之前加上数字，表示一次删除多行，如：<br>2dd表示一次删除2行</p>
-<h2 id="行间跳转："><a href="#行间跳转：" class="headerlink" title="行间跳转："></a>行间跳转：</h2><p>nG(n Shift+g) 游标移动到第 n 行(如果默认没有显示行号，请先进入命令模式，输入:set nu以显示行号)<br>gg 游标移动到到第一行<br>G(Shift+g) 到最后一行</p>
-<h2 id="行内跳转："><a href="#行内跳转：" class="headerlink" title="行内跳转："></a>行内跳转：</h2><p>普通模式下使用下列命令在行内按照单词为单位进行跳转</p>
-<p>w 到下一个单词的开头<br>e 到下一个单词的结尾<br>b 到前一个单词的开头<br>ge 到前一个单词的结尾<br>0或^ 到行头<br>$ 到行尾<br>f&lt;字母&gt; 向后搜索&lt;字母&gt;并跳转到第一个匹配的位置(非常实用)<br>F&lt;字母&gt; 向前搜索&lt;字母&gt;并跳转到第一个匹配的位置<br>t&lt;字母&gt; 向后搜索&lt;字母&gt;并跳转到第一个匹配位置之前的一个字母(不常用)<br>T&lt;字母&gt; 向前搜索&lt;字母&gt;并跳转到第一个匹配位置之后的一个字母(不常用)</p>
-<h2 id="复制及粘贴文本"><a href="#复制及粘贴文本" class="headerlink" title="复制及粘贴文本"></a>复制及粘贴文本</h2><p>普通模式中使用y复制</p>
-<p>普通模式中，yy复制游标所在的整行（3yy表示复制3行）<br>普通模式中，y^ 复制至行首，或y0。不含光标所在处字符。<br>普通模式中，y$ 复制至行尾。含光标所在处字符。<br>普通模式中，yw 复制一个单词。<br>普通模式中，y2w 复制两个单词。<br>普通模式中，yG 复制至文本末。<br>普通模式中，y1G 复制至文本开头。<br>普通模式中使用p粘贴</p>
-<p>普通模式中，p(小写)代表粘贴至光标后（下）<br>普通模式中，P(大写)代表粘贴至光标前（上）</p>
-<h2 id="剪切及粘贴："><a href="#剪切及粘贴：" class="headerlink" title="剪切及粘贴："></a>剪切及粘贴：</h2><p>其实前面讲得dd删除命令就是剪切，你每次dd删除文档内容后，便可以使用p来粘贴，也这一点可以</p>
-<p>替换和撤销(Undo)命令:</p>
-<p>r+&lt;待替换字母&gt; 将游标所在字母替换为指定字母<br>R 连续替换，直到按下Esc<br>cc 替换整行，即删除游标所在行，并进入插入模式<br>cw 替换一个单词，即删除一个单词，并进入插入模式<br>C(大写) 替换游标以后至行末<br>~ 反转游标所在字母大小写<br>u{n} 撤销一次或n次操作<br>U(大写) 撤销当前行的所有修改<br>Ctrl+r redo，即撤销undo的操作</p>
-<h2 id="快速查找"><a href="#快速查找" class="headerlink" title="快速查找:"></a>快速查找:</h2><p>普通模式下输入/然后键入需要查找的字符串 按回车后就会进行查找。<br>？与/功能相同，只不过？是向上而/是向下查找。<br>进入查找之后，输入n和N可以继续查找<br>n表示继续查找，N反向查找</p>
-<p>多文件编辑：vim 文件1 文件2</p>
-<h2 id="进入vim后打开新文件："><a href="#进入vim后打开新文件：" class="headerlink" title="进入vim后打开新文件："></a>进入vim后打开新文件：</h2><p>命令行模式下输入:e 3.txt 打开新文件3.txt<br>命令行模式下输入:e# 回到前一个文件<br>命令行模式下输入:ls可以列出以前编辑过的文档<br>命令行模式下输入:b 2.txt（或者编号）可以直接进入文件2.txt编辑<br>命令行模式下输入:bd 2.txt（或者编号）可以删除以前编辑过的列表中的文件项目<br>命令行模式下输入:e! 4.txt，新打开文件4.txt，放弃正在编辑的文件<br>命令行模式下输入:f 显示正在编辑的文件名<br>命令行模式下输入:f new.txt，改变正在编辑的文件名字为new.txt</p>
-<h2 id="可视模式命令简介："><a href="#可视模式命令简介：" class="headerlink" title="可视模式命令简介："></a>可视模式命令简介：</h2><p>在普通模式下输入v（小写），进入字符选择模式，就可以移动光标，光标走过的地方就会选取。再次按下v会后就会取消选取。<br>在普通模式下输入Shift+v（小写），进入行选择模式，按下V之后就会把整行选取，您可以上下移动光标选更多的行，同样，再按一次Shift+v就可以取消选取。<br>在普通模式下输入 Ctrl+v（小写），这是区域选择模式，可以进行矩形区域选择，再按一次Ctrl+v取消选取。<br>在可视模式下输入d删除选取区域内容<br>在可视模式下输入y复制选取区域内容</p>
-<h2 id="视窗操作简介："><a href="#视窗操作简介：" class="headerlink" title="视窗操作简介："></a>视窗操作简介：</h2><p>在命令行模式下输入:new 打开一个新的vim视窗，并进入视窗编辑一个新文件（普通模式下输入Ctrl+w也可以,但是Ctrl+w在chrome下会与chrome关闭标签页的快捷键冲突，所以使用该快捷键你可以在IE或其它浏览器进行练习），除了:new命令，下述列举的多种方法也可以在命令模式或普通模式下打开新的视窗：</p>
-<p>命令行模式下输入:sp 1.txt 打开新的水平分屏视窗来编辑1.txt<br>命令行模式下输入:vsp 2.txt 打开新的垂直分屏视窗来编辑2.txt<br>普通模式下Ctrl-w s 将当前窗口分割成两个水平的窗口<br>普通模式下Ctrl-w v 将当前窗口分割成两个垂直的窗口<br>普通模式下Ctrl-w q 即 :q 结束分割出来的视窗。如果在新视窗中有输入需要使用强制符！即:q!<br>普通模式下Ctrl-w o 打开一个视窗并且隐藏之前的所有视窗<br>普通模式下Ctrl-w j 移至下面视窗<br>普通模式下Ctrl-w k 移至上面视窗<br>普通模式下Ctrl-w h 移至左边视窗<br>普通模式下Ctrl-w l 移至右边视窗<br>普通模式下Ctrl-w J 将当前视窗移至下面<br>普通模式下Ctrl-w K 将当前视窗移至上面<br>普通模式下Ctrl-w H 将当前视窗移至左边<br>普通模式下Ctrl-w L 将当前视窗移至右边<br>普通模式下Ctrl-w - 减小视窗的高度<br>普通模式下Ctrl-w + 增加视窗的高度</p>
-
-          
+          删除：vim启动进入普通模式，处于插入模式或命令行模式时只需要按Esc或者Ctrl+[(这在vim课程环境中不管用)即可进入普通模式。普通模式中按i（插入）或a（附加）键都可以进入插入模式，普通模式中按:进入命令行模式。命令行模式中输入wq回车后保存并退出vim。
+进入普通模式，使用下列命令可以进行
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/08/vim编辑器常用命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -788,7 +1127,7 @@
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="maidi yang">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -808,6 +1147,16 @@
         <div class="post-meta">
           <span class="post-time">
             
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-02T16:22:49+08:00">
+                2018-11-02
+              </time>
+            
 
             
 
@@ -815,8 +1164,40 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/杂文/" itemprop="url" rel="index">
+                    <span itemprop="name">杂文</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/02/故事的钩子/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/02/故事的钩子/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -844,29 +1225,16 @@
       
         
           
-            <p><img src="/2018/11/02/故事的钩子/1.jpg" alt="图片未加载"><br><em>悬而未决：宏大宇宙设定中的叙事钩子</em></p>
-<p>我们中的许多人，尤其是我自己，一谈起自己深爱着的东西都是乐此不疲津津乐道的，无论是《英雄联盟》、《星球大战》、《被遗忘的国度》、《战锤 40K》、《魔兽世界》、《哈利波特》、漫威系列或者其他别的作品。上述这些都是非常庞大丰富的宇宙设定，充满了高远的寓意、繁复的历史故事和惹人怜爱 (或者恨之入骨)的人物角色。就我自己而言，当我深深投入其中的时候，真的难以自拔。</p>
-<p>(*注：钩子，原文是hook，有以下几层意思：钩子、线索、未完的故事。为了保持原有的信息量所以直译为比较形象的钩子了。)</p>
-<p>相信许多人都有同样的感受。</p>
-<p>初极狭，才通人。</p>
-<p>我觉得，我们之所以如此热爱这些宇宙设定，是因为越是深入挖掘，就越能够发现更多东西。这种沿着羊肠小道不断深入最后豁然开朗的感觉让我们百看不厌。每次我陷入其中，都能看到更多令人抓心挠肝的隐晦钩子，更多历史事件的模糊影子，更多奇异生物的惊鸿一瞥，还有更多背景故事的细枝末节……以星火燎原之势点燃我的想象力。这些宇宙设定都是有机的，里面的故事一直都在演进，随着游戏、漫画、小说、电影、电视剧等作品的推出而向前发展。</p>
-<p>有时我们会看到有一些叙事钩子、模糊概念和细枝末节——而你早几年前就已经察觉到了，突然有一天会成为剧情的焦点，那种满足感是不可言喻的。有的时候这些小细节最初只是无心插柳地随口一说，但铁杆粉丝们却会捕风捉影、紧追不放、脑洞大开。当坊间猜测不负众望地被证实为官方正史的时候，他们就会欣喜若狂。 </p>
-<p><img src="/2018/11/02/故事的钩子/2.jpg" alt="图片未加载"></p>
-<p>这就好比《星球大战：新的希望》中第一次提到了“克隆人的战争”，而多年以后，在《星球大战：克隆人的战争》中才真正揭晓一切。再比如，《战锤40K》的宇宙中多次提到了“荷鲁斯叛乱”的历史传说，而最后成为一套系列小说的时代背景。</p>
-<p>这种令人难以言表的满足感，来自观众与编剧/原作者之间形成的同步和默契 —— 知道笑点在哪里、重点在哪里、究竟暗示了什么梗。就像是在电影的演职员表最后的彩蛋里闪现了一个角色，而你一下就知道角色的身份和出现的意义，而不需要偷偷问旁边的人——“那人谁呀?”</p>
-<p>每当这些悬而未决的故事线索被重新拾起并且接续下去时，都会让人感到高兴和满足，但如果一切线索都不留钩子，那么也就没有太多值得我们反复回看的意义了。当然，如果这是一部单线叙事的作品，那么不留钩子也无关紧要 —— 作家/编剧/原作者只会向你透露当前最符合剧情需要的信息。这就好比，如果在《太空堡垒卡拉狄加》第一集就透露谁是塞隆人，那一切紧张和猜疑就都没了;如果在《权力的游戏》里一上来就透露“阿多”的含义，那么第六季第五集的那个场景的震撼力就会大打折扣。 </p>
-<p>支线故事</p>
-<p>当创作一个多线发展的宇宙设定时，线索的安排方式就有所不同了。所谓多线发展，就是指这个宇宙设定中有无数个故事线索，可以通过不同的形式来讲述(例如游戏、漫画、小说等)，而不是单线发展的剧情(例如有始有终的系列小说)。</p>
-<p>这两种概念的实际案例可以参考《哈利波特》(单线发展)和漫威宇宙(多线发展，有时还能全盘推倒重新构想)。我们创作《英雄联盟》的方式很大程度上属于后者。整体创作的目标是世界和角色，而不以单一故事为核心 —— 这就意味着可以有无数个故事线索等待挖掘。可以有更大的剧情事件，将许多不同的角色和地区连接起来(比如漫威宇宙中的无限宝石)，但真正驱动故事前进的，是角色本身。在一个庞大的多线发展的宇宙设定中，留下大量的钩子无疑是一件好。</p>
-<p><img src="/2018/11/02/故事的钩子/3.jpg" alt="图片未加载"></p>
-<p>对于编剧来说，现有历史背景中的故事钩子简直是天赐良机——因为可以提供新的叙事脉络。故事钩子可能会让人产生灵感火花，进而演变成许多东西。小至英雄语音，大至短篇故事，而且还能催生出精彩的同人创作，甚至形成一套史诗级长篇小说。</p>
-<p>每个引人遐想的细枝末节、叙事钩子、历史碎片都能成为一段新故事的基础。一些钩子和线索可以被扒得水落石出，而另一些惊天秘密则只能通过微妙的细节进行恰到好处的暗示 —— 还有一些钩子和线索出于某种原因永远都不会有结局(这也是可以的，只要别让这些线索在某个角色的故事中占据主导地位)。</p>
-<p>对于观众来讲，悬而未决的故事线索和钩子是遐想和猜测的空间，它们预示着即将发生的重大事件，或者暗示着更加深奥丰富的历史背景。它们可以告诉玩家故事以外还有一个更大的世界，有更多的故事等待发掘。最后，观众也可以借此来吐露心声，表达他们喜欢什么样的故事钩子，让创作者更能明确创作重点。</p>
-<p><img src="/2018/11/02/故事的钩子/4.jpg" alt="图片未加载"></p>
-<p>然而，最重要的一点就是不能舍本逐末。如果留下了太多故事钩子，但却从来都没有后续的收尾和延续，就会令读者非常失望。这种作品会让人摔书掀桌，而且无论是对读者还是对宇宙设定来说，都会产生负面的影响。人们会觉得一切暗示和线索的背后其实都空无一物，只不过是镜花水月、空中楼阁而已。</p>
-<p>所以真正的技巧在于，在留下大量钩子的同时，不能长时间放任不管，必须时不时地收尾 —— 尤其是那些最令人感到千钧一发的线索。如果不负责任地留下太多钩子悬而未决，就会让人觉得这些都是有始无终的烂尾 —— 甚至会让整个世界设定都变得烂尾。没有任何剧情上的进展，也没有任何疑问会得到解答。</p>
-
-          
+          悬而未决：宏大宇宙设定中的叙事钩子
+我们中的许多人，尤其是我自己，一谈起自己深爱着的东西都是乐此不疲津津乐道的，无论是《英雄联盟》、《星球大战》、《被遗忘的国度》、《战锤 40K》、《魔兽世界》、《哈利波特》、漫威系列或者其他别的作品。上述这些都是非常庞大丰富的宇宙设定，充满了高远的寓意、繁复的历史
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/02/故事的钩子/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -920,7 +1288,7 @@
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="maidi yang">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -940,6 +1308,16 @@
         <div class="post-meta">
           <span class="post-time">
             
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-02T15:15:08+08:00">
+                2018-11-02
+              </time>
+            
 
             
 
@@ -947,8 +1325,51 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/php/" itemprop="url" rel="index">
+                    <span itemprop="name">php</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/02/TP5定时任务/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/02/TP5定时任务/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -976,22 +1397,16 @@
       
         
           
-            <h1 id="TP5使用command命令行设置定时任务"><a href="#TP5使用command命令行设置定时任务" class="headerlink" title="TP5使用command命令行设置定时任务"></a>TP5使用command命令行设置定时任务</h1><h2 id="快速生成指令法"><a href="#快速生成指令法" class="headerlink" title="快速生成指令法"></a>快速生成指令法</h2><h3 id="1-快速指令生成"><a href="#1-快速指令生成" class="headerlink" title="1.快速指令生成"></a>1.快速指令生成</h3><p><code>php think make:command First first</code></p>
-<p>First表示类名，实际生成的指令类则是app\command\First（自动生成的指令类的命名空间默认都是 app\command）。<br>first表示指令名，建议统一使用小写，如果不传入该参数，则默认用类名的小写作为指令名。</p>
-<h3 id="2-配置参数"><a href="#2-配置参数" class="headerlink" title="2.配置参数"></a>2.配置参数</h3><p>为了让指令可以无需定义自动调用，需要在你的应用配置的console.php配置文件中，增加下面的配置参数：<br><code>&#39;auto_path&#39; =&gt; env(&#39;app_path&#39;) . &#39;command/&#39;,</code></p>
-<h3 id="3-执行结果"><a href="#3-执行结果" class="headerlink" title="3.执行结果"></a>3.执行结果</h3><p>配置后， 你可以在命令行测试下刚才新生成的指令。<br><code>php think first</code></p>
-<p>输出结果为：<br><code>first</code></p>
-<p>你可以编辑app\command\First类，完成实际的指令任务。<br>注意，如果你生成了指定命名空间的指令，但又不是你配置的自动加载目录，那么仍然需要在command.php 文件中定义指令。<br>如果需要生成一个指定的命名空间，可以使用：</p>
-<p><code>php think make:command app\index\Second second</code></p>
-<h3 id="4-新建-sh文件"><a href="#4-新建-sh文件" class="headerlink" title="4.新建.sh文件"></a>4.新建.sh文件</h3><p>然后根目录下新建first.sh文件<br>内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PATH=/usr/local/php/bin:/opt/someApp/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin # 将php路径加入都临时变量中</span><br><span class="line">cd /home/wwwroot/域名/  # 进入项目的根目录下，保证可以运行php think的命令</span><br><span class="line">php think first</span><br></pre></td></tr></table></figure></p>
-<h3 id="5-设置定时任务（cronta写法可百度）"><a href="#5-设置定时任务（cronta写法可百度）" class="headerlink" title="5.设置定时任务（cronta写法可百度）"></a>5.设置定时任务（<em>cronta写法可百度</em>）</h3><p>连接到服务器，输入 <code>crontab -e</code>，写入：</p>
-<p><code>0 0 * * * sh /home/wwwroot/域名/crond.sh</code></p>
-<h3 id="6-重启crond服务"><a href="#6-重启crond服务" class="headerlink" title="6.重启crond服务"></a>6.重启crond服务</h3><p><code>systemctl restart crond</code></p>
-<h3 id="7-观察定时任务"><a href="#7-观察定时任务" class="headerlink" title="7.观察定时任务"></a>7.观察定时任务</h3><p><code>tail -f /var/log/cron</code></p>
-<h3 id="8-查看系统邮件"><a href="#8-查看系统邮件" class="headerlink" title="8.查看系统邮件"></a>8.查看系统邮件</h3><p>定时任务完成后，系统邮件会记录任务日志，查看系统邮件：<br><code>/var/spool/mail/root</code></p>
-<h2 id="接口方式"><a href="#接口方式" class="headerlink" title="接口方式"></a>接口方式</h2><p><code>php /home/wwwroot/域名/index.php demo/test/test</code><br>直接设置定时执行，或者加入.sh都行</p>
-
-          
+          TP5使用command命令行设置定时任务快速生成指令法1.快速指令生成php think make:command First first
+First表示类名，实际生成的指令类则是app\command\First（自动生成的指令类的命名空间默认都是 app\command）。first表示指令名
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/02/TP5定时任务/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1045,7 +1460,7 @@
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="maidi yang">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -1065,6 +1480,16 @@
         <div class="post-meta">
           <span class="post-time">
             
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-01T17:59:38+08:00">
+                2018-11-01
+              </time>
+            
 
             
 
@@ -1072,8 +1497,51 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/php/" itemprop="url" rel="index">
+                    <span itemprop="name">php</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/01/thinkphp5导出excel/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/01/thinkphp5导出excel/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -1101,14 +1569,17 @@
       
         
           
-            <p>需要用到phpoffice/phpspreadsheet拓展<br>在composer.json添加</p>
-<p>或者:<code>composer require phpoffice/phpspreadsheet</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">use PhpOffice\PhpSpreadsheet\Spreadsheet;</span><br><span class="line">use PhpOffice\PhpSpreadsheet\Writer\Xlsx;</span><br></pre></td></tr></table></figure>
-<p>前台数据传递 ：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;#excel&apos;).click(function () &#123;</span><br><span class="line">    var rank = $(&apos;#rank&apos;).val();</span><br><span class="line">    var special_rank = $(&apos;#special_rank&apos;).val();</span><br><span class="line">    var start_pv = $(&apos;#start_pv&apos;).val();</span><br><span class="line">    var end_pv = $(&apos;#end_pv&apos;).val();</span><br><span class="line">    var keyword = $(&apos;#keyword&apos;).val();</span><br><span class="line">    var url = $(this).attr(&apos;ex_url&apos;);</span><br><span class="line"></span><br><span class="line">    window.open(url+&quot;?rank=&quot;+rank+&quot;&amp;special_rank=&quot;+special_rank+&quot;&amp;start_pv=&quot;+start_pv+&quot;&amp;end_pv=&quot;+end_pv+&quot;&amp;keyword=&quot;+keyword);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>后台打印：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">$result = 数据;</span><br><span class="line"></span><br><span class="line">$spreadsheet = new Spreadsheet();</span><br><span class="line">$sheet = $spreadsheet-&gt;getActiveSheet();</span><br><span class="line"></span><br><span class="line">$grade = config(&apos;grade.grade&apos;);</span><br><span class="line"></span><br><span class="line">$headLetter = [&apos;A&apos;,&apos;B&apos;,&apos;C&apos;];</span><br><span class="line">$headName = [&apos;id&apos;,&apos;真实姓名&apos;,&apos;身份证号&apos;];</span><br><span class="line"></span><br><span class="line">foreach($headLetter as $k =&gt; $v)&#123;</span><br><span class="line">    $sheet-&gt;setCellValue($v.&apos;1&apos;, $headName[$k]);、</span><br><span class="line">//自动宽度</span><br><span class="line">   $sheet-&gt;getColumnDimension($v)-&gt;setAutoSize(true);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$j = 2;</span><br><span class="line">foreach ($result[&apos;data&apos;] as $k =&gt; $v) &#123;</span><br><span class="line">    $sheet-&gt;setCellValue(&apos;A&apos; . $j, $v[&apos;id&apos;])</span><br><span class="line">        -&gt;setCellValue(&apos;B&apos; . $j, $v[&apos;name&apos;])</span><br><span class="line">        -&gt;setCellValue(&apos;C&apos; . $j, $v[&apos;id_card&apos;])</span><br><span class="line">    $j++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//请求列表数据接口</span><br><span class="line">//$result = sendGetApi(&apos;userExcelList&apos;);</span><br><span class="line"></span><br><span class="line">//设置文件保存的命名、编码、同时开放保存路径的权限</span><br><span class="line">//命名</span><br><span class="line">$fileName = &quot;打印文件&quot; . date(&quot;Y-m-d&quot;, time()) . &quot;.xlsx&quot;;</span><br><span class="line">//编码</span><br><span class="line">header(&apos;Content-Type:application/vnd.ms-excel;charset=utf-8&apos;);</span><br><span class="line">//告诉浏览器要输出的名称</span><br><span class="line">header(&quot;Content-Disposition:attachment;filename=$fileName&quot;);</span><br><span class="line">//禁止浏览器缓存</span><br><span class="line">header(&apos;Cache-Control:max-age=0&apos;);</span><br><span class="line">//生成excel文件</span><br><span class="line">$writer = new Xlsx($spreadsheet);</span><br><span class="line">//彻底开放保存路径</span><br><span class="line">$writer-&gt;save(&apos;php://output&apos;);</span><br><span class="line">exit();</span><br></pre></td></tr></table></figure></p>
-<p>去除科学记数法：在数字字符串前加一个空格使之成为字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$objPHPExcel = new PHPExcel();</span><br><span class="line">$objPHPExcel-&gt;setActiveSheetIndex(0);</span><br><span class="line">$objPHPExcel-&gt;getActiveSheet()-&gt;setTitle(&apos;Simple&apos;);$objPHPExcel-&gt;getActiveSheet()-&gt;setCellValue(&apos;D1&apos;, &apos; &apos; . 123456789033);</span><br></pre></td></tr></table></figure></p>
-
-          
+          需要用到phpoffice/phpspreadsheet拓展在composer.json添加
+或者:composer require phpoffice/phpspreadsheet
+12use PhpOffice\PhpSpreadsheet\Spreadsheet;use PhpOffice\P
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/01/thinkphp5导出excel/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1162,7 +1633,7 @@
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="maidi yang">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -1182,6 +1653,16 @@
         <div class="post-meta">
           <span class="post-time">
             
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-01T08:50:32+08:00">
+                2018-11-01
+              </time>
+            
 
             
 
@@ -1189,8 +1670,51 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/liunx/" itemprop="url" rel="index">
+                    <span itemprop="name">liunx</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/01/liunx基础指令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/01/liunx基础指令/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -1218,27 +1742,16 @@
       
         
           
-            <p><em>rm -rf default.conf 删除<br>ln -s /vagrant/nginx.conf default.conf 制定公用地址<br>service nginx restart 重启nginx</em></p>
-<h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><p>tab:命令补全<br>Ctrl+c：强行终止<br>Ctrl+d 键盘输入结束或退出终端<br>Ctrl+s 暂停当前程序，暂停后按下任意键恢复运行<br>Ctrl+z 将当前程序放到后台运行，恢复到前台为命令fg<br>Ctrl+a 将光标移至输入行头，相当于Home键<br>Ctrl+e 将光标移至输入行末，相当于End键<br>Ctrl+k 删除从光标所在位置到行末<br>Alt+Backspace 向前删除一个单词<br>Shift+PgUp 将终端显示向上滚动<br>Shift+PgDn 将终端显示向下滚动</p>
-<h1 id="Shell-常用通配符"><a href="#Shell-常用通配符" class="headerlink" title="Shell 常用通配符"></a>Shell 常用通配符</h1><p>* 匹配 0 或多个字符<br>? 匹配任意一个字符<br>[list] 匹配 list 中的任意单一字符<br>[!list] 匹配 除list 中的任意单一字符以外的字符<br>[c1-c2] 匹配 c1-c2 中的任意单一字符 如：[0-9] [a-z]<br>{string1,string2,…} 匹配 string1 或 string2 (或更多)其一字符串<br>{c1..c2} 匹配 c1-c2 中全部字符 如{1..10}</p>
-<h1 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h1><p>touch 创建文件<br>mkdir 创建目录<br>ls 查看文件目录<br>man 调用手册<br>apt-get 搜索，安装软件<br>cat，nl 查看文件<br>chown 变更文件所有者 sudo chown 所有者 文件名 chown <a href="http://www.www" target="_blank" rel="noopener">www.www</a> 目录 -R<br>chmod 修改文件权限 chmod go-rw 文件名 chmod -R 777 文件名 “0”表示没有权限、“1”表示可执行权限、“2”表示可写权限、“4”表示可读权限。“7=1+2+4<br>cp 复制文件，复制目录需要带上-r参数 cp 文件名 目录，cp -r 文件名 目录<br>rm 删除文件，目录需要带上-r参数 rm 文件名 目录，rm -r 文件名 目录<br>mv 移动文件,重命名文件 mv 源目录文件 目的目录，mv 旧的文件名 新的文件名</p>
-<h1 id="用户管理命令"><a href="#用户管理命令" class="headerlink" title="用户管理命令"></a>用户管理命令</h1><p>su 切换命令<br>sudo 使用root权限<br>adduser 创建用户<br>groups 查看用户组<br>usermod 添加用户到用户组 sudo usermod -G sudo 用户名<br>deluser 删除用户 sudo deluser 用户名 –remove-home</p>
-<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p>定义变量：变量名 = 变量值<br>修改变量：<br>${变量名#匹配字串} 从头向后开始匹配，删除符合匹配字串的最短数据<br>${变量名##匹配字串} 从头向后开始匹配，删除符合匹配字串的最长数据<br>${变量名%匹配字串} 从尾向前开始匹配，删除符合匹配字串的最短数据<br>${变量名%%匹配字串} 从尾向前开始匹配，删除符合匹配字串的最长数据<br>${变量名/旧的字串/新的字串} 将符合旧字串的第一个字串替换为新的字串<br>${变量名//旧的字串/新的字串} 将符合旧字串的全部字串替换为新的字串<br>变量删除：unser 变量名</p>
-<h1 id="搜索文件"><a href="#搜索文件" class="headerlink" title="搜索文件"></a>搜索文件</h1><h2 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h2><p>快而全，通过“ /var/lib/mlocate/mlocate.db ”数据库查找，不过这个数据库也不是实时更新的，系统会使用定时任务每天自动执行 updatedb 命令更新一次，所以有时候你刚添加的文件，它可能会找不到，需要手动执行一次 updatedb 命令（在我们的环境中必须先执行一次该命令）。它可以用来查找指定目录下的不同文件类型<br>示例：locate /etc/sh，locate /usr/share/*.jpg</p>
-<h2 id="which"><a href="#which" class="headerlink" title="which"></a>which</h2><p>小而精，本身是 Shell 内建的一个命令，我们通常使用 which 来确定是否安装了某个指定的软件，因为它只从 PATH 环境变量指定的路径中去搜索命令<br>示例：which ma</p>
-<h2 id="find"><a href="#find" class="headerlink" title="find"></a>find</h2><p>精而细，通过文件类型、文件名进行查找而且可以根据文件的属性（如文件的时间戳，文件的权限等）进行搜索<br>格式：find [path] [option] [action]<br>示例：sudo find 目录 -name 文件名<br>通过时间搜索：<br>-atime 最后访问时间<br>-ctime 最后修改文件内容的时间<br>-mtime 最后修改文件属性的时间<br>示例： 列出home目录中，当天有改动的文件：find ~ -mtime 0<br>列出用户目录下比code文件夹新的文件：find ~ -newer /home/vagrant/Co</p>
-<h1 id="压缩文件："><a href="#压缩文件：" class="headerlink" title="压缩文件："></a>压缩文件：</h1><h2 id="zip"><a href="#zip" class="headerlink" title="zip"></a>zip</h2><p>zip -r -9 -q -o 压缩文件名.zip 需要压缩的文件路径<br>-r参数表示递归打包包含子目录的全部内容。，-q 参数表示为安静模式，即不向屏幕输出信息。-o表示输出文件，需在其后紧跟打包输出文件名。-e参数可以创建加密压缩包。<br>zip解压:：unzip -q 需要解压文件 -d 解压指定目录<br>查看压缩文件：du -h 压缩文件名 ，du -h -d 0 *.zip ~ | sort</p>
-<h2 id="rar"><a href="#rar" class="headerlink" title="rar"></a>rar</h2><p>rar的命令参数没有-，如果加上会报错。rar d 压缩文件名.rar 需要压缩的文件路径<br>rar解压：unrar e 压缩文件名.rar 需要解缩的文件路径</p>
-<h2 id="tar"><a href="#tar" class="headerlink" title="tar"></a>tar</h2><p>打包：tar -zcvf something.tar something<br>解包：tar -zxvf something.tar<br>指定路径：-C 参数</p>
-<h1 id="文件系统管理与磁盘操作"><a href="#文件系统管理与磁盘操作" class="headerlink" title="文件系统管理与磁盘操作"></a>文件系统管理与磁盘操作</h1><p>df -h 查看磁盘的容量<br>du -h -d 查看目录的容量</p>
-<h2 id="帮助命令："><a href="#帮助命令：" class="headerlink" title="帮助命令："></a>帮助命令：</h2><p>help 显示shell内建命令的帮助信息 ls –help<br>man 详细获取命令手册，不区分内建与外部命令。 man ls</p>
-<h2 id="任务计划crontab："><a href="#任务计划crontab：" class="headerlink" title="任务计划crontab："></a>任务计划crontab：</h2><p>格式：</p>
-<ul>
-<li>Example of job definition:# .—————- minute (0 - 59)# | .————- hour (0 - 23)# | | .———- day of month (1 - 31)# | | | .——- month (1 - 12) OR jan,feb,mar,apr …# | | | | .—- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat# | | | | |# <em> </em> <em> </em> <em> user-name command to be executed</em></li>
-</ul>
-<p>crontab -e 添加计划任务<br>crontab -e 查看计划任务<br>pgrep cron 查看任务执行<br>sudo tail -f 任务路径 查看到执行任务命令之后在日志中的信息反馈<br>crontab -r 删除alte计划任务</p>
-
-          
+          rm -rf default.conf 删除ln -s /vagrant/nginx.conf default.conf 制定公用地址service nginx restart 重启nginx
+快捷键tab:命令补全Ctrl+c：强行终止Ctrl+d 键盘输入结束或退出终端Ctrl+s 暂停当前程序
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/01/liunx基础指令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1312,6 +1825,8 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="maidi yang">
+            
               <p class="site-author-name" itemprop="name">maidi yang</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
@@ -1321,7 +1836,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives">
+                <a href="/archives/">
               
                   <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
@@ -1356,6 +1871,22 @@
           
 
           
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/maidi-yang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:254884797@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
 
           
           
@@ -1385,12 +1916,22 @@
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
-    <i class="fa fa-"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">maidi yang</span>
 
   
 </div>
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">
+        本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    </span>
+
+    <span id="busuanzi_container_site_uv">
+      本站访客数<span id="busuanzi_value_site_uv"></span>人
+    </span>
 
 
 
@@ -1434,6 +1975,10 @@
 
 
 
+  
+
+
+  
 
 
 
@@ -1447,55 +1992,58 @@
 
   
   
-    <script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
 
   
   
-    <script type="text/javascript" src="//fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
   
 
   
   
-    <script type="text/javascript" src="//jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
   
 
   
   
-    <script type="text/javascript" src="//velocity/velocity.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="//velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
   
 
 
-  <script type="text/javascript" src="//src/utils.js?v="></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
 
-  <script type="text/javascript" src="//src/motion.js?v="></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
 
 
 
   
   
-
-
-  <script type="text/javascript" src="//src/affix.js?v="></script>
-
-  <script type="text/javascript" src="//src/schemes/pisces.js?v="></script>
-
-
 
   
 
   
 
 
-  <script type="text/javascript" src="//src/bootstrap.js?v="></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
@@ -1530,6 +2078,28 @@
 
 
 
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'klek08bmrIrPwtrsHHMxcmmG-gzGzoHsz',
+        appKey: '4usFsW2qoL1DAyVzE0Y9J0uk',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
 
 
   
@@ -1543,6 +2113,21 @@
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
   
