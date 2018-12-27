@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="mysql,">
+  <meta name="keywords" content="php,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="数据库优化1.从结构层: web服务器采用负载均衡服务器,mysql服务器采用主从复制,读写分离2.从储存层: 采用合适的存储引擎,采用三范式3.从设计层: 采用分区分表,索引,表的字段采用合适的字段属性,适当的采用逆范式,开启mysql缓存4.sql语句层:结果一样的情况下,采用效率高,速度快节省资源的sql语句执行 三范式第一范式   1、每一列属性都是不可再分的属性值，确保每一列的原子性">
-<meta name="keywords" content="mysql">
+<meta name="description" content="常用性能优化方案 1.使用单引号替换双引号，单引号在运行的时候不检查运行引号内部的变量，执行效率是双引号的两倍；2.使用PHP内置的数组操作方法，PHP内置的数组操作方法的运行效率是自行编写代码的10倍以上；3.使用字符串函数替换正则函数，例如：使用 str_replace 替换 preg_replace；4.使用isset($a{5})替换strlen($a)&amp;gt;5；5.require_on">
+<meta name="keywords" content="php">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sql知识点">
-<meta property="og:url" content="http://yangleiweb.top/2018/12/25/sql知识点/index.html">
+<meta property="og:title" content="php性能优化">
+<meta property="og:url" content="http://yangleiweb.top/2018/12/27/php性能优化/index.html">
 <meta property="og:site_name" content="In my life">
-<meta property="og:description" content="数据库优化1.从结构层: web服务器采用负载均衡服务器,mysql服务器采用主从复制,读写分离2.从储存层: 采用合适的存储引擎,采用三范式3.从设计层: 采用分区分表,索引,表的字段采用合适的字段属性,适当的采用逆范式,开启mysql缓存4.sql语句层:结果一样的情况下,采用效率高,速度快节省资源的sql语句执行 三范式第一范式   1、每一列属性都是不可再分的属性值，确保每一列的原子性">
+<meta property="og:description" content="常用性能优化方案 1.使用单引号替换双引号，单引号在运行的时候不检查运行引号内部的变量，执行效率是双引号的两倍；2.使用PHP内置的数组操作方法，PHP内置的数组操作方法的运行效率是自行编写代码的10倍以上；3.使用字符串函数替换正则函数，例如：使用 str_replace 替换 preg_replace；4.使用isset($a{5})替换strlen($a)&amp;gt;5；5.require_on">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-25T10:10:14.271Z">
+<meta property="og:updated_time" content="2018-12-27T06:00:49.806Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sql知识点">
-<meta name="twitter:description" content="数据库优化1.从结构层: web服务器采用负载均衡服务器,mysql服务器采用主从复制,读写分离2.从储存层: 采用合适的存储引擎,采用三范式3.从设计层: 采用分区分表,索引,表的字段采用合适的字段属性,适当的采用逆范式,开启mysql缓存4.sql语句层:结果一样的情况下,采用效率高,速度快节省资源的sql语句执行 三范式第一范式   1、每一列属性都是不可再分的属性值，确保每一列的原子性">
+<meta name="twitter:title" content="php性能优化">
+<meta name="twitter:description" content="常用性能优化方案 1.使用单引号替换双引号，单引号在运行的时候不检查运行引号内部的变量，执行效率是双引号的两倍；2.使用PHP内置的数组操作方法，PHP内置的数组操作方法的运行效率是自行编写代码的10倍以上；3.使用字符串函数替换正则函数，例如：使用 str_replace 替换 preg_replace；4.使用isset($a{5})替换strlen($a)&amp;gt;5；5.require_on">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yangleiweb.top/2018/12/25/sql知识点/">
+  <link rel="canonical" href="http://yangleiweb.top/2018/12/27/php性能优化/">
 
 
 
 
 
-  <title>sql知识点 | In my life</title>
+  <title>php性能优化 | In my life</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yangleiweb.top/2018/12/25/sql知识点/">
+    <link itemprop="mainEntityOfPage" href="http://yangleiweb.top/2018/12/27/php性能优化/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="maidi yang">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">sql知识点</h1>
+          <h1 class="post-title" itemprop="name headline">php性能优化</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-25T18:04:39+08:00">
-                2018-12-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-27T13:55:09+08:00">
+                2018-12-27
               </time>
             
 
@@ -326,8 +326,8 @@
                 
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/mysql/" itemprop="url" rel="index">
-                    <span itemprop="name">mysql</span>
+                  <a href="/categories/技术/php/" itemprop="url" rel="index">
+                    <span itemprop="name">php</span>
                   </a>
                 </span>
 
@@ -344,8 +344,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/12/25/sql知识点/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/25/sql知识点/" itemprop="commentCount"></span>
+                <a href="/2018/12/27/php性能优化/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/27/php性能优化/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -373,56 +373,64 @@
       
 
       
-        <h1 id="数据库优化"><a href="#数据库优化" class="headerlink" title="数据库优化"></a>数据库优化</h1><p>1.从结构层: web服务器采用负载均衡服务器,mysql服务器采用主从复制,读写分离<br>2.从储存层: 采用合适的存储引擎,采用三范式<br>3.从设计层: 采用分区分表,索引,表的字段采用合适的字段属性,适当的采用逆范式,开启mysql缓存<br>4.sql语句层:结果一样的情况下,采用效率高,速度快节省资源的sql语句执行</p>
-<h1 id="三范式"><a href="#三范式" class="headerlink" title="三范式"></a>三范式</h1><h2 id="第一范式"><a href="#第一范式" class="headerlink" title="第一范式"></a>第一范式</h2><p>   1、每一列属性都是不可再分的属性值，确保每一列的原子性<br>   2、两列的属性相近或相似或一样，尽量合并属性一样的列，确保不产生冗余数据。</p>
-<h2 id="第二范式"><a href="#第二范式" class="headerlink" title="第二范式"></a>第二范式</h2><p>每一行的数据只能与其中一列相关，即一行数据只做一件事。只要数据列中出现数据重复，就要把表拆分开来。</p>
-<h2 id="第三范式"><a href="#第三范式" class="headerlink" title="第三范式"></a>第三范式</h2><p> 数据不能存在传递关系，即没个属性都跟主键有直接关系而不是间接关系。</p>
-<h1 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h1><p>MySQL索引的建立对于MySQL的高效运行是很重要的，索引可以大大提高MySQL的检索速度。<br>打个比方，如果合理的设计且使用索引的MySQL是一辆兰博基尼的话，那么没有设计和使用索引的MySQL就是一个人力三轮车。<br>索引分单列索引和组合索引。单列索引，即一个索引只包含单个列，一个表可以有多个单列索引，但这不是组合索引。组合索引，即一个索引包含多个列。<br>创建索引时，你需要确保该索引是应用在 SQL 查询语句的条件(一般作为 WHERE 子句的条件)。<br>实际上，索引也是一张表，该表保存了主键与索引字段，并指向实体表的记录。<br>上面都在说使用索引的好处，但过多的使用索引将会造成滥用。因此索引也会有它的缺点：虽然索引大大提高了查询速度，同时却会降低更新表的速度，如对表进行INSERT、UPDATE和DELETE。因为更新表时，MySQL不仅要保存数据，还要保存一下索引文件。</p>
-<h2 id="建立索引会占用磁盘空间的索引文件。"><a href="#建立索引会占用磁盘空间的索引文件。" class="headerlink" title="建立索引会占用磁盘空间的索引文件。"></a>建立索引会占用磁盘空间的索引文件。</h2><h2 id="普通索引"><a href="#普通索引" class="headerlink" title="普通索引"></a>普通索引</h2><h3 id="创建索引"><a href="#创建索引" class="headerlink" title="创建索引"></a>创建索引</h3><p>这是最基本的索引，它没有任何限制。它有以下几种创建方式：</p>
-<p><code>CREATE INDEX indexName ON mytable(username(length))</code></p>
-<p>如果是CHAR，VARCHAR类型，length可以小于字段实际长度；如果是BLOB和TEXT类型，必须指定 length。</p>
-<p>修改表结构(添加索引)</p>
-<p><code>ALTER table tableName ADD INDEX indexName(columnName)</code></p>
-<p>创建表的时候直接指定<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE mytable(  </span><br><span class="line"> </span><br><span class="line">ID INT NOT NULL,   </span><br><span class="line"> </span><br><span class="line">username VARCHAR(16) NOT NULL,  </span><br><span class="line"> </span><br><span class="line">INDEX [indexName] (username(length))  </span><br><span class="line"> </span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
-<p>删除索引的语法</p>
-<p><code>DROP INDEX [indexName] ON mytable;</code></p>
-<hr>
-<h3 id="唯一索引"><a href="#唯一索引" class="headerlink" title="唯一索引"></a>唯一索引</h3><p>它与前面的普通索引类似，不同的就是：索引列的值必须唯一，但允许有空值。如果是组合索引，则列值的组合必须唯一。它有以下几种创建方式：<br>创建索引</p>
-<p><code>CREATE UNIQUE INDEX indexName ON mytable(username(length))</code><br>修改表结构</p>
-<p><code>LTER table mytable ADD UNIQUE [indexName] (username(length))</code></p>
-<p>创建表的时候直接指定<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE mytable(  </span><br><span class="line"> </span><br><span class="line">ID INT NOT NULL,   </span><br><span class="line"> </span><br><span class="line">username VARCHAR(16) NOT NULL,  </span><br><span class="line"> </span><br><span class="line">UNIQUE [indexName] (username(length))  </span><br><span class="line"> </span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
-<hr>
-<h4 id="使用ALTER-命令添加和删除索引"><a href="#使用ALTER-命令添加和删除索引" class="headerlink" title="使用ALTER 命令添加和删除索引"></a>使用ALTER 命令添加和删除索引</h4><p>有四种方式来添加数据表的索引：<br><code>ALTER TABLE tbl_name ADD PRIMARY KEY (column_list)</code>: 该语句添加一个主键，这意味着索引值必须是唯一的，且不能为NULL。</p>
-<p><code>ALTER TABLE tbl_name ADD UNIQUE index_name (column_list)</code>: 这条语句创建索引的值必须是唯一的（除了NULL外，NULL可能会出现多次）。</p>
-<p><code>ALTER TABLE tbl_name ADD INDEX index_name (column_list)</code>: 添加普通索引，索引值可出现多次。</p>
-<p><code>ALTER TABLE tbl_name ADD FULLTEXT index_name (column_list)</code>:该语句指定了索引为 FULLTEXT ，用于全文索引。</p>
-<p>以下实例为在表中添加索引。</p>
-<p><code>mysql&gt; ALTER TABLE testalter_tbl ADD INDEX (c)</code></p>
-<p>你还可以在 ALTER 命令中使用 DROP 子句来删除索引。尝试以下实例删除索引:</p>
-<p><code>mysql&gt; ALTER TABLE testalter_tbl DROP INDEX c</code></p>
-<hr>
-<h4 id="使用-ALTER-命令添加和删除主键"><a href="#使用-ALTER-命令添加和删除主键" class="headerlink" title="使用 ALTER 命令添加和删除主键"></a>使用 ALTER 命令添加和删除主键</h4><p>主键只能作用于一个列上，添加主键索引时，你需要确保该主键默认不为空（NOT NULL）。实例如下：</p>
-<p><code>mysql&gt; ALTER TABLE testalter_tbl MODIFY i INT NOT NULL;</code></p>
-<p><code>mysql&gt; ALTER TABLE testalter_tbl ADD PRIMARY KEY (i);</code></p>
-<p>你也可以使用 ALTER 命令删除主键：</p>
-<p><code>mysql&gt; ALTER TABLE testalter_tbl DROP PRIMARY KEY;</code></p>
-<p>删除主键时只需指定PRIMARY KEY，但在删除索引时，你必须知道索引名。</p>
-<h2 id="索引的优缺点"><a href="#索引的优缺点" class="headerlink" title="索引的优缺点"></a>索引的优缺点</h2><p>1、优点：</p>
-<p>a）可以保证数据库表中每一行的数据的唯一性 </p>
-<p>b）可以大大加快数据的索引速度</p>
-<p>c）加速表与表之间的连接，物别是在实现数据的参考完事性方面特别有意义 </p>
-<p>d）在使用分组和排序子句进行数据检索时，同样可以显著减少查询中分组和排序的时间 </p>
-<p>f）通过使用索引，可以在时间查询的过程中，使用优化隐藏器，提高系统的性能</p>
-<p>2、 缺点：<br>a) 创建索引和维护索引要耗费时间，这种时间随着数据量的增加而增加 </p>
-<p>b) 索引需要占物理空间，除了数据表占用数据空间之外，每一个索引还要占用一定的物理空间，如果需要建立聚簇索引，那么需要占用的空间会更大 </p>
-<p>c) 以表中的数据进行增、删、改的时候，索引也要动态的维护，这就降低了整数的维护速度</p>
-<p>d) 建立索引的原则 </p>
-<p>e) 在经常需要搜索的列上，可以加快搜索的速度 </p>
-<p>f) 在作为主键的列上，强制该列的唯一性和组织表中数据的排列结构 </p>
-<p>g) 在经常用在连接的列上，这些列主要是一外键，可以加快连接的速度 </p>
-<p>h) 在经经常需要根据范围进行搜索的列上创建索引，国为索引已经排序，其指定的范围是连续的 </p>
-<p>i) 在经常需要排序的列上，国为索引已经排序，这样井底可以利用索引的排序，加快排序井底时间 </p>
-<p>j) 在经常使用在where子句中的列上，加快条件的判断速度</p>
+        <p>常用性能优化方案</p>
+<p>1.使用单引号替换双引号，单引号在运行的时候不检查运行引号内部的变量，执行效率是双引号的两倍；<br>2.使用PHP内置的数组操作方法，PHP内置的数组操作方法的运行效率是自行编写代码的10倍以上；<br>3.使用字符串函数替换正则函数，例如：使用 str_replace 替换 preg_replace；<br>4.使用isset($a{5})替换strlen($a)&gt;5；<br>5.require_once() 代价昂贵，include 文件时尽量使用绝对路径，因为它避免了PHP去 include_path 里查找文件的速度，解析操作系统路径所需时间会更少。</p>
+<p>循环优化方案</p>
+<p>1.在执行for循环之前确定最大循环数，不要把count/strlen/sizeof等每次都要重复做的但结果都一样的事情放到for循环的条件语句中，另外最好运用foreach代替for循环；<br>2.禁止在循环内部查询数据库，应将查询放在循环外部；<br>3.循环内部不宜使用@操作符；<br>4.循环内部不宜声明变量，尤其是大变量:对象，解决办法是循环之前预定义需要声明的变量。</p>
+<p>0、用单引号代替双引号来包含字符串，这样做会更快一些。因为PHP会在双引号包围的字符串中搜寻变量，单引号则不会，注意：只有echo能这么做，它是一种可以把多个字符串当作参数的“函数”(译注：PHP手册中说echo是语言结构，不是真正的函数，故把函数加上了双引号)。 PS：在单引号中，PHP不会自动搜寻变量、转义字符等，因此效率上快很多。而一般来说字符串是没有变量的，所以使用双引号会导致性能不佳。</p>
+<p>1、如果能将类的方法定义成static，就尽量定义成static，它的速度会提升将近4倍。 PS：事实上，function、method、static method的速度不会有太大差异。具体可见“PHP函数的实现原理及性能分析【转载】”一文。</p>
+<p>2、$row[’id’] 的速度是$row[id]的7倍。 PS：不太懂，貌似差异只有后者会先判断id这个宏是否存在，如果不存在则自动转变为字符串。</p>
+<p>3、echo 比 print 快，并且使用echo的多重参数(译注：指用逗号而不是句点)代替字符串连接，比如echo $str1,$str2。</p>
+<p>PS：如果使用echo $str1.$str2 就会需要 PHP 引擎首先把所有的变量连接起来，然后在输出，而echo $str1,$str2，PHP 引擎就会按照循序输出他们</p>
+<p>4、在执行for循环之前确定最大循环数，不要每循环一次都计算最大值，最好运用foreach代替。 PS：像count、strlen这样的操作其实是O(1)的，因此不会带来太多消耗，当然避免每次循环都计算是比较好的策略。最好用foreach代替for，这个效率更高，如果考虑到foreach($array as $var)每次拷贝的消耗，可以使用foreach($array as &amp;$var)这样的引用。</p>
+<p>5、注销那些不用的变量尤其是大数组，以便释放内存。 PS：如果没有记错的话，unset($array)不会立刻释放内存，但随时释放是个好习惯。</p>
+<p>6、尽量避免使用<strong>get，</strong>set，__autoload。</p>
+<p>7、require_once()代价昂贵。 PS：require_once和include_once需要判重，因此效率上要低，但是5.2版本后效率问题已经基本解决。</p>
+<p>8、include文件时尽量使用绝对路径，因为它避免了PHP去include_path里查找文件的速度，解析操作系统路径所需的时间会更少。 PS：支持，尽量少用iniset()来设置include_path。</p>
+<p>9、如果你想知道脚本开始执行(译注：即服务器端收到客户端请求)的时刻，使用$_SERVER[‘REQUEST_TIME’]要好于time()。 PS：$_SERVER[‘REQUEST_TIME’]保存了发起该请求时刻的时间戳，而time()则返回当前时刻的Unix时间戳。</p>
+<p>10、函数代替正则表达式完成相同功能。 PS：这种函数是指strtok、strstr、strpos、str_replace、substr、explode、implode等等。</p>
+<p>11、str_replace函数比preg_replace函数快，但strtr函数的效率是str_replace函数的四倍。 PS：字符串操作比正则替换要快。</p>
+<p>12、如果一个字符串替换函数，可接受数组或字符作为参数，并且参数长度不太长，那么可以考虑额外写一段替换代码，使得每次传递参数是一个字符，而不是只写一行代码接受数组作为查询和替换的参数。 PS：需要考虑到内置函数和用户自定义函数的开销差异，恐怕这种做法得不偿失。</p>
+<p>13、使用选择分支语句(译注：即switch case)好于使用多个if，else if语句。 PS：php中switch支持数值和字符串变量，比C的switch要好用，建议使用。</p>
+<p>14、用@屏蔽错误消息的做法非常低效，极其低效。 PS：有什么替代方法吗？没有的话还是不得不用的……</p>
+<p>15、打开apache的mod_deflate模块，可以提高网页的浏览速度。</p>
+<p>16、数据库连接当使用完毕时应关掉，不要用长连接。 PS：在连接之前，最好设置一下相应的超时机制，例如链接超时、读写超时、等待超时等。</p>
+<p>17、错误消息代价昂贵。</p>
+<p>18、在方法中递增局部变量，速度是最快的。几乎与在函数中调用局部变量的速度相当。</p>
+<p>19、递增一个全局变量要比递增一个局部变量慢2倍。</p>
+<p>20、递增一个对象属性(如：$this-&gt;prop++)要比递增一个局部变量慢3倍。</p>
+<p>21、递增一个未预定义的局部变量要比递增一个预定义的局部变量慢9至10倍。</p>
+<p>22、仅定义一个局部变量而没在函数中调用它，同样会减慢速度(其程度相当于递增一个局部变量)。PHP大概会检查看是否存在全局变量。</p>
+<p>23、方法调用看来与类中定义的方法的数量无关，因为我(在测试方法之前和之后都)添加了10个方法，但性能上没有变化。</p>
+<p>24、派生类中的方法运行起来要快于在基类中定义的同样的方法。</p>
+<p>25、调用带有一个参数的空函数，其花费的时间相当于执行7至8次的局部变量递增操作。类似的方法调用所花费的时间接近于15次的局部变量递增操作。</p>
+<p>26、Apache解析一个PHP脚本的时间要比解析一个静态HTML页面慢2至10倍。尽量多用静态HTML页面，少用脚本。</p>
+<p>27、除非脚本可以缓存，否则每次调用时都会重新编译一次。引入一套PHP缓存机制通常可以提升25%至100%的性能，以免除编译开销。</p>
+<p>28、尽量做缓存，可使用memcached。memcached是一款高性能的内存对象缓存系统，可用来加速动态Web应用程序，减轻数据库负载。对运算码 (OP code)的缓存很有用，使得脚本不必为每个请求做重新编译。</p>
+<p>29、当操作字符串并需要检验其长度是否满足某种要求时，你想当然地会使用strlen()函数。此函数执行起来相当快，因为它不做任何计算，只返回在zval 结构(C的内置数据结构，用于存储PHP变量)中存储的已知字符串长度。但是，由于strlen()是函数，多多少少会有些慢，因为函数调用会经过诸多步骤，如字母小写化(译注：指函数名小写化，PHP不区分函数名大小写)、哈希查找，会跟随被调用的函数一起执行。在某些情况下，你可以使用isset() 技巧加速执行你的代码。</p>
+<p>　　(举例如下)</p>
+<p>　<figure class="highlight plain"><figcaption><span>(strlen($foo) < 5) &#123; echo “Foo is too short”$$ &#125;````</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">　　(与下面的技巧做比较)</span><br><span class="line"></span><br><span class="line">　````　if (!isset($foo&#123;5&#125;)) &#123; echo “Foo is too short”$$ &#125;</span><br></pre></td></tr></table></figure></p>
+<p>　　调用isset()恰巧比strlen()快，因为与后者不同的是，isset()作为一种语言结构，意味着它的执行不需要函数查找和字母小写化。也就是说，实际上在检验字符串长度的顶层代码中你没有花太多开销。 PS：长见识了。</p>
+<p>30、当执行变量$i的递增或递减时，$i++会比++$i慢一些。这种差异是PHP特有的，并不适用于其他语言，所以请不要修改你的C或Java代码并指望它们能立即变快，没用的。++$i更快是因为它只需要3条指令(opcodes)，$i++则需要4条指令。后置递增实际上会产生一个临时变量，这个临时变量随后被递增。而前置递增直接在原值上递增。这是最优化处理的一种，正如Zend的PHP优化器所作的那样。牢记这个优化处理不失为一个好主意，因为并不是所有的指令优化器都会做同样的优化处理，并且存在大量没有装配指令优化器的互联网服务提供商(ISPs)和服务器。</p>
+<p>31、并不是事必面向对象(OOP)，面向对象往往开销很大，每个方法和对象调用都会消耗很多内存。</p>
+<p>32、并非要用类实现所有的数据结构，数组也很有用。</p>
+<p>33、不要把方法细分得过多，仔细想想你真正打算重用的是哪些代码?</p>
+<p>34、当你需要时，你总能把代码分解成方法。 PS：分解成方法要适当，行数少使用频率高的方法尽量用直接写代码，可以减少函数堆栈开销；且方法嵌套不宜过深，否则大大影响PHP的运行效率。</p>
+<p>35、尽量采用大量的PHP内置函数。</p>
+<p>36、如果在代码中存在大量耗时的函数，你可以考虑用C扩展的方式实现它们。</p>
+<p>37、评估检验(profile)你的代码。检验器会告诉你，代码的哪些部分消耗了多少时间。Xdebug调试器包含了检验程序，评估检验总体上可以显示出代码的瓶颈。</p>
+<p>38、mod_zip可作为Apache模块，用来即时压缩你的数据，并可让数据传输量降低80%。</p>
+<p>39、在可以用file_get_contents替代file、fopen、feof、fgets等系列方法的情况下，尽量用file_get_contents，因为他的效率高得多!但是要注意file_get_contents在打开一个URL文件时候的PHP版本问题; PS：这个要记住，尽量使用file_get_contents和file_put_contents，不需要自己判断文件句柄打开是否成功。</p>
+<p>40、尽量的少进行文件操作，虽然PHP的文件操作效率也不低的;</p>
+<p>41、优化Select SQL语句，在可能的情况下尽量少的进行Insert、Update操作(在update上，我被恶批过);</p>
+<p>42、尽可能的使用PHP内部函数(但是我却为了找个PHP里面不存在的函数，浪费了本可以写出一个自定义函数的时间，经验问题啊!); PS：内置函数比用户自定义函数效率高了将近一个数量级。</p>
+<p>43、循环内部不要声明变量，尤其是大变量：对象(这好像不只是PHP里面要注意的问题吧?); PS：这个必须的，变量过多或者过大时，每次重分配的开销就无法忽略。</p>
+<p>44、多维数组尽量不要循环嵌套赋值;</p>
+<p>45、在可以用PHP内部字符串操作函数的情况下，不要用正则表达式;</p>
+<p>46、foreach效率更高，尽量用foreach代替while和for循环;</p>
+<p>47、用单引号替代双引号引用字符串; PS：晕，这个不就是第一条吗？</p>
+<p>48、“用i+=1代替i=i+1。符合c/c++的习惯，效率还高”;</p>
+<p>49、对global变量，应该用完就unset()掉;</p>
 
       
     </div>
@@ -440,7 +448,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/mysql/" rel="tag"># mysql</a>
+            <a href="/tags/php/" rel="tag"># php</a>
           
         </div>
       
@@ -453,8 +461,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/25/git开发流程及常用操作/" rel="next" title="git开发流程及常用操作">
-                <i class="fa fa-chevron-left"></i> git开发流程及常用操作
+              <a href="/2018/12/26/评论回复数据设计/" rel="next" title="评论回复数据设计">
+                <i class="fa fa-chevron-left"></i> 评论回复数据设计
               </a>
             
           </div>
@@ -462,10 +470,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/26/评论回复数据设计/" rel="prev" title="评论回复数据设计">
-                评论回复数据设计 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -520,17 +524,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -608,22 +603,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库优化"><span class="nav-number">1.</span> <span class="nav-text">数据库优化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三范式"><span class="nav-number">2.</span> <span class="nav-text">三范式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一范式"><span class="nav-number">2.1.</span> <span class="nav-text">第一范式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二范式"><span class="nav-number">2.2.</span> <span class="nav-text">第二范式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三范式"><span class="nav-number">2.3.</span> <span class="nav-text">第三范式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#索引"><span class="nav-number">3.</span> <span class="nav-text">索引</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#建立索引会占用磁盘空间的索引文件。"><span class="nav-number">3.1.</span> <span class="nav-text">建立索引会占用磁盘空间的索引文件。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#普通索引"><span class="nav-number">3.2.</span> <span class="nav-text">普通索引</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建索引"><span class="nav-number">3.2.1.</span> <span class="nav-text">创建索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#唯一索引"><span class="nav-number">3.2.2.</span> <span class="nav-text">唯一索引</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用ALTER-命令添加和删除索引"><span class="nav-number">3.2.2.1.</span> <span class="nav-text">使用ALTER 命令添加和删除索引</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用-ALTER-命令添加和删除主键"><span class="nav-number">3.2.2.2.</span> <span class="nav-text">使用 ALTER 命令添加和删除主键</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的优缺点"><span class="nav-number">3.3.</span> <span class="nav-text">索引的优缺点</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
