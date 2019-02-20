@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="PHP各个版本下载地址：http://php.net/releases/解压压缩包：tar -xzvf  php-7.0.33.tar.gz现在以安装zip扩展为例12345678cd /root/Downloads/php-7.0.33/ext/zipfind / -name phpize/usr/local/php/bin/phpize````  生成一些版本配置文件执行phpize，报错：“">
+<meta name="description" content="PHP各个版本下载地址：http://php.net/releases/解压压缩包：tar -xzvf  php-7.0.33.tar.gz现在以安装zip扩展为例1234cd /root/Downloads/php-7.0.33/ext/zipfind / -name phpize/usr/local/php/bin/phpize 生成一些版本配置文件 执行phpize，报错：“Cannot f">
 <meta name="keywords" content="php，liunx，sql server">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux php开启zip,zlip">
 <meta property="og:url" content="http://yangleiweb.top/2019/02/20/linux-php开启zip-zlip/index.html">
 <meta property="og:site_name" content="In my life">
-<meta property="og:description" content="PHP各个版本下载地址：http://php.net/releases/解压压缩包：tar -xzvf  php-7.0.33.tar.gz现在以安装zip扩展为例12345678cd /root/Downloads/php-7.0.33/ext/zipfind / -name phpize/usr/local/php/bin/phpize````  生成一些版本配置文件执行phpize，报错：“">
+<meta property="og:description" content="PHP各个版本下载地址：http://php.net/releases/解压压缩包：tar -xzvf  php-7.0.33.tar.gz现在以安装zip扩展为例1234cd /root/Downloads/php-7.0.33/ext/zipfind / -name phpize/usr/local/php/bin/phpize 生成一些版本配置文件 执行phpize，报错：“Cannot f">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-20T04:26:14.855Z">
+<meta property="og:updated_time" content="2019-02-20T04:28:01.887Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux php开启zip,zlip">
-<meta name="twitter:description" content="PHP各个版本下载地址：http://php.net/releases/解压压缩包：tar -xzvf  php-7.0.33.tar.gz现在以安装zip扩展为例12345678cd /root/Downloads/php-7.0.33/ext/zipfind / -name phpize/usr/local/php/bin/phpize````  生成一些版本配置文件执行phpize，报错：“">
+<meta name="twitter:description" content="PHP各个版本下载地址：http://php.net/releases/解压压缩包：tar -xzvf  php-7.0.33.tar.gz现在以安装zip扩展为例1234cd /root/Downloads/php-7.0.33/ext/zipfind / -name phpize/usr/local/php/bin/phpize 生成一些版本配置文件 执行phpize，报错：“Cannot f">
 
 
 
@@ -373,12 +373,17 @@
       
 
       
-        <p>PHP各个版本下载地址：<a href="http://php.net/releases/" target="_blank" rel="noopener">http://php.net/releases/</a><br>解压压缩包：tar -xzvf  php-7.0.33.tar.gz<br>现在以安装zip扩展为例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd /root/Downloads/php-7.0.33/ext/zip</span><br><span class="line">find / -name phpize</span><br><span class="line"></span><br><span class="line">/usr/local/php/bin/phpize</span><br><span class="line">````  </span><br><span class="line">生成一些版本配置文件</span><br><span class="line"></span><br><span class="line">执行phpize，报错：“Cannot find config.m4.”，执行：</span><br></pre></td></tr></table></figure></p>
-<p>cp config0.m4 config.m4<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<p>which php-config<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/bin/php-config</span><br></pre></td></tr></table></figure></p>
-<p>./configure –with-php-config=/usr/local/php/bin/php-config<br>make &amp;&amp; make install<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">顺利的话，最终会提示：</span><br></pre></td></tr></table></figure></p>
-<p>Installing shared extensions:  /usr/local/php/lib/php/extensions/no-debug-non-zts-20100525<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">修改php.ini</span><br><span class="line"></span><br><span class="line">查看配置文件位置</span><br><span class="line">``find / -name php.ini`` </span><br><span class="line">修改php.ini增加 </span><br><span class="line">``vi php.ini `` </span><br><span class="line">``extension=/usr/local/php/lib/php/extensions/no-debug-non-zts-20100525/zip.so``</span><br><span class="line">``:wq  #保存退出``</span><br><span class="line">重启服务器</span><br></pre></td></tr></table></figure></p>
-<p>service nginx restart<br>service php-fpm restart<br><code></code><br>去查看phpinfo()吧</p>
+        <p>PHP各个版本下载地址：<a href="http://php.net/releases/" target="_blank" rel="noopener">http://php.net/releases/</a><br>解压压缩包：tar -xzvf  php-7.0.33.tar.gz<br>现在以安装zip扩展为例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /root/Downloads/php-7.0.33/ext/zip</span><br><span class="line">find / -name phpize</span><br><span class="line"></span><br><span class="line">/usr/local/php/bin/phpize</span><br></pre></td></tr></table></figure></p>
+<p>生成一些版本配置文件</p>
+<p>执行phpize，报错：“Cannot find config.m4.”，执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp config0.m4 config.m4</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">which php-config</span><br></pre></td></tr></table></figure>
+<p>/usr/local/bin/php-config</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure --with-php-config=/usr/local/php/bin/php-config</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<p>顺利的话，最终会提示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Installing shared extensions:  /usr/local/php/lib/php/extensions/no-debug-non-zts-20100525</span><br></pre></td></tr></table></figure></p>
+<p>修改php.ini</p>
+<p>查看配置文件位置<br><code>find / -name php.ini</code><br>修改php.ini增加<br><code>vi php.ini</code><br><code>extension=/usr/local/php/lib/php/extensions/no-debug-non-zts-20100525/zip.so</code><br><code>:wq  #保存退出</code><br>重启服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br><span class="line">service php-fpm restart</span><br></pre></td></tr></table></figure></p>
+<p>去查看phpinfo()吧</p>
 
       
     </div>
