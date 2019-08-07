@@ -373,21 +373,57 @@
 
       
         
-          
-          一般评论都是同级展示，利用递归查出自评论，实现网易盖楼的评论套评论形式。我自己上网查了一些大牛的想法，可以用分表的形式来让数据更简介分明。有两种形式：
-评论回复分表形式同时也可以将评论拆分为评论表和回复表，评论挂在各种主题下面，而回复挂在评论下面。
-评论表设计如下：
-
-
-
-表字段
-字段说明
-
-
-
-
-
-          ...
+          <p>一般评论都是同级展示，利用递归查出自评论，实现网易盖楼的评论套评论形式。<br>我自己上网查了一些大牛的想法，可以用分表的形式来让数据更简介分明。<br>有两种形式：</p>
+<h1 id="评论回复分表形式"><a href="#评论回复分表形式" class="headerlink" title="评论回复分表形式"></a>评论回复分表形式</h1><p>同时也可以将评论拆分为评论表和回复表，评论挂在各种主题下面，而回复挂在评论下面。</p>
+<p>评论表设计如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">表字段</th>
+<th style="text-align:center">字段说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">主键</td>
+</tr>
+<tr>
+<td style="text-align:center">topic_id</td>
+<td style="text-align:center">主题id</td>
+</tr>
+<tr>
+<td style="text-align:center">topic_type</td>
+<td style="text-align:center">主题类型</td>
+</tr>
+<tr>
+<td style="text-align:center">content</td>
+<td style="text-align:center">评论内容</td>
+</tr>
+<tr>
+<td style="text-align:center">from_uid</td>
+<td style="text-align:center">评论用户id</td>
+</tr>
+</tbody>
+</table>
+<p>回复表设计：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">表字段</th>
+<th style="text-align:center">字段说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">主键</td>
+</tr>
+</tbody>
+</table>
+<p>| comment_id    | 评论id<br>| reply_id    | 回复目标id<br>| reply_type    | 回复类型<br>| content    | 回复内容<br>| from_uid    | 回复用户id<br>| to_uid    | 目标用户id<br>由于我们拆分了评论和回复，那么评论表就不再需要目标用户字段了，因为评论均是用户对主题的评论，评论表的设计更佳简洁了。</p>
+<p>回复表添加了一个comment_id字段来表示该回复挂在的根评论id，这样设计也是出于性能方面的考虑，我们可以直接通过评论id一次性的找出该评论下的所有回复，然后通过程序来编排回复的显示结构。 通过适当的冗余来提高性能也是常用的优化手段之一。</p>
+<p>reply_type：表示回复的类型，因为回复可以是针对评论的回复(comment)，也可以是针对回复的回复(reply)， 通过这个字段来区分两种情景。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/12/26/评论回复数据设计/#more" rel="contents">
@@ -556,9 +592,11 @@
 
       
         
-          
-          数据库优化1.从结构层: web服务器采用负载均衡服务器,mysql服务器采用主从复制,读写分离2.从储存层: 采用合适的存储引擎,采用三范式3.从设计层: 采用分区分表,索引,表的字段采用合适的字段属性,适当的采用逆范式,开启mysql缓存4.sql语句层:结果一样的情况下,采用效率高,速度快节省
-          ...
+          <h1 id="数据库优化"><a href="#数据库优化" class="headerlink" title="数据库优化"></a>数据库优化</h1><p>1.从结构层: web服务器采用负载均衡服务器,mysql服务器采用主从复制,读写分离<br>2.从储存层: 采用合适的存储引擎,采用三范式<br>3.从设计层: 采用分区分表,索引,表的字段采用合适的字段属性,适当的采用逆范式,开启mysql缓存<br>4.sql语句层:结果一样的情况下,采用效率高,速度快节省资源的sql语句执行</p>
+<h1 id="三范式"><a href="#三范式" class="headerlink" title="三范式"></a>三范式</h1><h2 id="第一范式"><a href="#第一范式" class="headerlink" title="第一范式"></a>第一范式</h2><p>   1、每一列属性都是不可再分的属性值，确保每一列的原子性<br>   2、两列的属性相近或相似或一样，尽量合并属性一样的列，确保不产生冗余数据。</p>
+<h2 id="第二范式"><a href="#第二范式" class="headerlink" title="第二范式"></a>第二范式</h2><p>每一行的数据只能与其中一列相关，即一行数据只做一件事。只要数据列中出现数据重复，就要把表拆分开来。</p>
+<h2 id="第三范式"><a href="#第三范式" class="headerlink" title="第三范式"></a>第三范式</h2><p> 数据不能存在传递关系，即没个属性都跟主键有直接关系而不是间接关系。</p>
+<h1 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h1>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/12/25/sql知识点/#more" rel="contents">
@@ -727,9 +765,11 @@
 
       
         
-          
-          github开发流程：第一步：切换到develop分支：git checkout develop。第二步：从develop分支迁出本地开发分支:git checkout -b developforwindy420第三步：在developforwindy420进行开发后，需要提交提交代码：git ad
-          ...
+          <h1 id="github开发流程："><a href="#github开发流程：" class="headerlink" title="github开发流程："></a>github开发流程：</h1><p>第一步：切换到develop分支：git checkout develop。<br>第二步：从develop分支迁出本地开发分支:git checkout -b developforwindy420<br>第三步：在developforwindy420进行开发后，需要提交提交代码：git add .; git commit -m “{你的开发功能}”<br>第四步：切换到develop分支，对developforwindy420进行合并：git checkout develop; git merge –no-ff developforwindy420<br>第五步：提交代码到develop分支:git pull; git push<br>第六步：代码提交后，此次开发分支作废，需要删除：git branch -d developforwindy420</p>
+<h2 id="github修改MASTER的BUG流程："><a href="#github修改MASTER的BUG流程：" class="headerlink" title="github修改MASTER的BUG流程："></a>github修改MASTER的BUG流程：</h2><p>修复BUG流程：<br>第一步：切换到master分支:git checkout master<br>第二步：从master分支上创建本地分支：git checkout -b fixedbug420<br>第三步：在fixedbug420分支上对bug进行修复，进行commit提交:git add .; git commit -m “{你所修复的BUG}”<br>第四步：需要将fixedbug420的修复merge到master和develop分支上。具体操作如下：git checkout master;git merge –no-ff fixedbug420; git pull; git push。  git checkout develop;git merge –no-ff fixedbug420; git pull; git push。<br>第五步：bug修复后，需要删除本地分支:git branch -d fixedbug420</p>
+<h1 id="git常用功能"><a href="#git常用功能" class="headerlink" title="git常用功能"></a>git常用功能</h1><h2 id="git回退到某个版本并提交"><a href="#git回退到某个版本并提交" class="headerlink" title="git回退到某个版本并提交"></a>git回退到某个版本并提交</h2><p>回退到分支某个版本  git reset –hard  c88173be7b521fcbe88c5be4fc1d3889e52226ae（要回退的分支版本号）<br>查看分支当前版本  git rev-parse HEAD<br>提交回退的版本 git push -f  (注：强制提交后，当前版本后面的提交版本将会删掉！)</p>
+<h2 id="git分支"><a href="#git分支" class="headerlink" title="git分支"></a>git分支</h2><p>git branch 查看分支<br>git branch xxx 创建分支<br>git branch -d xxx 删除分支</p>
+<h2 id="git修改暂存"><a href="#git修改暂存" class="headerlink" title="git修改暂存"></a>git修改暂存</h2>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/12/25/git开发流程及常用操作/#more" rel="contents">
@@ -898,11 +938,13 @@
 
       
         
-          
-          获取原微信公众号用户ID用微信公众号获取用户列表api
-https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140840
-或者在数据查询12$MemberModel = new MemberModel();$openid = 
-          ...
+          <h2 id="获取原微信公众号用户ID"><a href="#获取原微信公众号用户ID" class="headerlink" title="获取原微信公众号用户ID"></a>获取原微信公众号用户ID</h2><p>用微信公众号获取用户列表api</p>
+<p><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140840" target="_blank" rel="noopener">https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140840</a></p>
+<p>或者在数据查询<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$MemberModel = new MemberModel();</span><br><span class="line">$openid = $MemberModel-&gt;order(&apos;id&apos;,&apos;asc&apos;)-&gt;limit(300,100)-&gt;column(&apos;wechat_openid&apos;);</span><br></pre></td></tr></table></figure></p>
+<h2 id="获取新公众号accessToken"><a href="#获取新公众号accessToken" class="headerlink" title="获取新公众号accessToken"></a>获取新公众号accessToken</h2><p>官方api文档<br><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140183" target="_blank" rel="noopener">https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140183</a></p>
+<p>php获取代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ch = curl_init();</span><br><span class="line">        curl_setopt($ch, CURLOPT_URL, &apos;https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=appid&amp;secret=appsecret&apos;);</span><br><span class="line">        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);</span><br><span class="line">        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);</span><br><span class="line">        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);</span><br><span class="line">        $output = curl_exec($ch);</span><br><span class="line">        curl_close($ch);</span><br><span class="line">        $jsoninfo = json_decode($output, true);</span><br></pre></td></tr></table></figure></p>
+<h2 id="获取新公众号openid"><a href="#获取新公众号openid" class="headerlink" title="获取新公众号openid"></a>获取新公众号openid</h2><p>官方说明文档<br><a href="http://kf.qq.com/faq/170221aUnmmU170221eUZJNf.html" target="_blank" rel="noopener">http://kf.qq.com/faq/170221aUnmmU170221eUZJNf.html</a></p>
+<p>php获取代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//获取新openid</span><br><span class="line">        $arr = array(</span><br><span class="line">            &apos;from_appid&apos;=&gt;&apos;原公众号appid&apos;,</span><br><span class="line">            &apos;openid_list&apos;=&gt;[&quot;oEmYbwN-n24jxvk4Sox81qedINkQ&quot;,&quot;oEmYbwH9uVd4RKJk7ZZg6SzL6tTo&quot;],</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        $data_string =  json_encode($arr);</span><br><span class="line">        //echo $data_string;</span><br><span class="line">        //curl验证成功</span><br><span class="line">        $ch = curl_init(&quot;http://api.weixin.qq.com/cgi-bin/changeopenid?access_token=&quot;.$jsoninfo[&apos;access_token&apos;]);</span><br><span class="line">        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, &quot;POST&quot;);</span><br><span class="line">        curl_setopt($ch, CURLOPT_POSTFIELDS,$data_string);</span><br><span class="line">        curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);</span><br><span class="line">        curl_setopt($ch, CURLOPT_HTTPHEADER, array(</span><br><span class="line">            &apos;Content-Type: application/json&apos;,</span><br><span class="line">            &apos;Content-Length: &apos; . strlen($data_string)</span><br><span class="line">        ));</span><br><span class="line"></span><br><span class="line">        $result = curl_exec($ch);</span><br><span class="line">        if (curl_errno($ch)) &#123;</span><br><span class="line">            print curl_error($ch);</span><br><span class="line">        &#125;</span><br><span class="line">        curl_close($ch);</span><br><span class="line">        $result = json_decode($result, true);</span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/11/26/微信公众号迁移openid转换/#more" rel="contents">
@@ -1072,17 +1114,10 @@ https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140840
       
         
           
-          
-详细语法请见：Markdown语法说明（详解版）
+            <p><img src="/2018/11/21/Markdown语法一图流/1.png" alt="图片未加载"></p>
+<p>详细语法请见：Markdown语法说明（详解版）</p>
 
           
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/21/Markdown语法一图流/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
@@ -1244,9 +1279,11 @@ https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140840
 
       
         
-          
-          秒杀表结构1234567891011CREATE TABLE `seckill`  (  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT &apos;主键&apos;,  `goods_id` varchar(200) CHARACTER 
-          ...
+          <h2 id="秒杀"><a href="#秒杀" class="headerlink" title="秒杀"></a>秒杀</h2><h3 id="表结构"><a href="#表结构" class="headerlink" title="表结构"></a>表结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `seckill`  (</span><br><span class="line">  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT &apos;主键&apos;,</span><br><span class="line">  `goods_id` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT &apos;0&apos; COMMENT &apos;参与活动的商品&apos;,</span><br><span class="line">  `status` tinyint(1) NOT NULL DEFAULT 0 COMMENT &apos;活动状态(0:未开始，1进行中，2已结束)&apos;,</span><br><span class="line">  `price` decimal(7, 2) UNSIGNED NULL DEFAULT 0.00 COMMENT &apos;优惠价格&apos;,</span><br><span class="line">  `start_time` int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT &apos;开始时间&apos;,</span><br><span class="line">  `end_time` int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT &apos;结束时间&apos;,</span><br><span class="line">  `name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT &apos;0&apos; COMMENT &apos;活动名称&apos;,</span><br><span class="line">  `stock` int(10) NULL DEFAULT NULL COMMENT &apos;库存&apos;,</span><br><span class="line">  PRIMARY KEY (`id`) USING BTREE</span><br><span class="line">) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;</span><br></pre></td></tr></table></figure>
+<h3 id="业务逻辑"><a href="#业务逻辑" class="headerlink" title="业务逻辑"></a>业务逻辑</h3><p>1.后台添加活动，设定状态和开始时间<br>2.前台调用数据，判断活动状态，是否结束<br>3.秒杀分批次展示，优先展示最近进行中，通过时间算法判断。<br>4.进行中的活动通过<strong>结束时间</strong>减去<strong>现在时间</strong> 展示什么时间结束，未开始活动<strong>开始时间</strong>减去<strong>现在时间</strong>展示什么时候开始<br>5.下单，如有高并发使用队列，一般进行事务处理锁表判断库存，下单成功减去库存事务结束</p>
+<h2 id="砍价"><a href="#砍价" class="headerlink" title="砍价"></a>砍价</h2><h3 id="表结构-1"><a href="#表结构-1" class="headerlink" title="表结构"></a>表结构</h3><p>砍价活动主表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `bargain`  (</span><br><span class="line">  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT &apos;主键ID&apos;,</span><br><span class="line">  `goods_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT &apos;参与活动的商品&apos;,</span><br><span class="line">  `bargain_max` decimal(10, 2) NOT NULL DEFAULT 0.00 COMMENT &apos;单次最小砍价金额&apos;,</span><br><span class="line">  `bargain_min` decimal(10, 2) UNSIGNED NOT NULL DEFAULT 0.00 COMMENT &apos;单次最大砍价金额&apos;,</span><br><span class="line">  `min_price` decimal(10, 2) UNSIGNED NOT NULL DEFAULT 0.00 COMMENT &apos;最低价格&apos;,</span><br><span class="line">  `stock` int(10) NULL DEFAULT 0 COMMENT &apos;库存&apos;,</span><br><span class="line">  `status` tinyint(1) NOT NULL DEFAULT 0 COMMENT &apos;活动状态(0:未开始，1进行中，2已结束)&apos;,</span><br><span class="line">  `start_time` datetime(0) NULL DEFAULT NULL COMMENT &apos;开始时间&apos;,</span><br><span class="line">  `end_time` datetime(0) NULL DEFAULT NULL COMMENT &apos;结束时间&apos;,</span><br><span class="line">  `created_at` datetime(0) NULL DEFAULT NULL COMMENT &apos;添加时间&apos;,</span><br><span class="line">  `updated_at` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT &apos;更新时间&apos;,</span><br><span class="line">  `deleted_at` datetime(0) NULL DEFAULT NULL COMMENT &apos;删除时间&apos;,</span><br><span class="line">  `least_count` smallint(5) NULL DEFAULT NULL COMMENT &apos;最小砍价次数&apos;,</span><br><span class="line">  PRIMARY KEY (`id`) USING BTREE</span><br><span class="line">) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;</span><br></pre></td></tr></table></figure></p>
+<p>发起砍价表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `bargain_order`  (</span><br><span class="line">  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT &apos;主键ID&apos;,</span><br><span class="line">  `activity_id` int(10) UNSIGNED NOT NULL COMMENT &apos;活动id&apos;,</span><br><span class="line">  `goods_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT &apos;参与活动的商品&apos;,</span><br><span class="line">  `member_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT &apos;砍价商品发起的用户ID&apos;,</span><br><span class="line">  `bargain_count` smallint(5) UNSIGNED NOT NULL DEFAULT 0 COMMENT &apos;被砍价次数&apos;,</span><br><span class="line">  `price` decimal(7, 2) UNSIGNED NOT NULL DEFAULT 0.00 COMMENT &apos;最终交易价格&apos;,</span><br><span class="line">  `is_addorder` tinyint(1) NOT NULL DEFAULT 0 COMMENT &apos;是否下单(0:未下单，1已下单)&apos;,</span><br><span class="line">  `created_at` datetime(0) NULL DEFAULT NULL COMMENT &apos;添加时间&apos;,</span><br><span class="line">  `updated_at` datetime(0) NULL DEFAULT NULL COMMENT &apos;更新时间&apos;,</span><br><span class="line">  `deleted_at` datetime(0) NULL DEFAULT NULL COMMENT &apos;删除时间&apos;,</span><br><span class="line">  PRIMARY KEY (`id`) USING BTREE</span><br><span class="line">) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;</span><br></pre></td></tr></table></figure></p>
+<p>帮忙砍价记录表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `bargain_order_list`  (</span><br><span class="line">  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT &apos;主键ID&apos;,</span><br><span class="line">  `bargain_order_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT &apos;砍价表id&apos;,</span><br><span class="line">  `assistor_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT &apos;帮助者ID&apos;,</span><br><span class="line">  `nick_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT &apos;帮助者Nickname&apos;,</span><br><span class="line">  `head_img` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT &apos;帮助者头像&apos;,</span><br><span class="line">  `bargain_money` decimal(5, 2) UNSIGNED NOT NULL DEFAULT 0.00 COMMENT &apos;砍掉价格&apos;,</span><br><span class="line">  `ip` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT &apos;ip&apos;,</span><br><span class="line">  `created_at` datetime(0) NULL DEFAULT NULL COMMENT &apos;添加时间&apos;,</span><br><span class="line">  `updated_at` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT &apos;更新时间&apos;,</span><br><span class="line">  `deleted_at` datetime(0) NULL DEFAULT NULL COMMENT &apos;删除时间&apos;,</span><br><span class="line">  PRIMARY KEY (`id`) USING BTREE</span><br><span class="line">) ENGINE = InnoDB AUTO_INCREMENT = 31 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;</span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/11/21/电商营销功能秒杀、砍价表设计逻辑处理/#more" rel="contents">
@@ -1417,10 +1454,10 @@ https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140840
 
       
         
-          
-          TP优点：TP框架是我们中国人自己开发的框架,各种资料比较齐全,国内用的比较多,比较简单和方便,而且是免费开源的
-特性：  1.多表查询非常方便,在model中几句代码就可以完成对多表的关联操作    2.融合了smarty模板,使前后台分离    3.支持多种缓存技术,尤其对memcache技术支
-          ...
+          <h2 id="TP"><a href="#TP" class="headerlink" title="TP"></a>TP</h2><h3 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h3><p>TP框架是我们中国人自己开发的框架,各种资料比较齐全,国内用的比较多,比较简单和方便,而且是免费开源的</p>
+<h3 id="特性："><a href="#特性：" class="headerlink" title="特性："></a>特性：</h3><p>  1.多表查询非常方便,在model中几句代码就可以完成对多表的关联操作<br>    2.融合了smarty模板,使前后台分离<br>    3.支持多种缓存技术,尤其对memcache技术支持非常好<br>    4.命名规范,模型,视图,控制器严格遵循命名规则,通过命名一一对应<br>    5.支持多种url模式<br>    6.内置ajax返回方法,包括xml,json,html等<br>    7.支持应用扩展,类库扩展,驱动扩展等</p>
+<h2 id="laravel"><a href="#laravel" class="headerlink" title="laravel"></a>laravel</h2><h3 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h3><p>laravel框架的设计思想比较先进,非常适合应用各种开发模式,作为一个框架,它为你准备好了一切,composer是php的未来,没有composer,php肯定要走向没落<br>    laravel框架最大的特点和优秀之处就是集合了php比较新的特点,以及各种各样的设计模式,Ioc模式,依赖注入等</p>
+<h3 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h3><p>一:      1.强大的rest router:用简单的回调函数就可以调用,快速绑定controller和router<br>           2.artisan:命令行工具,很多手动的工作都自动化<br>           3.可继承的模板,简化view的开发和管理<br>           4.blade模板:渲染速度更快<br>           5.ORM操作数据库<br>           6.migration:管理数据库和版本控制<br>           7.测试功能也很强大<br>           8.composer也是亮点</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/11/09/php框架对比/#more" rel="contents">
@@ -1589,10 +1626,13 @@ https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140840
 
       
         
-          
-          删除：vim启动进入普通模式，处于插入模式或命令行模式时只需要按Esc或者Ctrl+[(这在vim课程环境中不管用)即可进入普通模式。普通模式中按i（插入）或a（附加）键都可以进入插入模式，普通模式中按:进入命令行模式。命令行模式中输入wq回车后保存并退出vim。
-进入普通模式，使用下列命令可以进行
-          ...
+          <h2 id="删除："><a href="#删除：" class="headerlink" title="删除："></a>删除：</h2><p>vim启动进入普通模式，处于插入模式或命令行模式时只需要按Esc或者Ctrl+[(这在vim课程环境中不管用)即可进入普通模式。普通模式中按i（插入）或a（附加）键都可以进入插入模式，普通模式中按:进入命令行模式。命令行模式中输入wq回车后保存并退出vim。</p>
+<p>进入普通模式，使用下列命令可以进行文本快速删除：</p>
+<p>x 删除游标所在的字符<br>X 删除游标所在前一个字符<br>Delete 同x<br>dd 删除整行<br>dw 删除一个单词（不适用中文）<br>d$或D 删除至行尾<br>d^ 删除至行首<br>dG 删除到文档结尾处<br>d1G 删至文档首部<br>除此之外，你还可以在命令之前加上数字，表示一次删除多行，如：<br>2dd表示一次删除2行</p>
+<h2 id="行间跳转："><a href="#行间跳转：" class="headerlink" title="行间跳转："></a>行间跳转：</h2><p>nG(n Shift+g) 游标移动到第 n 行(如果默认没有显示行号，请先进入命令模式，输入:set nu以显示行号)<br>gg 游标移动到到第一行<br>G(Shift+g) 到最后一行</p>
+<h2 id="行内跳转："><a href="#行内跳转：" class="headerlink" title="行内跳转："></a>行内跳转：</h2><p>普通模式下使用下列命令在行内按照单词为单位进行跳转</p>
+<p>w 到下一个单词的开头<br>e 到下一个单词的结尾<br>b 到前一个单词的开头<br>ge 到前一个单词的结尾<br>0或^ 到行头<br>$ 到行尾<br>f&lt;字母&gt; 向后搜索&lt;字母&gt;并跳转到第一个匹配的位置(非常实用)<br>F&lt;字母&gt; 向前搜索&lt;字母&gt;并跳转到第一个匹配的位置<br>t&lt;字母&gt; 向后搜索&lt;字母&gt;并跳转到第一个匹配位置之前的一个字母(不常用)<br>T&lt;字母&gt; 向前搜索&lt;字母&gt;并跳转到第一个匹配位置之后的一个字母(不常用)</p>
+<h2 id="复制及粘贴文本"><a href="#复制及粘贴文本" class="headerlink" title="复制及粘贴文本"></a>复制及粘贴文本</h2>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/11/08/vim编辑器常用命令/#more" rel="contents">
@@ -1750,10 +1790,16 @@ https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140840
 
       
         
-          
-          悬而未决：宏大宇宙设定中的叙事钩子
-我们中的许多人，尤其是我自己，一谈起自己深爱着的东西都是乐此不疲津津乐道的，无论是《英雄联盟》、《星球大战》、《被遗忘的国度》、《战锤 40K》、《魔兽世界》、《哈利波特》、漫威系列或者其他别的作品。上述这些都是非常庞大丰富的宇宙设定，充满了高远的寓意、繁复的历史
-          ...
+          <p><img src="/2018/11/02/故事的钩子/1.jpg" alt="图片未加载"><br><em>悬而未决：宏大宇宙设定中的叙事钩子</em></p>
+<p>我们中的许多人，尤其是我自己，一谈起自己深爱着的东西都是乐此不疲津津乐道的，无论是《英雄联盟》、《星球大战》、《被遗忘的国度》、《战锤 40K》、《魔兽世界》、《哈利波特》、漫威系列或者其他别的作品。上述这些都是非常庞大丰富的宇宙设定，充满了高远的寓意、繁复的历史故事和惹人怜爱 (或者恨之入骨)的人物角色。就我自己而言，当我深深投入其中的时候，真的难以自拔。</p>
+<p>(*注：钩子，原文是hook，有以下几层意思：钩子、线索、未完的故事。为了保持原有的信息量所以直译为比较形象的钩子了。)</p>
+<p>相信许多人都有同样的感受。</p>
+<p>初极狭，才通人。</p>
+<p>我觉得，我们之所以如此热爱这些宇宙设定，是因为越是深入挖掘，就越能够发现更多东西。这种沿着羊肠小道不断深入最后豁然开朗的感觉让我们百看不厌。每次我陷入其中，都能看到更多令人抓心挠肝的隐晦钩子，更多历史事件的模糊影子，更多奇异生物的惊鸿一瞥，还有更多背景故事的细枝末节……以星火燎原之势点燃我的想象力。这些宇宙设定都是有机的，里面的故事一直都在演进，随着游戏、漫画、小说、电影、电视剧等作品的推出而向前发展。</p>
+<p>有时我们会看到有一些叙事钩子、模糊概念和细枝末节——而你早几年前就已经察觉到了，突然有一天会成为剧情的焦点，那种满足感是不可言喻的。有的时候这些小细节最初只是无心插柳地随口一说，但铁杆粉丝们却会捕风捉影、紧追不放、脑洞大开。当坊间猜测不负众望地被证实为官方正史的时候，他们就会欣喜若狂。 </p>
+<p><img src="/2018/11/02/故事的钩子/2.jpg" alt="图片未加载"></p>
+<p>这就好比《星球大战：新的希望》中第一次提到了“克隆人的战争”，而多年以后，在《星球大战：克隆人的战争》中才真正揭晓一切。再比如，《战锤40K》的宇宙中多次提到了“荷鲁斯叛乱”的历史传说，而最后成为一套系列小说的时代背景。</p>
+<p>这种令人难以言表的满足感，来自观众与编剧/原作者之间形成的同步和默契 —— 知道笑点在哪里、重点在哪里、究竟暗示了什么梗。就像是在电影的演职员表最后的彩蛋里闪现了一个角色，而你一下就知道角色的身份和出现的意义，而不需要偷偷问旁边的人——“那人谁呀?”</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/11/02/故事的钩子/#more" rel="contents">

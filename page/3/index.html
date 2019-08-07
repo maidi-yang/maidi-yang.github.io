@@ -373,10 +373,11 @@
 
       
         
-          
-          TP5使用command命令行设置定时任务快速生成指令法1.快速指令生成php think make:command First first
-First表示类名，实际生成的指令类则是app\command\First（自动生成的指令类的命名空间默认都是 app\command）。first表示指令名
-          ...
+          <h1 id="TP5使用command命令行设置定时任务"><a href="#TP5使用command命令行设置定时任务" class="headerlink" title="TP5使用command命令行设置定时任务"></a>TP5使用command命令行设置定时任务</h1><h2 id="快速生成指令法"><a href="#快速生成指令法" class="headerlink" title="快速生成指令法"></a>快速生成指令法</h2><h3 id="1-快速指令生成"><a href="#1-快速指令生成" class="headerlink" title="1.快速指令生成"></a>1.快速指令生成</h3><p><code>php think make:command First first</code></p>
+<p>First表示类名，实际生成的指令类则是app\command\First（自动生成的指令类的命名空间默认都是 app\command）。<br>first表示指令名，建议统一使用小写，如果不传入该参数，则默认用类名的小写作为指令名。</p>
+<h3 id="2-配置参数"><a href="#2-配置参数" class="headerlink" title="2.配置参数"></a>2.配置参数</h3><p>为了让指令可以无需定义自动调用，需要在你的应用配置的console.php配置文件中，增加下面的配置参数：<br><code>&#39;auto_path&#39; =&gt; env(&#39;app_path&#39;) . &#39;command/&#39;,</code></p>
+<h3 id="3-执行结果"><a href="#3-执行结果" class="headerlink" title="3.执行结果"></a>3.执行结果</h3><p>配置后， 你可以在命令行测试下刚才新生成的指令。<br><code>php think first</code></p>
+<p>输出结果为：<br><code>first</code></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/11/02/TP5定时任务/#more" rel="contents">
@@ -546,17 +547,14 @@ First表示类名，实际生成的指令类则是app\command\First（自动生�
       
         
           
-          需要用到phpoffice/phpspreadsheet拓展在composer.json添加
-或者:composer require phpoffice/phpspreadsheet
-12use PhpOffice\PhpSpreadsheet\Spreadsheet;use PhpOffice\P
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/01/thinkphp5导出excel/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <p>需要用到phpoffice/phpspreadsheet拓展<br>在composer.json添加</p>
+<p>或者:<code>composer require phpoffice/phpspreadsheet</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">use PhpOffice\PhpSpreadsheet\Spreadsheet;</span><br><span class="line">use PhpOffice\PhpSpreadsheet\Writer\Xlsx;</span><br></pre></td></tr></table></figure>
+<p>前台数据传递 ：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;#excel&apos;).click(function () &#123;</span><br><span class="line">    var rank = $(&apos;#rank&apos;).val();</span><br><span class="line">    var special_rank = $(&apos;#special_rank&apos;).val();</span><br><span class="line">    var start_pv = $(&apos;#start_pv&apos;).val();</span><br><span class="line">    var end_pv = $(&apos;#end_pv&apos;).val();</span><br><span class="line">    var keyword = $(&apos;#keyword&apos;).val();</span><br><span class="line">    var url = $(this).attr(&apos;ex_url&apos;);</span><br><span class="line"></span><br><span class="line">    window.open(url+&quot;?rank=&quot;+rank+&quot;&amp;special_rank=&quot;+special_rank+&quot;&amp;start_pv=&quot;+start_pv+&quot;&amp;end_pv=&quot;+end_pv+&quot;&amp;keyword=&quot;+keyword);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>后台打印：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">$result = 数据;</span><br><span class="line"></span><br><span class="line">$spreadsheet = new Spreadsheet();</span><br><span class="line">$sheet = $spreadsheet-&gt;getActiveSheet();</span><br><span class="line"></span><br><span class="line">$grade = config(&apos;grade.grade&apos;);</span><br><span class="line"></span><br><span class="line">$headLetter = [&apos;A&apos;,&apos;B&apos;,&apos;C&apos;];</span><br><span class="line">$headName = [&apos;id&apos;,&apos;真实姓名&apos;,&apos;身份证号&apos;];</span><br><span class="line"></span><br><span class="line">foreach($headLetter as $k =&gt; $v)&#123;</span><br><span class="line">    $sheet-&gt;setCellValue($v.&apos;1&apos;, $headName[$k]);、</span><br><span class="line">//自动宽度</span><br><span class="line">   $sheet-&gt;getColumnDimension($v)-&gt;setAutoSize(true);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$j = 2;</span><br><span class="line">foreach ($result[&apos;data&apos;] as $k =&gt; $v) &#123;</span><br><span class="line">    $sheet-&gt;setCellValue(&apos;A&apos; . $j, $v[&apos;id&apos;])</span><br><span class="line">        -&gt;setCellValue(&apos;B&apos; . $j, $v[&apos;name&apos;])</span><br><span class="line">        -&gt;setCellValue(&apos;C&apos; . $j, $v[&apos;id_card&apos;])</span><br><span class="line">    $j++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//请求列表数据接口</span><br><span class="line">//$result = sendGetApi(&apos;userExcelList&apos;);</span><br><span class="line"></span><br><span class="line">//设置文件保存的命名、编码、同时开放保存路径的权限</span><br><span class="line">//命名</span><br><span class="line">$fileName = &quot;打印文件&quot; . date(&quot;Y-m-d&quot;, time()) . &quot;.xlsx&quot;;</span><br><span class="line">//编码</span><br><span class="line">header(&apos;Content-Type:application/vnd.ms-excel;charset=utf-8&apos;);</span><br><span class="line">//告诉浏览器要输出的名称</span><br><span class="line">header(&quot;Content-Disposition:attachment;filename=$fileName&quot;);</span><br><span class="line">//禁止浏览器缓存</span><br><span class="line">header(&apos;Cache-Control:max-age=0&apos;);</span><br><span class="line">//生成excel文件</span><br><span class="line">$writer = new Xlsx($spreadsheet);</span><br><span class="line">//彻底开放保存路径</span><br><span class="line">$writer-&gt;save(&apos;php://output&apos;);</span><br><span class="line">exit();</span><br></pre></td></tr></table></figure></p>
+<p>去除科学记数法：在数字字符串前加一个空格使之成为字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$objPHPExcel = new PHPExcel();</span><br><span class="line">$objPHPExcel-&gt;setActiveSheetIndex(0);</span><br><span class="line">$objPHPExcel-&gt;getActiveSheet()-&gt;setTitle(&apos;Simple&apos;);$objPHPExcel-&gt;getActiveSheet()-&gt;setCellValue(&apos;D1&apos;, &apos; &apos; . 123456789033);</span><br></pre></td></tr></table></figure></p>
+
+          
         
       
     </div>
@@ -718,10 +716,12 @@ First表示类名，实际生成的指令类则是app\command\First（自动生�
 
       
         
-          
-          rm -rf default.conf 删除ln -s /vagrant/nginx.conf default.conf 制定公用地址service nginx restart 重启nginx
-快捷键tab:命令补全Ctrl+c：强行终止Ctrl+d 键盘输入结束或退出终端Ctrl+s 暂停当前程序
-          ...
+          <p><em>rm -rf default.conf 删除<br>ln -s /vagrant/nginx.conf default.conf 制定公用地址<br>service nginx restart 重启nginx</em></p>
+<h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><p>tab:命令补全<br>Ctrl+c：强行终止<br>Ctrl+d 键盘输入结束或退出终端<br>Ctrl+s 暂停当前程序，暂停后按下任意键恢复运行<br>Ctrl+z 将当前程序放到后台运行，恢复到前台为命令fg<br>Ctrl+a 将光标移至输入行头，相当于Home键<br>Ctrl+e 将光标移至输入行末，相当于End键<br>Ctrl+k 删除从光标所在位置到行末<br>Alt+Backspace 向前删除一个单词<br>Shift+PgUp 将终端显示向上滚动<br>Shift+PgDn 将终端显示向下滚动</p>
+<h1 id="Shell-常用通配符"><a href="#Shell-常用通配符" class="headerlink" title="Shell 常用通配符"></a>Shell 常用通配符</h1><p>* 匹配 0 或多个字符<br>? 匹配任意一个字符<br>[list] 匹配 list 中的任意单一字符<br>[!list] 匹配 除list 中的任意单一字符以外的字符<br>[c1-c2] 匹配 c1-c2 中的任意单一字符 如：[0-9] [a-z]<br>{string1,string2,…} 匹配 string1 或 string2 (或更多)其一字符串<br>{c1..c2} 匹配 c1-c2 中全部字符 如{1..10}</p>
+<h1 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h1><p>touch 创建文件<br>mkdir 创建目录<br>ls 查看文件目录<br>man 调用手册<br>apt-get 搜索，安装软件<br>cat，nl 查看文件<br>chown 变更文件所有者 sudo chown 所有者 文件名 chown <a href="http://www.www" target="_blank" rel="noopener">www.www</a> 目录 -R<br>chmod 修改文件权限 chmod go-rw 文件名 chmod -R 777 文件名 “0”表示没有权限、“1”表示可执行权限、“2”表示可写权限、“4”表示可读权限。“7=1+2+4<br>cp 复制文件，复制目录需要带上-r参数 cp 文件名 目录，cp -r 文件名 目录<br>rm 删除文件，目录需要带上-r参数 rm 文件名 目录，rm -r 文件名 目录<br>mv 移动文件,重命名文件 mv 源目录文件 目的目录，mv 旧的文件名 新的文件名</p>
+<h1 id="用户管理命令"><a href="#用户管理命令" class="headerlink" title="用户管理命令"></a>用户管理命令</h1><p>su 切换命令<br>sudo 使用root权限<br>adduser 创建用户<br>groups 查看用户组<br>usermod 添加用户到用户组 sudo usermod -G sudo 用户名<br>deluser 删除用户 sudo deluser 用户名 –remove-home</p>
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/11/01/liunx基础指令/#more" rel="contents">
@@ -890,10 +890,11 @@ First表示类名，实际生成的指令类则是app\command\First（自动生�
 
       
         
-          
-          一 、PHP基础部分1、PHP语言的一大优势是跨平台，什么是跨平台？PHP的运行环境最优搭配为Apache+MySQL+PHP，此运行环境可以在不同操作系统（例如windows、Linux等）上配置，不受操作系统的限制，所以叫跨平台
-2、WEB开发中数据提交方式有几种？有什么区别？百度使用哪种方式？
-          ...
+          <h1 id="一-、PHP基础部分"><a href="#一-、PHP基础部分" class="headerlink" title="一 、PHP基础部分"></a>一 、PHP基础部分</h1><h2 id="1、PHP语言的一大优势是跨平台，什么是跨平台？"><a href="#1、PHP语言的一大优势是跨平台，什么是跨平台？" class="headerlink" title="1、PHP语言的一大优势是跨平台，什么是跨平台？"></a>1、PHP语言的一大优势是跨平台，什么是跨平台？</h2><p>PHP的运行环境最优搭配为Apache+MySQL+PHP，此运行环境可以在不同操作系统（例如windows、Linux等）上配置，不受操作系统的限制，所以叫跨平台</p>
+<h2 id="2、WEB开发中数据提交方式有几种？有什么区别？百度使用哪种方式？"><a href="#2、WEB开发中数据提交方式有几种？有什么区别？百度使用哪种方式？" class="headerlink" title="2、WEB开发中数据提交方式有几种？有什么区别？百度使用哪种方式？"></a>2、WEB开发中数据提交方式有几种？有什么区别？百度使用哪种方式？</h2><p>Get与post两种方式</p>
+<h3 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h3><p>（1）url可见性：get 方式url参数可见，post 不可见<br>（2）可缓存性：get 方式是可以缓存的，post 方式不可以缓存。<br>（3）传输数据大小：get一般传输数据大小不超过2k-4k（根据浏览器不同，限制不一样，但相差不大）；post 请求传输数据的大小根据php.ini 配置文件设定，也可以无限大。<br>（4）数据传输上：get 方式通过url地址栏拼接参数进行传输，post 方式通过body体进行传输。</p>
+<h3 id="建议："><a href="#建议：" class="headerlink" title="建议："></a>建议：</h3><p>（1）get式安全性较Post式要差些包含机密信息建议用Post数据提交式；<br>（2）做数据查询建议用Get式；做数据添加、修改或删除建议用Post方式；<br>百度使用的get方式，因为可以从它的URL中看出</p>
+<h2 id="3、掌握PHP的哪些框架、模板引擎、系统等"><a href="#3、掌握PHP的哪些框架、模板引擎、系统等" class="headerlink" title="3、掌握PHP的哪些框架、模板引擎、系统等"></a>3、掌握PHP的哪些框架、模板引擎、系统等</h2>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/10/29/php基础部分/#more" rel="contents">
