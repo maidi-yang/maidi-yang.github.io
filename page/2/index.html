@@ -260,6 +260,184 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yangleiweb.top/2018/12/27/php性能优化/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="maidi yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="In my life">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/27/php性能优化/" itemprop="url">php性能优化</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-27T13:55:09+08:00">
+                2018-12-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/php/" itemprop="url" rel="index">
+                    <span itemprop="name">php</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/27/php性能优化/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/27/php性能优化/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>常用性能优化方案</p>
+<p>1.使用单引号替换双引号，单引号在运行的时候不检查运行引号内部的变量，执行效率是双引号的两倍；<br>2.使用PHP内置的数组操作方法，PHP内置的数组操作方法的运行效率是自行编写代码的10倍以上；<br>3.使用字符串函数替换正则函数，例如：使用 str_replace 替换 preg_replace；<br>4.使用isset($a{5})替换strlen($a)&gt;5；<br>5.require_once() 代价昂贵，include 文件时尽量使用绝对路径，因为它避免了PHP去 include_path 里查找文件的速度，解析操作系统路径所需时间会更少。</p>
+<p>循环优化方案</p>
+<p>1.在执行for循环之前确定最大循环数，不要把count/strlen/sizeof等每次都要重复做的但结果都一样的事情放到for循环的条件语句中，另外最好运用foreach代替for循环；<br>2.禁止在循环内部查询数据库，应将查询放在循环外部；<br>3.循环内部不宜使用@操作符；<br>4.循环内部不宜声明变量，尤其是大变量:对象，解决办法是循环之前预定义需要声明的变量。</p>
+<p>0、用单引号代替双引号来包含字符串，这样做会更快一些。因为PHP会在双引号包围的字符串中搜寻变量，单引号则不会，注意：只有echo能这么做，它是一种可以把多个字符串当作参数的“函数”(译注：PHP手册中说echo是语言结构，不是真正的函数，故把函数加上了双引号)。 PS：在单引号中，PHP不会自动搜寻变量、转义字符等，因此效率上快很多。而一般来说字符串是没有变量的，所以使用双引号会导致性能不佳。</p>
+<p>1、如果能将类的方法定义成static，就尽量定义成static，它的速度会提升将近4倍。 PS：事实上，function、method、static method的速度不会有太大差异。具体可见“PHP函数的实现原理及性能分析【转载】”一文。</p>
+<p>2、$row[’id’] 的速度是$row[id]的7倍。 PS：不太懂，貌似差异只有后者会先判断id这个宏是否存在，如果不存在则自动转变为字符串。</p>
+<p>3、echo 比 print 快，并且使用echo的多重参数(译注：指用逗号而不是句点)代替字符串连接，比如echo $str1,$str2。</p>
+<p>PS：如果使用echo $str1.$str2 就会需要 PHP 引擎首先把所有的变量连接起来，然后在输出，而echo $str1,$str2，PHP 引擎就会按照循序输出他们</p>
+<p>4、在执行for循环之前确定最大循环数，不要每循环一次都计算最大值，最好运用foreach代替。 PS：像count、strlen这样的操作其实是O(1)的，因此不会带来太多消耗，当然避免每次循环都计算是比较好的策略。最好用foreach代替for，这个效率更高，如果考虑到foreach($array as $var)每次拷贝的消耗，可以使用foreach($array as &amp;$var)这样的引用。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/27/php性能优化/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+        
+    
+        
+            
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yangleiweb.top/2018/12/26/评论回复数据设计/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1674,173 +1852,6 @@
 
         
     
-        
-            
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yangleiweb.top/2018/11/02/故事的钩子/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="maidi yang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="In my life">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/02/故事的钩子/" itemprop="url">故事的钩子</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-02T16:22:49+08:00">
-                2018-11-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/杂文/" itemprop="url" rel="index">
-                    <span itemprop="name">杂文</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/11/02/故事的钩子/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/02/故事的钩子/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="/2018/11/02/故事的钩子/1.jpg" alt="图片未加载"><br><em>悬而未决：宏大宇宙设定中的叙事钩子</em></p>
-<p>我们中的许多人，尤其是我自己，一谈起自己深爱着的东西都是乐此不疲津津乐道的，无论是《英雄联盟》、《星球大战》、《被遗忘的国度》、《战锤 40K》、《魔兽世界》、《哈利波特》、漫威系列或者其他别的作品。上述这些都是非常庞大丰富的宇宙设定，充满了高远的寓意、繁复的历史故事和惹人怜爱 (或者恨之入骨)的人物角色。就我自己而言，当我深深投入其中的时候，真的难以自拔。</p>
-<p>(*注：钩子，原文是hook，有以下几层意思：钩子、线索、未完的故事。为了保持原有的信息量所以直译为比较形象的钩子了。)</p>
-<p>相信许多人都有同样的感受。</p>
-<p>初极狭，才通人。</p>
-<p>我觉得，我们之所以如此热爱这些宇宙设定，是因为越是深入挖掘，就越能够发现更多东西。这种沿着羊肠小道不断深入最后豁然开朗的感觉让我们百看不厌。每次我陷入其中，都能看到更多令人抓心挠肝的隐晦钩子，更多历史事件的模糊影子，更多奇异生物的惊鸿一瞥，还有更多背景故事的细枝末节……以星火燎原之势点燃我的想象力。这些宇宙设定都是有机的，里面的故事一直都在演进，随着游戏、漫画、小说、电影、电视剧等作品的推出而向前发展。</p>
-<p>有时我们会看到有一些叙事钩子、模糊概念和细枝末节——而你早几年前就已经察觉到了，突然有一天会成为剧情的焦点，那种满足感是不可言喻的。有的时候这些小细节最初只是无心插柳地随口一说，但铁杆粉丝们却会捕风捉影、紧追不放、脑洞大开。当坊间猜测不负众望地被证实为官方正史的时候，他们就会欣喜若狂。 </p>
-<p><img src="/2018/11/02/故事的钩子/2.jpg" alt="图片未加载"></p>
-<p>这就好比《星球大战：新的希望》中第一次提到了“克隆人的战争”，而多年以后，在《星球大战：克隆人的战争》中才真正揭晓一切。再比如，《战锤40K》的宇宙中多次提到了“荷鲁斯叛乱”的历史传说，而最后成为一套系列小说的时代背景。</p>
-<p>这种令人难以言表的满足感，来自观众与编剧/原作者之间形成的同步和默契 —— 知道笑点在哪里、重点在哪里、究竟暗示了什么梗。就像是在电影的演职员表最后的彩蛋里闪现了一个角色，而你一下就知道角色的身份和出现的意义，而不需要偷偷问旁边的人——“那人谁呀?”</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/02/故事的钩子/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-        
-    
   </section>
 
   
@@ -1893,7 +1904,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
