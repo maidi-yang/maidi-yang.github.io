@@ -1,733 +1,226 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-<meta name="baidu-site-verification" content="jxvbm9TZ19">
-
-
-
-
-
-
+<html>
+<head>
+  <meta charset="utf-8">
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
-
-
-
-
-
-
-
-
-
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="In my life">
-<meta property="og:url" content="http://yangleiweb.top/index.html">
-<meta property="og:site_name" content="In my life">
-<meta property="og:locale" content="zh-Hans">
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="In my life">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yangleiweb.top/">
-
-
-
-
-
-  <title>In my life</title>
   
-
-
-
-
-
-
-
-
-</head>
-
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
   
   
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
   
+  
+<link rel="stylesheet" href="/css/style.css">
 
-  <div class="container sidebar-position-right 
-  page-home">
-    <div class="headband"></div>
-    <a href="https://github.com/maidi-yang" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  
     
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">In my life</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-CakePHP2-升级PHP8-1流程" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/12/07/CakePHP2-%E5%8D%87%E7%BA%A7PHP8-1%E6%B5%81%E7%A8%8B/" class="article-date">
+  <time class="dt-published" datetime="2022-12-07T08:26:30.000Z" itemprop="datePublished">2022-12-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>►<a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/cakephp/">cakephp</a>
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
   </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            总览
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
-            
-            关于
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
+  <div class="article-inner">
     
-        
-            
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yangleiweb.top/2022/12/07/CakePHP2-升级PHP8-1流程/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="maidi yang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="In my life">
-    </span>
-
     
-      <header class="post-header">
-
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/12/07/CakePHP2-升级PHP8-1流程/" itemprop="url">CakePHP2 升级PHP8.1流程</a></h1>
-        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/12/07/CakePHP2-%E5%8D%87%E7%BA%A7PHP8-1%E6%B5%81%E7%A8%8B/">CakePHP2 升级PHP8.1流程</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-12-07T16:26:30+08:00">
-                2022-12-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/cakephp/" itemprop="url" rel="index">
-                    <span itemprop="name">cakephp</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2022/12/07/CakePHP2-升级PHP8-1流程/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2022/12/07/CakePHP2-升级PHP8-1流程/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="e-content article-entry" itemprop="articleBody">
       
-      
+        <p>暂停Apache 服务<br>替换原本php安装包，原安装包备份<br><img src="/CakePHP2-%E5%8D%87%E7%BA%A7PHP8-1%E6%B5%81%E7%A8%8B/1.jpg" alt="图片未加载"></p>
+<p>修改infrasys\apache\conf\httpd.conf<br><img src="/CakePHP2-%E5%8D%87%E7%BA%A7PHP8-1%E6%B5%81%E7%A8%8B/2.jpg" alt="图片未加载"></p>
+<p>修改php.ini和php-cil.ini<br>所有路径保证没有错误<br><img src="/CakePHP2-%E5%8D%87%E7%BA%A7PHP8-1%E6%B5%81%E7%A8%8B/3.jpg" alt="图片未加载"></p>
+<p>错误处理：<br>1：cakephp版本不兼容<br><img src="/CakePHP2-%E5%8D%87%E7%BA%A7PHP8-1%E6%B5%81%E7%A8%8B/4.jpg" alt="图片未加载"><br>替换新的cakephp2 兼容文件 </p>
 
-      
-        
-          
-            <p>暂停Apache 服务<br>替换原本php安装包，原安装包备份<br><img src="/2022/12/07/CakePHP2-升级PHP8-1流程/1.jpg" alt="图片未加载"></p>
-<p>修改infrasys\apache\conf\httpd.conf<br><img src="/2022/12/07/CakePHP2-升级PHP8-1流程/2.jpg" alt="图片未加载"></p>
-<p>修改php.ini和php-cil.ini<br>所有路径保证没有错误<br><img src="/2022/12/07/CakePHP2-升级PHP8-1流程/3.jpg" alt="图片未加载"></p>
-<p>错误处理：<br>1：cakephp版本不兼容<br><img src="/2022/12/07/CakePHP2-升级PHP8-1流程/4.jpg" alt="图片未加载"><br>替换新的cakephp2 兼容文件 </p>
-
-          
-        
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/12/07/CakePHP2-%E5%8D%87%E7%BA%A7PHP8-1%E6%B5%81%E7%A8%8B/" data-id="clkajpqvb00011sud7dkebclo" data-title="CakePHP2 升级PHP8.1流程" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
-        <div class="post-eof"></div>
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cakephp/" rel="tag">cakephp</a></li></ul>
+
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
 
-        
+
+  
+    <article id="post-CakePHP-recursive-和contain使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/12/07/CakePHP-recursive-%E5%92%8Ccontain%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time class="dt-published" datetime="2022-12-07T08:16:45.000Z" itemprop="datePublished">2022-12-07</time>
+</a>
     
-        
-            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>►<a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/cakephp/">cakephp</a>
+  </div>
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yangleiweb.top/2022/12/07/CakePHP-recursive-和contain使用/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="maidi yang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="In my life">
-    </span>
-
+  </div>
+  <div class="article-inner">
     
-      <header class="post-header">
-
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/12/07/CakePHP-recursive-和contain使用/" itemprop="url">CakePHP recursive 和contain使用</a></h1>
-        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/12/07/CakePHP-recursive-%E5%92%8Ccontain%E4%BD%BF%E7%94%A8/">CakePHP recursive 和contain使用</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-12-07T16:16:45+08:00">
-                2022-12-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/cakephp/" itemprop="url" rel="index">
-                    <span itemprop="name">cakephp</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2022/12/07/CakePHP-recursive-和contain使用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2022/12/07/CakePHP-recursive-和contain使用/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="e-content article-entry" itemprop="articleBody">
       
-      
-
-      
-        
-          <p>正常使用关联查询表与表已经有关联的情况可使用recursive<br>一般情况下mode方法都会有recursive的值传递,可在调用的时候传递，或者自己写查询方法设置参数。<br>关于recursive查询的范围：<br>-1  ：model</p>
+        <p>正常使用关联查询表与表已经有关联的情况可使用recursive<br>一般情况下mode方法都会有recursive的值传递,可在调用的时候传递，或者自己写查询方法设置参数。<br>关于recursive查询的范围：<br>-1  ：model</p>
 <p>0   ：model + belongTo + hasOne</p>
 <p>1   ：model + belongTo + hasOne + hasMany</p>
 <p>2:  ：model + belongTo + hasOne + hasMany + hasAndBelongsToMany</p>
-<p>mode方法一般都会有recursive参数传递：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public function findActiveById($id, $recursive = -1) &#123;</span><br><span class="line">   $data= $this-&gt;find(&apos;first&apos;, array(</span><br><span class="line">            &apos;conditions&apos; =&gt; array(</span><br><span class="line">                           &apos;id&apos; =&gt; $id,</span><br><span class="line">                           &apos;status&apos; =&gt; &apos;&apos;,</span><br><span class="line">                           ),</span><br><span class="line">            &apos;recursive&apos; =&gt; $recursive</span><br><span class="line">            )</span><br><span class="line">         );</span><br><span class="line">   return ($data);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>或者自己使用参数传递：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$this-&gt;Model-&gt;find(&apos;All&apos;, array(</span><br><span class="line">                              &apos;fields&apos; =&gt; array(&apos;id&apos;),      </span><br><span class="line">                              &apos;recursive&apos; =&gt; -1,</span><br><span class="line">                              )</span><br><span class="line">                           );</span><br></pre></td></tr></table></figure></p>
-<p>当使用recursive关联查询时候可以使用unbindModel方法解除一些关联，可以减少一些不用的数据查询出来：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$this-&gt;Model-&gt;unbindModel( array(&apos;hasMany&apos; =&gt; array(&apos;OutOutletGroupLookup&apos;)) );</span><br></pre></td></tr></table></figure></p>
-<p>当需要解除的关联关系过多时，可使用unbindAll解除所有的关联，然后unbindAll方法内填入需要保留的关联:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$this-&gt;Model-&gt;unbindAll(array(&apos;hasMany&apos; =&gt; array(&apos;OutOutlet&apos;)));</span><br></pre></td></tr></table></figure></p>
-<p>Contain：<br>关于contain的正常使用和recursive是差不多的作用，当contain的值等于false的时候作用和recursive = -1一样，只会查询出本表数据，不会查询关联表数据。<br>使用之前先加载行为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$this-&gt;Model-&gt;Behaviors-&gt;load(&apos;Containable&apos;); //加载&apos;Containable&apos;行为</span><br><span class="line"></span><br><span class="line">$this-&gt;Model-&gt;find(&apos;all&apos;, array(</span><br><span class="line">      &apos;contain&apos; =&gt; false, //作用和recursive&apos; =&gt; -1一样，不会查询出其他关联表数据</span><br><span class="line">   )</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
-<p>当需要指定查询某个表的时候就可以在contain当中放入需要的表名：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$this-&gt;Model-&gt;find(&apos;all&apos;, array(</span><br><span class="line">      &apos;contain&apos; =&gt; array(&apos;OutOutlet&apos;),//只查询出想要关联的表</span><br><span class="line">   )</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2022/12/07/CakePHP-recursive-和contain使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<p>mode方法一般都会有recursive参数传递：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public function findActiveById($id, $recursive = -1) &#123;</span><br><span class="line">   $data= $this-&gt;find(&#x27;first&#x27;, array(</span><br><span class="line">            &#x27;conditions&#x27; =&gt; array(</span><br><span class="line">                           &#x27;id&#x27; =&gt; $id,</span><br><span class="line">                           &#x27;status&#x27; =&gt; &#x27;&#x27;,</span><br><span class="line">                           ),</span><br><span class="line">            &#x27;recursive&#x27; =&gt; $recursive</span><br><span class="line">            )</span><br><span class="line">         );</span><br><span class="line">   return ($data);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>或者自己使用参数传递：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$this-&gt;Model-&gt;find(&#x27;All&#x27;, array(</span><br><span class="line">                              &#x27;fields&#x27; =&gt; array(&#x27;id&#x27;),      </span><br><span class="line">                              &#x27;recursive&#x27; =&gt; -1,</span><br><span class="line">                              )</span><br><span class="line">                           );</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>当使用recursive关联查询时候可以使用unbindModel方法解除一些关联，可以减少一些不用的数据查询出来：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$this-&gt;Model-&gt;unbindModel( array(&#x27;hasMany&#x27; =&gt; array(&#x27;OutOutletGroupLookup&#x27;)) );</span><br></pre></td></tr></table></figure>
+<p>当需要解除的关联关系过多时，可使用unbindAll解除所有的关联，然后unbindAll方法内填入需要保留的关联:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$this-&gt;Model-&gt;unbindAll(array(&#x27;hasMany&#x27; =&gt; array(&#x27;OutOutlet&#x27;)));</span><br></pre></td></tr></table></figure>
+<p>Contain：<br>关于contain的正常使用和recursive是差不多的作用，当contain的值等于false的时候作用和recursive &#x3D; -1一样，只会查询出本表数据，不会查询关联表数据。<br>使用之前先加载行为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$this-&gt;Model-&gt;Behaviors-&gt;load(&#x27;Containable&#x27;); //加载&#x27;Containable&#x27;行为</span><br><span class="line"></span><br><span class="line">$this-&gt;Model-&gt;find(&#x27;all&#x27;, array(</span><br><span class="line">      &#x27;contain&#x27; =&gt; false, //作用和recursive&#x27; =&gt; -1一样，不会查询出其他关联表数据</span><br><span class="line">   )</span><br><span class="line">);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>当需要指定查询某个表的时候就可以在contain当中放入需要的表名：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$this-&gt;Model-&gt;find(&#x27;all&#x27;, array(</span><br><span class="line">      &#x27;contain&#x27; =&gt; array(&#x27;OutOutlet&#x27;),//只查询出想要关联的表</span><br><span class="line">   )</span><br><span class="line">);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>当需要指定查询关联表某一些字段，不希望全部查询出来占用PHP内存的时候就可以在contain的表名参数里面再放入需要的字段名：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$this-&gt;Model-&gt;find(&#x27;all&#x27;, array(</span><br><span class="line">      &#x27;contain&#x27; =&gt; array( //使用&#x27;contain&#x27;在关联表当中查询需要的字段</span><br><span class="line">         &#x27;OutOutlet&#x27; =&gt; array(&#x27;id&#x27;, &#x27;code&#x27;) </span><br><span class="line">      ),</span><br><span class="line">   )</span><br><span class="line">);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>当然contain也可以加入条件查询，和正常查询一样加入conditions就可以：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$outShops = $this-&gt;PosDisplayPanel-&gt;OutShop-&gt;find(&#x27;all&#x27;, array(</span><br><span class="line">      &#x27;fields&#x27; =&gt; $fields,</span><br><span class="line">      &#x27;conditions&#x27; =&gt; $conditions,</span><br><span class="line">      &#x27;contain&#x27; =&gt; array(</span><br><span class="line">         &#x27;OutOutlet&#x27; =&gt; array(</span><br><span class="line">            &#x27;fields&#x27; =&gt; array(&#x27;id&#x27;, &#x27;code&#x27;),</span><br><span class="line">            &#x27;conditions&#x27; =&gt; array(</span><br><span class="line">            &#x27;OutOutlet.olet_id&#x27; =&gt; 1</span><br><span class="line">         ))</span><br><span class="line">      )</span><br><span class="line">   )</span><br><span class="line">);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/12/07/CakePHP-recursive-%E5%92%8Ccontain%E4%BD%BF%E7%94%A8/" data-id="clkajpqv500001sud7cdo62bu" data-title="CakePHP recursive 和contain使用" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
-        <div class="post-eof"></div>
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cakephp/" rel="tag">cakephp</a></li></ul>
+
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
 
-        
+
+  
+    <article id="post-UnblockNeteaseMusic使用教程" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/10/28/UnblockNeteaseMusic%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" class="article-date">
+  <time class="dt-published" datetime="2019-10-28T01:35:55.000Z" itemprop="datePublished">2019-10-28</time>
+</a>
     
-        
-            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>►<a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/git/">git</a>
+  </div>
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yangleiweb.top/2019/10/28/UnblockNeteaseMusic使用教程/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="maidi yang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="In my life">
-    </span>
-
+  </div>
+  <div class="article-inner">
     
-      <header class="post-header">
-
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/28/UnblockNeteaseMusic使用教程/" itemprop="url">UnblockNeteaseMusic使用教程</a></h1>
-        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/10/28/UnblockNeteaseMusic%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">UnblockNeteaseMusic使用教程</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-28T09:35:55+08:00">
-                2019-10-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/git/" itemprop="url" rel="index">
-                    <span itemprop="name">git</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/10/28/UnblockNeteaseMusic使用教程/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/10/28/UnblockNeteaseMusic使用教程/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="e-content article-entry" itemprop="articleBody">
       
-      
+        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">声明：本教程只用作学习交流，请勿做他用，如有侵权，请联系我删除；</span><br></pre></td></tr></table></figure>
 
-      
-        
-          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">声明：本教程只用作学习交流，请勿做他用，如有侵权，请联系我删除；</span><br></pre></td></tr></table></figure>
 <p>该项目代码托管在Github上，并且更新频繁，感谢作者制作并维护这个项目；</p>
-<p><strong>传送门</strong>：<a href="https://github.com/nondanee/UnblockNeteaseMusic" target="_blank" rel="noopener">UnblockNeteaseMusic</a></p>
+<p><strong>传送门</strong>：<a target="_blank" rel="noopener" href="https://github.com/nondanee/UnblockNeteaseMusic">UnblockNeteaseMusic</a></p>
 <p>废话不多说，这个项目可以让你实现在全平台的网易云客户端实现无限制听歌，什么叫无限制听歌？就是VIP，无版权，甚至加灰的都能听啦！就问你牛不牛X，强不强大！</p>
 <p><strong>该项目的实现原理如下：</strong></p>
 <ul>
-<li>使用网易云旧链 / QQ / 虾米 / 百度 / 酷狗 / 酷我 / 咕咪 / JOOX 音源替换变灰歌曲链接 (默认仅启用前四)</li>
-<li>为请求增加 X-Real-IP 参数解锁海外限制，支持指定网易云服务器 IP，支持设置上游 HTTP / HTTPS 代理</li>
-<li>完整的流量代理功能 (HTTP / HTTPS)，可直接作为系统代理 (同时支持 PAC)</li>
+<li>使用网易云旧链 &#x2F; QQ &#x2F; 虾米 &#x2F; 百度 &#x2F; 酷狗 &#x2F; 酷我 &#x2F; 咕咪 &#x2F; JOOX 音源替换变灰歌曲链接 (默认仅启用前四)</li>
+<li>为请求增加 X-Real-IP 参数解锁海外限制，支持指定网易云服务器 IP，支持设置上游 HTTP &#x2F; HTTPS 代理</li>
+<li>完整的流量代理功能 (HTTP &#x2F; HTTPS)，可直接作为系统代理 (同时支持 PAC)</li>
 </ul>
 <p><strong>使用方法（参考图片设置）</strong></p>
 <ul>
@@ -735,344 +228,280 @@
 <li>代理服务器地址：127.0.0.1 （推荐本机搭建，速度快）</li>
 <li>代理服务器端口：2333 （可以自定义）</li>
 </ul>
-<p><img src="/2019/10/28/UnblockNeteaseMusic使用教程/1.jpg" alt="图片未加载"></p>
+<p><img src="/UnblockNeteaseMusic%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/1.jpg" alt="图片未加载"></p>
 <p>##Windows搭建教程：</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/10/28/UnblockNeteaseMusic使用教程/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<p>下载项目源码<br><a target="_blank" rel="noopener" href="https://github.com/nondanee/UnblockNeteaseMusic">https://github.com/nondanee/UnblockNeteaseMusic</a><br>会用git直接clone</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/nondanee/UnblockNeteaseMusic.git</span><br></pre></td></tr></table></figure>
+<p>不会的直接点下载<br><img src="/UnblockNeteaseMusic%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/2.jpg" alt="图片未加载"></p>
+<p>（推荐放C盘根目录）<br><strong>安装node.js</strong><br>官方网站：<a href="www.nodejs.org">www.nodejs.org</a><br><img src="/UnblockNeteaseMusic%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/3.jpg" alt="图片未加载"><br><em>（下载安装最新版即可）</em></p>
+<p><strong>获取网易云域名IP</strong></p>
+<p><code>ping music.163.com</code><br><img src="/UnblockNeteaseMusic%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/4.jpg" alt="图片未加载"></p>
+<p><em>（记录这个IP，稍后使用）</em></p>
+<p><strong>制作bat脚本 &amp; vbs脚本</strong></p>
+<ol>
+<li>新建一个文本文档，把以下三条代码复制进去命名保存</li>
+<li>文件后缀改成 .bat 格式<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">cd C:UnblockNeteaseMusic-master</span><br><span class="line">node app.js -p 2333 -f 59.111.160.197</span><br></pre></td></tr></table></figure></li>
+<li>新建一个文本文档，把以下三条代码复制进去命名保存</li>
+<li>文件后缀改成 .vbs 格式<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Set ws = CreateObject(&quot;Wscript.Shell&quot;)  </span><br><span class="line">ws.run &quot;cmd /c lpssxs.bat&quot;,vbhide  </span><br></pre></td></tr></table></figure></li>
+<li>bat &amp; vbs 文件请放一个文件夹中<br>（C:UnblockNeteaseMusic-master）<br><img src="/UnblockNeteaseMusic%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/5.jpg" alt="图片未加载"></li>
+</ol>
+<p>（注： lpssxs.bat是我个人命名，大家根据自己命名修改即可）<br><strong>执行脚本</strong><br>右键以管理员权限运行bat即可<br><img src="/UnblockNeteaseMusic%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/6.jpg" alt="图片未加载"><br><em>（测试运行效果如图）</em></p>
+<p><strong>客户端填写代理信息</strong><br>将刚刚创建的信息依次填入保存<br>按照网易云提示重启一下网易云即可</p>
+<p><img src="/UnblockNeteaseMusic%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/7.jpg" alt="图片未加载"></p>
+<p><strong>设置开机自启</strong><br>将vbs创建快捷方式放到自启文件夹即可<br>Windows自启文件夹路径：<br>C:ProgramData&#x2F;Microsof&#x2F;tWindows&#x2F;Start&#x2F;MenuProgramsStartUp</p>
+<p><img src="/UnblockNeteaseMusic%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/8.jpg" alt="图片未加载"></p>
+<p>如果嫌手机使用麻烦的话，推荐使用 UnblockNeteaseMusic 安卓版</p>
+<p><a target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-1014790-1-2.html">https://www.52pojie.cn/thread-1014790-1-2.html</a></p>
+<p>来自 <a target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-1010165-1-1.html"><a target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-1010165-1-1.html">https://www.52pojie.cn/thread-1010165-1-1.html</a></a></p>
+
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/10/28/UnblockNeteaseMusic%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" data-id="clkajpqvq000l1sud6jntfh86" data-title="UnblockNeteaseMusic使用教程" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
-        <div class="post-eof"></div>
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%AD%8C%E5%8D%95UnblockNeteaseMusic/" rel="tag">歌单UnblockNeteaseMusic</a></li></ul>
+
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
 
-        
+
+  
+    <article id="post-Markdown详细语法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/10/25/Markdown%E8%AF%A6%E7%BB%86%E8%AF%AD%E6%B3%95/" class="article-date">
+  <time class="dt-published" datetime="2019-10-25T09:02:43.000Z" itemprop="datePublished">2019-10-25</time>
+</a>
     
-        
-            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>►<a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/Markdown/">Markdown</a>
+  </div>
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yangleiweb.top/2019/10/25/Markdown详细语法/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="maidi yang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="In my life">
-    </span>
-
+  </div>
+  <div class="article-inner">
     
-      <header class="post-header">
-
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/25/Markdown详细语法/" itemprop="url">Markdown详细语法</a></h1>
-        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/10/25/Markdown%E8%AF%A6%E7%BB%86%E8%AF%AD%E6%B3%95/">Markdown详细语法</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-25T17:02:43+08:00">
-                2019-10-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/Markdown/" itemprop="url" rel="index">
-                    <span itemprop="name">Markdown</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/10/25/Markdown详细语法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/10/25/Markdown详细语法/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="e-content article-entry" itemprop="articleBody">
       
-      
-
-      
-        
-          <p>Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
+        <p>Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
 <p>相比WYSIWYG编辑器</p>
 <p>优点：<br>1、因为是纯文本，所以只要支持Markdown的地方都能获得一样的编辑效果，可以让作者摆脱排版的困扰，专心写作。<br>2、操作简单。比如:WYSIWYG编辑时标记个标题，先选中内容，再点击导航栏的标题按钮，选择几级标题。要三个步骤。而Markdown只需要在标题内容前加#即可</p>
 <p>缺点：<br>1、需要记一些语法（当然，是很简单。五分钟学会）。<br>2、有些平台不支持Markdown编辑模式。</p>
-<p>开启方式：设置-&gt;默认编辑器-&gt;Markdown编辑器</p>
-<p>#一、标题<br>在想要设置为标题的文字前面加#来表示<br>一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。</p>
+<p>开启方式：设置-&gt;默认编辑器-&gt;Markdown编辑器<br>#一、标题<br>在想要设置为标题的文字前面加#来表示<br>一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。</p>
 <p>注：标准语法一般在#后跟个空格再写文字，貌似简书不加空格也行。</p>
-<p>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题</span><br><span class="line">##### 这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure></p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题</span><br><span class="line">##### 这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure>
 <p>效果如下：</p>
-<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/10/25/Markdown详细语法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><h1 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h1><h2 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h2><p>要加粗的文字左右分别用两个*号包起来</p>
+<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><p>要倾斜的文字左右分别用一个*号包起来</p>
+<h2 id="斜体加粗"><a href="#斜体加粗" class="headerlink" title="斜体加粗"></a>斜体加粗</h2><p>要倾斜和加粗的文字左右分别用三个*号包起来</p>
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>要加删除线的文字左右分别用两个~~号包起来</p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">**这是加粗的文字**</span><br><span class="line">*这是倾斜的文字*`</span><br><span class="line">***这是斜体加粗的文字***</span><br><span class="line">~~这是加删除线的文字~~</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em>&#96;<br><em><strong>这是斜体加粗的文字</strong></em><br><del>这是加删除线的文字</del></p>
+<h1 id="三、引用"><a href="#三、引用" class="headerlink" title="三、引用"></a>三、引用</h1><p>在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;<br>n个…<br>貌似可以一直加下去，但没神马卵用</p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;这是引用的内容</span><br><span class="line">&gt;&gt;这是引用的内容</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>这是引用的内容</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h1 id="四、分割线"><a href="#四、分割线" class="headerlink" title="四、分割线"></a>四、分割线</h1><p>三个或者三个以上的 - 或者 * 都可以。</p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">----</span><br><span class="line">***</span><br><span class="line">*****</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>效果如下：</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<p>可以看到，显示效果是一样的。</p>
+<h1 id="五、图片"><a href="#五、图片" class="headerlink" title="五、图片"></a>五、图片</h1><p>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片alt](图片地址 &#x27;&#x27;图片title&#x27;&#x27;)</span><br></pre></td></tr></table></figure>
+<p>图片alt就是显示在图片下面的文字，相当于对图片内容的解释。<br>图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加<br>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![blockchain](https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/</span><br><span class="line">u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg &quot;区块链&quot;)</span><br></pre></td></tr></table></figure>
+<p>效果如下：<br>![blockchain](<a target="_blank" rel="noopener" href="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/">https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/</a><br>u&#x3D;702257389,1274025419&amp;fm&#x3D;27&amp;gp&#x3D;0.jpg “区块链”)</p>
+<p>上传本地图片直接点击导航栏的图片标志，选择图片即可</p>
+<h1 id="六、超链接"><a href="#六、超链接" class="headerlink" title="六、超链接"></a>六、超链接</h1><p>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[超链接名](超链接地址 &quot;超链接title&quot;)</span><br><span class="line">title可加可不加</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[超链接名](超链接地址 &quot;超链接title&quot;)</span><br><span class="line">[百度](http://baidu.com)</span><br></pre></td></tr></table></figure>
+<p>效果如下：<br><a target="_blank" rel="noopener" href="http://baidu.com/">百度</a></p>
+<p>注：Markdown本身语法不支持链接在新页面中打开，貌似简书做了处理，是可以的。别的平台可能就不行了，如果想要在新页面中打开的话可以用html语言的a标签代替。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;超链接地址&quot; target=&quot;_blank&quot;&gt;超链接名&lt;/a&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="七、列表"><a href="#七、列表" class="headerlink" title="七、列表"></a>七、列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p>语法：<br>无序列表用 - + * 任何一种都可以</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- 列表内容</span><br><span class="line">+ 列表内容</span><br><span class="line">* 列表内容</span><br><span class="line"></span><br><span class="line">注意：- + * 跟内容之间都要有一个空格</span><br></pre></td></tr></table></figure>
+
+<p>效果如下：</p>
+<ul>
+<li>列表内容</li>
+</ul>
+<ul>
+<li>列表内容</li>
+</ul>
+<ul>
+<li>列表内容</li>
+</ul>
+<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>语法：<br>数字加点</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.列表内容</span><br><span class="line">2.列表内容</span><br><span class="line">3.列表内容</span><br><span class="line"></span><br><span class="line">注意：序号跟内容之间要有空格</span><br></pre></td></tr></table></figure>
+<p>效果如下：<br>1.列表内容<br>2.列表内容<br>3.列表内容</p>
+<h2 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h2><p>上一级和下一级之间敲三个空格即可</p>
+<ul>
+<li>一级无序列表内容<ul>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>一级无序列表内容<ol>
+<li>二级有序列表内容</li>
+<li>二级有序列表内容</li>
+<li>二级有序列表内容</li>
+</ol>
+</li>
+</ul>
+<ol>
+<li>一级有序列表内容<ul>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+</ul>
+</li>
+<li>一级有序列表内容<ol>
+<li>二级有序列表内容</li>
+<li>二级有序列表内容</li>
+<li>二级有序列表内容</li>
+</ol>
+</li>
+</ol>
+<h1 id="八、表格"><a href="#八、表格" class="headerlink" title="八、表格"></a>八、表格</h1><p>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|:--:|---:</span><br><span class="line">内容|内容|内容</span><br><span class="line">内容|内容|内容</span><br><span class="line"></span><br><span class="line">第二行分割表头和内容。</span><br><span class="line">- 有一个就行，为了对齐，多加了几个</span><br><span class="line">文字默认居左</span><br><span class="line">-两边加：表示文字居中</span><br><span class="line">-右边加：表示文字居右</span><br><span class="line">注：原生的语法两边都要用 | 包起来。此处省略</span><br><span class="line">``````</span><br><span class="line">示例：</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>姓名</th>
+<th align="center">技能</th>
+<th align="right">排行</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>刘备</td>
+<td align="center">哭</td>
+<td align="right">大哥</td>
+</tr>
+<tr>
+<td>关羽</td>
+<td align="center">打</td>
+<td align="right">二哥</td>
+</tr>
+<tr>
+<td>张飞</td>
+<td align="center">骂</td>
+<td align="right">三弟</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">效果如下：</span><br><span class="line"></span><br><span class="line">姓名|技能|排行</span><br><span class="line">--|:--:|--:</span><br><span class="line">刘备|哭|大哥</span><br><span class="line">关羽|打|二哥</span><br><span class="line">张飞|骂|三弟</span><br><span class="line"></span><br><span class="line"># 九、代码</span><br><span class="line">语法：</span><br><span class="line"></span><br><span class="line">单行代码：代码之间分别用一个反引号包起来</span><br></pre></td></tr></table></figure>
+<pre><code>`代码内容`
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行</span><br></pre></td></tr></table></figure>
+<p>(<code>)   代码...   代码...   代码... (</code>)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;注：为了防止转译，前后三个反引号处加了小括号，实际是没有的。这里只是用来演示，实际中去掉两边小括号即可。</span><br><span class="line"></span><br><span class="line">示例：</span><br><span class="line"></span><br><span class="line">单行代码</span><br></pre></td></tr></table></figure>
+<p><code>create database hero;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码块</span><br></pre></td></tr></table></figure>
+<p>(<code>)     function fun()&#123;          echo &quot;这是一句非常牛逼的代码&quot;;     &#125;     fun(); (</code>)</p>
+<pre><code>效果如下：
+
+单行代码
+
+`create database hero;`
+
+代码块
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function fun()&#123;</span><br><span class="line">     echo &quot;这是一句非常牛逼的代码&quot;;</span><br><span class="line">&#125;</span><br><span class="line">fun();</span><br></pre></td></tr></table></figure>
+</code></pre>
+
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/10/25/Markdown%E8%AF%A6%E7%BB%86%E8%AF%AD%E6%B3%95/" data-id="clkajpqvg00041sud3lqs8yaz" data-title="Markdown详细语法" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
-        <div class="post-eof"></div>
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li></ul>
+
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
 
-        
+
+  
+    <article id="post-游戏的魔术" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/08/14/%E6%B8%B8%E6%88%8F%E7%9A%84%E9%AD%94%E6%9C%AF/" class="article-date">
+  <time class="dt-published" datetime="2019-08-14T06:37:15.000Z" itemprop="datePublished">2019-08-14</time>
+</a>
     
-        
-            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%9D%82%E6%96%87/">杂文</a>
+  </div>
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yangleiweb.top/2019/08/14/游戏的魔术/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="maidi yang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="In my life">
-    </span>
-
+  </div>
+  <div class="article-inner">
     
-      <header class="post-header">
-
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/14/游戏的魔术/" itemprop="url">游戏的魔术</a></h1>
-        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/08/14/%E6%B8%B8%E6%88%8F%E7%9A%84%E9%AD%94%E6%9C%AF/">游戏的魔术</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-14T14:37:15+08:00">
-                2019-08-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/杂文/" itemprop="url" rel="index">
-                    <span itemprop="name">杂文</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/08/14/游戏的魔术/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/14/游戏的魔术/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="e-content article-entry" itemprop="articleBody">
       
-      
-
-      
-        
-          <p>这是一篇讲述游戏如何利用科技与人性，制造奇迹与感动的文章。</p>
+        <p>这是一篇讲述游戏如何利用科技与人性，制造奇迹与感动的文章。</p>
 <p>她包含了以下作品的一些剧透：</p>
 <p><strong>地球冒险 Earthbound</strong></p>
 <p><strong>传说之下 Undertale</strong></p>
@@ -1082,1088 +511,332 @@
 <p><strong>尼尔：自动人形 Nier Automata</strong></p>
 <p>如果您很在意惊喜，可以通关之后再来阅读——估计全部作品加起来，只需要数百小时。</p>
 <p>如果您属于不在意剧透的旅客，请继续阅读——我们截取游戏历史长河中的一小杯水，做点不靠谱的推敲。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/08/14/游戏的魔术/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<h2 id="存档的本质"><a href="#存档的本质" class="headerlink" title="存档的本质"></a>存档的本质</h2><p>这篇文章的起因，是最近出炉的众多佳作之一，《Nier Automata》。</p>
+<p>但在我们最终谈到她的结局与她的屁股之前，还得先回到20多年前，看一款叫做《Earthbound》的游戏。</p>
+<p><img src="/%E6%B8%B8%E6%88%8F%E7%9A%84%E9%AD%94%E6%9C%AF/1.jpg" alt="游戏的魔术"></p>
+<p>发行于1994年的NES平台，《Earthbound》（也称为《Mother 2》）可能是最早颠覆日式RPG文化的作品之一。她把游戏场景从奇幻世界搬到了现代世界。设计师糸井重里，放弃刀剑与魔法，用儿童玩具与超能力取代，以求撰写一个更人性化的故事。</p>
+<p>不过我们今天要谈的不是《Earthbound》的故事有多感人。</p>
+<p>恰恰相反，我们想谈下她如何打击盗版者，使得他们无法获得好的体验。</p>
+<p>《Earthbound》的卡带至少附带四个反盗版检测：</p>
+<p>首先她判断游戏主机是不是PAL区。如果是，她会显示锁区信息。</p>
+<p>接着她判断游戏卡带的存档空间是否少于8KB，因为盗版卡往往附带更多空间。如果是，显示盗版警告。</p>
+<p>假如这些判断都被绕过了，她会在游戏里增加敌人的数量，以及在本没有敌人的区域，增添敌人。</p>
+<p>假如玩家还能打到最终Boss，她会在Boss战时假死，玩家重启机器后，会发现所有存档被清空。</p>
+<p>《Earthbound》可能不是最早的清空玩家存档的游戏作品，但她恐怕是最经典的一个。</p>
+<p>重要的是，这本为限制盗版而设的功能，却揭示了一个引人深思的游戏哲学：</p>
+<p>存档是玩家与游戏之间的记忆桥梁。</p>
+<h2 id="存档与叙事"><a href="#存档与叙事" class="headerlink" title="存档与叙事"></a>存档与叙事</h2><p><img src="/%E6%B8%B8%E6%88%8F%E7%9A%84%E9%AD%94%E6%9C%AF/2.jpg" alt="游戏的魔术"><br>时隔20多年，深受《Earthbound》与《Touhou Project》系列影响的设计师Toby Fox，制作了同样脍炙人口的《Undertale》，她结合了《Earthbound》的对战画面与《Touhou Project》的弹幕躲避机制。</p>
+<p>《Undertale》重复利用「存档是记忆」的概念，一再颠覆玩家对「游戏可以记住多少事情」的假设：</p>
+<p>每次New Game+，角色们都会根据玩家之前的行为改变台词。</p>
+<p>如果玩家打通了游戏的最差结局，游戏会悄悄记录下来，确保玩家删除存档也无法再获得最好结局。</p>
+<p>如果玩家打通了游戏的最佳结局，游戏会请求玩家，不要重复游戏，别让角色重新经历折磨。</p>
+<p>在特定的场景下，游戏脚本甚至考虑到玩家「第6次通关」这种几乎不可能出现的情景。</p>
+<p>在罕见的线路下，游戏角色会嘲笑那些「懒得亲自通关，搜索通关视频看」的玩家。</p>
+<p>也因为这些细节上的创新，让《Undertale》获得与《Earthbound》类似的评价：</p>
+<p>一款活生生的游戏。</p>
+<h2 id="游戏的魔术"><a href="#游戏的魔术" class="headerlink" title="游戏的魔术"></a>游戏的魔术</h2><p>毫无疑问，糸井重里和Toby Fox，并非全球仅有的两位「打玩家存档主意」的设计师。</p>
+<p><img src="/%E6%B8%B8%E6%88%8F%E7%9A%84%E9%AD%94%E6%9C%AF/3.jpg" alt="游戏的魔术"></p>
+<p>《Rogue》，这部影响了一个游戏类型（Rogue-like）的作品，恰恰是利用「永久死亡」的概念，改变了玩家在游戏世界中的定位——从不畏死亡的英雄，变成了提心吊胆的普通人。</p>
+<p>设计师小岛秀夫也有同样的想法。事实上，他想更进一步，制作一款「在玩家死亡时自动破坏游戏盘」的作品。</p>
+<p>当然，没有游戏发行公司疯狂到为了设计师的怪诞想法，冒被消费者集体控诉的风险。</p>
+<p><img src="/%E6%B8%B8%E6%88%8F%E7%9A%84%E9%AD%94%E6%9C%AF/4.jpg" alt="游戏的魔术"></p>
+<p>取而代之，小岛做了《Metal Gear》系列：一个从广告宣传到游戏剧情都在欺骗玩家的经典系列。</p>
+<p>总结这个神棍系列超出了本文的范畴。但说起魔术，就不得不提这个场面——</p>
+<p><img src="/%E6%B8%B8%E6%88%8F%E7%9A%84%E9%AD%94%E6%9C%AF/5.jpg" alt="游戏的魔术"></p>
+<p>在《Metal Gear Solid 3: Snake Eater》中，玩家控制的主角，要攀爬一道很高的梯子。</p>
+<p>有多高呢？要爬几分钟这么高吧。</p>
+<p>小岛这么设计似乎只有一个理由，播一段游戏原创的插曲。而攀爬梯子的时长，恰恰是那首歌的长度。</p>
+<p>但真的如此吗？</p>
+<p>如果你仔细观察玩家攀爬铁梯时的地面距离与贴图变化，它看起来是个「强制视角」的错视设计。</p>
+<p>简单而言，玩家距离地面或许并不是如此远。游戏巧妙改变贴图之间的距离，制造高度的错觉。</p>
+<p>同样的错视，也出现在《Thirty Flights of Loving》这款独立游戏中，她的开发者Brendon Chung解释了它的来源——主题公园的常用招数。</p>
+<p>假如说，魔术师与主题公园的目标是「化不可能为可能」：</p>
+<p>利用玩家无法察觉的方式作弊，是「游戏的魔术」。</p>
+<h2 id="结局的力量"><a href="#结局的力量" class="headerlink" title="结局的力量"></a>结局的力量</h2><p><img src="/%E6%B8%B8%E6%88%8F%E7%9A%84%E9%AD%94%E6%9C%AF/6.jpg" alt="游戏的魔术"></p>
+<p>终于，我们可以把话题扯回《Nier Automata》。</p>
+<p>不，我们不准备谈相比小岛秀夫的老男人爬梯子，横尾太郎是如何制作年轻高叉女体机器人爬梯子的。</p>
+<p>我们要谈的，是本作的最终结局——所谓的Ending E。</p>
+<p>但我们要谈的，不是这个结局与主线故事的关系：</p>
+<p>而是她如何巧妙的利用我们之前所说的一切，制造玩家意料之外的感动。</p>
+<p>为此，我们还得再一次回溯时光。</p>
+<p>时间回到2015年10月，《Undertale》英文版刚发售不久，《Nier》设计师横尾太郎在视频采访中承认，他很想玩这款游戏，只无奈没有日文版。</p>
+<p>与此同时，《Nier Automata》还在紧张的前期开发中，团队E3发布刚过几个月，那时游戏的完成度才到10%。</p>
+<p>我们不知道横尾太郎最后玩了《Undertale》没，但有一点是肯定的，他也喜欢「打玩家存档主意」。</p>
+<p>在原版《Nier》中，横尾太郎就搞了这样的设计——玩家必须删除存档，才能拯救其他角色。</p>
+<p>而《Nier Automata》更进一步：</p>
+<p>与《Undertale》类似，她的最终结局要求玩家打一个几乎无法获胜的弹幕Boss（值得一提，前者也有类似的结尾弹幕）。</p>
+<p>与《Metal Gear Solid 3: Snake Eater》类似，在挑战的过程中，玩家会听到一首悠扬的歌曲。</p>
+<p>与《Nier》类似，玩家可能拯救他人，条件也是删除自己的通关存档。</p>
+<p>毫无疑问，这个设计是成功的。配合多结局，《Nier Automata》获得评测者与玩家们几乎一致的好评。</p>
+<p>但我们还没解释清楚，《Nier Automata》如何确保玩家获得这个好的体验？</p>
+<h2 id="结局的魔术"><a href="#结局的魔术" class="headerlink" title="结局的魔术"></a>结局的魔术</h2><p>我们常说，结局是创作最难的部分；无论前面发生了什么，读者都希望获得一个他们可以接受的收官。</p>
+<p>在游戏领域，为保持玩家感官上的「自由度」，设计师往往需要作点弊，才能让玩家心服口服。</p>
+<p><img src="/%E6%B8%B8%E6%88%8F%E7%9A%84%E9%AD%94%E6%9C%AF/7.jpg" alt="游戏的魔术"></p>
+<p>2009年在PS3上发行的《Noby Noby Boy》是一个好的例子。这款游戏要求玩家「拉伸」一只称为「Boy」的可爱蚯蚓。随着全球玩家累积「拉伸值」，游戏中另一条巨大的蚯蚓，「Girl」，也会伸长。</p>
+<p>玩家需要累积多长呢？大约太阳系直径这么长吧。</p>
+<p><img src="/%E6%B8%B8%E6%88%8F%E7%9A%84%E9%AD%94%E6%9C%AF/8.jpg" alt="游戏的魔术"></p>
+<p>在游戏发售2489天后，也就是2015年12月14日，全球玩家完成了这个任务。作为回礼，游戏释出了一封感人的信件。</p>
+<p>感动归感动。如果我们仔细想想，从地球到月球、火星、冥王星、绕去太阳并返回地球，这些距离根本不成比例。</p>
+<p>《Noby Noby Boy》的设计师高桥庆太如何克服这个「数学难题」？幸运周的加倍增长，从最初的几倍，到最后的几百万倍。</p>
+<p><img src="/%E6%B8%B8%E6%88%8F%E7%9A%84%E9%AD%94%E6%9C%AF/9.jpg" alt="游戏的魔术"></p>
+<p>说起玩家合作，让我们回头看看《Nier Automata》面对的「数学难题」：</p>
+<p>在结局Boss战时，玩家会被系统询问，要不要获取他人帮助。一旦接受，玩家会获得更强的火力与看似无限的生命，歌曲也从独唱变成有和音。但与此同时，每次中弹，屏幕上都会显示「某某玩家的数据已经丢失」。</p>
+<p>完成最终结局后，系统再次询问玩家，是否留言给其他玩家，以及是否以牺牲自己存档为代价，随机帮一位素不相识的玩家。揭示玩家之前获得的协助，来自其他通关玩家牺牲的存档。</p>
+<p>不得不说，这是个聪明的设计。相比前作拯救虚拟角色，《Nier Automata》更上一层楼，把人类互助的精神展现了出来。</p>
+<p>但我们仔细想想，假如每次攻略Boss都会牺牲如此多「存档」，而玩家获胜后，只能贡献一份「存档」。这个非营利公益组织不破产是说不通的。</p>
+<p>安全可行的方式，是混入系统生成名字，或重复利用玩家ID。</p>
+<p>无论哪种，鉴于绝大多数玩家只会攻略本作一次，要看出端倪，几乎是不可能的。</p>
+<p><img src="/%E6%B8%B8%E6%88%8F%E7%9A%84%E9%AD%94%E6%9C%AF/10.jpg" alt="游戏的魔术"></p>
+<p>余下的问题是，《Nier Automata》怎么确保玩家「接受协助」？要是玩家实力太强，或者不愿放弃，咋办？</p>
+<p>稍作调查，我们发现，横尾太郎至少准备了三招：</p>
+<p>首先大幅度增加后期的弹幕密度，企图说服玩家寻求帮助。</p>
+<p>如果玩家实力太强，游戏在「市场部」的回合会随机让玩家死亡，即便未碰到子弹。</p>
+<p>假如玩家继续挑战，在数小时后，游戏会生成无法击落的名字，给玩家一个清晰的信号——别试了。</p>
+<p>想必《Earthbound》的团队也不曾想到，当年反盗版的技术，会在20年后的今天，转辗成为《Nier Automata》给玩家留下美好回忆的技术。</p>
+<h2 id="最后的话语"><a href="#最后的话语" class="headerlink" title="最后的话语"></a>最后的话语</h2><p><img src="/%E6%B8%B8%E6%88%8F%E7%9A%84%E9%AD%94%E6%9C%AF/11.jpg" alt="游戏的魔术"><br>以上所谈，仅是这些游戏的一小部分。如果要深挖，比如《Nier Automata》对电影《2001: A Space Odyssey》的致敬，也是可以再写一篇文章的。</p>
+<p>但让我们就此打住，引用《L.A. Noire》过场里一段经典的旁白：</p>
+<p>The case that makes you and the case that breaks you.</p>
+<p>The one you never solve, the one that keeps you awake at night.</p>
+<p>The case that gnaws at your guts and ruins your marriage.</p>
+<p>The case that keeps you propping up a bar as you relive the what-ifs, the might-have-beens, the half-leads and half-truths.</p>
+<p>The case that other cops murmur about whenever you walk past.</p>
+<p>The case you never, ever, discuss.</p>
+<p>把「case」替换成「game」，把「cop」替换成「player」，大概就是每位玩家希望体验的快乐吧。</p>
+<p>Peace out.</p>
+<p><em>文章转载自奶牛关游戏社区</em></p>
+
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/08/14/%E6%B8%B8%E6%88%8F%E7%9A%84%E9%AD%94%E6%9C%AF/" data-id="clkajpqvw000q1sud9vniefvq" data-title="游戏的魔术" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
-        <div class="post-eof"></div>
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A5%BD%E6%96%87/" rel="tag">好文</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B8%B8%E6%88%8F/" rel="tag">游戏</a></li></ul>
+
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
 
-        
+
+  
+    <article id="post-hexo常用命令" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/08/07/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="article-date">
+  <time class="dt-published" datetime="2019-08-07T06:37:53.000Z" itemprop="datePublished">2019-08-07</time>
+</a>
     
-        
-            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>►<a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/hexo/">hexo</a>
+  </div>
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yangleiweb.top/2019/08/07/hexo常用命令/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="maidi yang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="In my life">
-    </span>
-
+  </div>
+  <div class="article-inner">
     
-      <header class="post-header">
-
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/07/hexo常用命令/" itemprop="url">hexo常用命令</a></h1>
-        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/08/07/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">hexo常用命令</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-07T14:37:53+08:00">
-                2019-08-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/08/07/hexo常用命令/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/07/hexo常用命令/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="e-content article-entry" itemprop="articleBody">
       
-      
-
-      
-        
-          
-            <p>常见命令</p>
+        <p>常见命令</p>
 <p>hexo new “postName” #新建文章<br>hexo new page “pageName” #新建页面<br>hexo generate #生成静态页面至public目录<br>hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br>hexo deploy #部署到GitHub<br>hexo help  # 查看帮助<br>hexo version  #查看Hexo的版本<br>缩写：</p>
-<p>hexo n == hexo new<br>hexo g == hexo generate<br>hexo s == hexo server<br>hexo d == hexo deploy<br>组合命令：<br>hexo g #生成<br>hexo s -g #生成并本地预览<br>hexo d -g #生成并上传</p>
+<p>hexo n &#x3D;&#x3D; hexo new<br>hexo g &#x3D;&#x3D; hexo generate<br>hexo s &#x3D;&#x3D; hexo server<br>hexo d &#x3D;&#x3D; hexo deploy<br>组合命令：<br>hexo g #生成<br>hexo s -g #生成并本地预览<br>hexo d -g #生成并上传</p>
 
-          
-        
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/08/07/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-id="clkajpqvr000m1sud6h99hyj8" data-title="hexo常用命令" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
-        <div class="post-eof"></div>
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo%E5%91%BD%E4%BB%A4/" rel="tag">hexo命令</a></li></ul>
+
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
 
-        
+
+  
+    <article id="post-html2canvas-dom-to-image-jspdf实现网页截屏" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/08/07/html2canvas-dom-to-image-jspdf%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5%E6%88%AA%E5%B1%8F/" class="article-date">
+  <time class="dt-published" datetime="2019-08-07T06:33:49.000Z" itemprop="datePublished">2019-08-07</time>
+</a>
     
-        
-            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>►<a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/">前端</a>
+  </div>
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yangleiweb.top/2019/08/07/html2canvas-dom-to-image-jspdf实现网页截屏/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="maidi yang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="In my life">
-    </span>
-
+  </div>
+  <div class="article-inner">
     
-      <header class="post-header">
-
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/07/html2canvas-dom-to-image-jspdf实现网页截屏/" itemprop="url">html2canvas/dom-to-image + jspdf实现网页截屏</a></h1>
-        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/08/07/html2canvas-dom-to-image-jspdf%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5%E6%88%AA%E5%B1%8F/">html2canvas/dom-to-image + jspdf实现网页截屏</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-07T14:33:49+08:00">
-                2019-08-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/08/07/html2canvas-dom-to-image-jspdf实现网页截屏/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/07/html2canvas-dom-to-image-jspdf实现网页截屏/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="e-content article-entry" itemprop="articleBody">
       
-      
-
-      
-        
-          
-            <p>1.html2canvas网页截屏<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">html2canvas($(&apos;#page&apos;)[0], &#123;</span><br><span class="line">                onrendered: function (canvas) &#123;</span><br><span class="line">                    document.body.appendChild(canvas);</span><br><span class="line"></span><br><span class="line">                    var contentWidth = canvas.width;</span><br><span class="line">                    var contentHeight = canvas.height;</span><br><span class="line"></span><br><span class="line">                    var size = &#123;</span><br><span class="line">                        width: 595.28,</span><br><span class="line">                        height: 841.89</span><br><span class="line">                    &#125;</span><br><span class="line">                    //一页pdf显示html页面生成的canvas高度;</span><br><span class="line">                    var pageHeight = contentWidth / size.width * size.height;</span><br><span class="line">                    //未生成pdf的html页面高度</span><br><span class="line">                    var leftHeight = contentHeight;</span><br><span class="line">                    //页面偏移</span><br><span class="line">                    var position = 0;</span><br><span class="line">                    //a4纸的尺寸[595.28,841.89]，html页面生成的canvas在pdf中图片的宽高</span><br><span class="line">                    var imgWidth = size.width;</span><br><span class="line">                    var imgHeight = size.width/contentWidth * contentHeight;</span><br><span class="line"></span><br><span class="line">                    var pageData = canvas.toDataURL(&apos;image/jpeg&apos;, 1.0);</span><br><span class="line"></span><br><span class="line">                    var pdf = new jsPDF(&apos;&apos;, &apos;pt&apos;, &apos;a4&apos;);</span><br><span class="line"></span><br><span class="line">                    //有两个高度需要区分，一个是html页面的实际高度，和生成pdf的页面高度(841.89)</span><br><span class="line">                    //当内容未超过pdf一页显示的范围，无需分页</span><br><span class="line">                    if (leftHeight &lt; pageHeight) &#123;</span><br><span class="line">                        pdf.addImage(pageData, &apos;JPEG&apos;, 0, 0, imgWidth, imgHeight );</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        while(leftHeight &gt; 0) &#123;</span><br><span class="line">                            pdf.addImage(pageData, &apos;JPEG&apos;, 0, position, imgWidth, imgHeight)</span><br><span class="line">                            leftHeight -= pageHeight;</span><br><span class="line">                            position -= 841.89;</span><br><span class="line">                            //避免添加空白页</span><br><span class="line">                            if(leftHeight &gt; 0) &#123;</span><br><span class="line">                                pdf.addPage();</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    pdf.save(&quot;content.pdf&quot;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br></pre></td></tr></table></figure></p>
-<p>放大失真；处理复杂svg时与实际页面不同</p>
-<p>这种方法在火狐有下划线<u>标签上浮bug</u></p>
+        <p>1.html2canvas网页截屏<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">html2canvas($(&#x27;#page&#x27;)[0], &#123;</span><br><span class="line">                onrendered: function (canvas) &#123;</span><br><span class="line">                    document.body.appendChild(canvas);</span><br><span class="line"></span><br><span class="line">                    var contentWidth = canvas.width;</span><br><span class="line">                    var contentHeight = canvas.height;</span><br><span class="line"></span><br><span class="line">                    var size = &#123;</span><br><span class="line">                        width: 595.28,</span><br><span class="line">                        height: 841.89</span><br><span class="line">                    &#125;</span><br><span class="line">                    //一页pdf显示html页面生成的canvas高度;</span><br><span class="line">                    var pageHeight = contentWidth / size.width * size.height;</span><br><span class="line">                    //未生成pdf的html页面高度</span><br><span class="line">                    var leftHeight = contentHeight;</span><br><span class="line">                    //页面偏移</span><br><span class="line">                    var position = 0;</span><br><span class="line">                    //a4纸的尺寸[595.28,841.89]，html页面生成的canvas在pdf中图片的宽高</span><br><span class="line">                    var imgWidth = size.width;</span><br><span class="line">                    var imgHeight = size.width/contentWidth * contentHeight;</span><br><span class="line"></span><br><span class="line">                    var pageData = canvas.toDataURL(&#x27;image/jpeg&#x27;, 1.0);</span><br><span class="line"></span><br><span class="line">                    var pdf = new jsPDF(&#x27;&#x27;, &#x27;pt&#x27;, &#x27;a4&#x27;);</span><br><span class="line"></span><br><span class="line">                    //有两个高度需要区分，一个是html页面的实际高度，和生成pdf的页面高度(841.89)</span><br><span class="line">                    //当内容未超过pdf一页显示的范围，无需分页</span><br><span class="line">                    if (leftHeight &lt; pageHeight) &#123;</span><br><span class="line">                        pdf.addImage(pageData, &#x27;JPEG&#x27;, 0, 0, imgWidth, imgHeight );</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        while(leftHeight &gt; 0) &#123;</span><br><span class="line">                            pdf.addImage(pageData, &#x27;JPEG&#x27;, 0, position, imgWidth, imgHeight)</span><br><span class="line">                            leftHeight -= pageHeight;</span><br><span class="line">                            position -= 841.89;</span><br><span class="line">                            //避免添加空白页</span><br><span class="line">                            if(leftHeight &gt; 0) &#123;</span><br><span class="line">                                pdf.addPage();</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    pdf.save(&quot;content.pdf&quot;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br></pre></td></tr></table></figure><br>放大失真；处理复杂svg时与实际页面不同</p>
+<p>这种方法在火狐有下划线<U>标签上浮bug</p>
 <ol start="2">
-<li>domtoimage代码生图片<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">domtoimage.toPng($(&apos;#canvas&apos;)[0])</span><br><span class="line">                .then(function (dataUrl) &#123;</span><br><span class="line">                    var pdf = new jsPDF();</span><br><span class="line"></span><br><span class="line">                    pdf.addImage(dataUrl, &apos;PNG&apos;, 0, 0);</span><br><span class="line">                    pdf.save(&quot;content.pdf&quot;);</span><br><span class="line">                &#125;);</span><br></pre></td></tr></table></figure>
-</li>
+<li>domtoimage代码生图片<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">domtoimage.toPng($(&#x27;#canvas&#x27;)[0])</span><br><span class="line">                .then(function (dataUrl) &#123;</span><br><span class="line">                    var pdf = new jsPDF();</span><br><span class="line"></span><br><span class="line">                    pdf.addImage(dataUrl, &#x27;PNG&#x27;, 0, 0);</span><br><span class="line">                    pdf.save(&quot;content.pdf&quot;);</span><br><span class="line">                &#125;);</span><br></pre></td></tr></table></figure>
+放大失真；对于复杂svg很友好，基本不出现与实际页面不同的情况</li>
 </ol>
-<p>放大失真；对于复杂svg很友好，基本不出现与实际页面不同的情况</p>
 <p>如果要保证精确度，可以使用domtoimage.toSvg（svg的defs重用不支持）</p>
 
-          
-        
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/08/07/html2canvas-dom-to-image-jspdf%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5%E6%88%AA%E5%B1%8F/" data-id="clkajpqvt000o1sud2t121q12" data-title="html2canvas/dom-to-image + jspdf实现网页截屏" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
-        <div class="post-eof"></div>
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js%EF%BC%8Cpdf%E7%94%9F%E6%88%90/" rel="tag">js，pdf生成</a></li></ul>
+
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
 
+
+  
+
+
+</section>
         
-    
-        
-            
-
+          <aside id="sidebar">
   
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yangleiweb.top/2019/04/10/php读取excel文件/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="maidi yang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="In my life">
-    </span>
-
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/10/php读取excel文件/" itemprop="url">php读取excel文件</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-10T17:01:35+08:00">
-                2019-04-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/php/" itemprop="url" rel="index">
-                    <span itemprop="name">php</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/04/10/php读取excel文件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/10/php读取excel文件/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>新的业务需求，需要读取指定文件夹下的excel文件，导入数据库。<br>用的是box/spout的库<br>下面是读取代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">public function readCsv()&#123;</span><br><span class="line">		$dirName = ROOT.DS.APP_DIR.DS.&quot;/tmp/files&quot;; //遍历这个文件夹</span><br><span class="line">		$usedDir = ROOT.DS.APP_DIR.DS.&quot;/tmp/UsedFiles&quot;; //遍历完后移动的文件夹</span><br><span class="line">		if (!file_exists($usedDir)) &#123;</span><br><span class="line">			mkdir($usedDir, 0777, true);</span><br><span class="line">		&#125;</span><br><span class="line">		$handle1 = opendir($dirName);</span><br><span class="line">		$csvData = [];</span><br><span class="line"></span><br><span class="line">		//遍历文件夹</span><br><span class="line">		while(($res = readdir($handle1)) !== false)&#123;</span><br><span class="line">			if($res != &apos;.&apos; &amp;&amp; $res != &apos;..&apos;) &#123;</span><br><span class="line">				//如果是文件，提出文件内容，写入目标文件</span><br><span class="line">				if (is_file($dirName . &apos;/&apos; . $res)) &#123;</span><br><span class="line">					$option = array(&apos;delimiter&apos; =&gt; &apos;&apos;, &apos;enclosure&apos; =&gt; &apos;&apos;, &apos;header&apos; =&gt; true);</span><br><span class="line">					$hkjcfile = $dirName . &apos;/&apos; . $res;</span><br><span class="line">					$suffix = substr($res, strrpos($res, &apos;.&apos;) + 1);</span><br><span class="line">					$fileName = substr($res, 0, strrpos($res, &apos;.&apos;));</span><br><span class="line">					//使用box/spou库</span><br><span class="line">					list($imp, $status) = fileImport($hkjcfile, &apos;&apos;, $suffix, $option);</span><br><span class="line">					if ($status) &#123;</span><br><span class="line">						if (empty($imp)) &#123;</span><br><span class="line">							echo $hkjcfile . &apos;File content is empty&apos;;</span><br><span class="line">						&#125;</span><br><span class="line"></span><br><span class="line">						foreach ($imp as $k =&gt; $v) &#123;</span><br><span class="line">							if (count($v) &gt; 1 and !empty($v[1])) &#123;</span><br><span class="line">								$csvData[] = [</span><br><span class="line">									&apos;cardID&apos; =&gt; isset($v[0]) ? $v[0] : &apos;&apos;,</span><br><span class="line">									&apos;badgeID&apos; =&gt;isset($v[1]) ? $v[1] : &apos;&apos;,</span><br><span class="line">								];</span><br><span class="line">							&#125; else &#123;</span><br><span class="line">								echo  $hkjcfile . &apos;Data_missing&apos;;</span><br><span class="line">							&#125;</span><br><span class="line">						&#125;</span><br><span class="line">                        //调用存入数据库的方法</span><br><span class="line">						$returnDate = $this-&gt;importSave($csvData, $fileName);</span><br><span class="line">						if(is_array($returnDate)) &#123;</span><br><span class="line">							echo $res . &apos; Results of the &apos; . &apos;deleted rows:&apos; . $returnDate[&apos;delectRows&apos;] . &apos;.&apos; . &apos;update rows:&apos; . $returnDate[&apos;updateRows&apos;] . &apos;.&apos; . &apos;add rows:&apos; . $returnDate[&apos;addRows&apos;] . &apos;.&apos; . &apos;deleted error rows:&apos; . $returnDate[&apos;delectErrorRows&apos;] . &apos;.&apos; . &apos;update error rows:&apos; . $returnDate[&apos;updateErrorRows&apos;] . &apos;.&apos; . &apos;add error rows:&apos; . $returnDate[&apos;addErrorRows&apos;] . &apos;.&apos; . &apos;ignore rows:&apos; . $returnDate[&apos;ignoreRows&apos;];</span><br><span class="line"></span><br><span class="line">							copy($dirName . &apos;/&apos; . $res, $usedDir . &apos;/&apos; . $res); //拷贝到新目录</span><br><span class="line">							unlink($dirName . &apos;/&apos; . $res); //删除旧目录下的文件</span><br><span class="line">						&#125;else&#123;</span><br><span class="line">							echo $returnDate;</span><br><span class="line">						&#125;</span><br><span class="line"></span><br><span class="line">					&#125; else &#123;</span><br><span class="line">						echo $hkjcfile . &apos;File Content Reading Failed&apos;;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		echo true;</span><br></pre></td></tr></table></figure></p>
-<p>调用box/spout的库代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">use Box\Spout\Reader\ReaderFactory;</span><br><span class="line">use Box\Spout\Common\Type;</span><br><span class="line">    /**</span><br><span class="line">     * csv/xlsx上传文件处理器</span><br><span class="line">     * @param string $fileName</span><br><span class="line">     * @param array $fieldvalidate 字段数据验证</span><br><span class="line">     * @param string $t</span><br><span class="line">     * @param array $option</span><br><span class="line">     * @throws code 101 type format error</span><br><span class="line">     * @throws code 102 &#123;$field&#125; field colum not does exist</span><br><span class="line">     * @throws code 103 &#123;$rowIndex&#125; lines &#123;$field&#125; field is empty</span><br><span class="line">     * @return array</span><br><span class="line">     */</span><br><span class="line">    public function fileImport($fileName, $fieldvalidates = [], $t = &apos;xlsx&apos;, $option = []) &#123;</span><br><span class="line">        if (empty($fileName)) return [&apos;name is empty&apos;,false];</span><br><span class="line">        switch ($t) &#123;</span><br><span class="line">            case &apos;xlsx&apos;: $type = Type::XLSX;break;</span><br><span class="line">            case &apos;csv&apos;: $type = Type::CSV;break;</span><br><span class="line">            default: return [[101,&apos;type format error&apos;],false];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        $reader = ReaderFactory::create($type);</span><br><span class="line">        if($t == &apos;csv&apos;)&#123;</span><br><span class="line">            $reader-&gt;setFieldDelimiter($option[&apos;delimiter&apos;]?:&apos;,&apos;);</span><br><span class="line">            $reader-&gt;setFieldEnclosure($option[&apos;enclosure&apos;]?:&apos;&quot;&apos;);</span><br><span class="line">            $reader-&gt;setEndOfLineCharacter(&quot;\r&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        $reader-&gt;setShouldFormatDates(true); // will return formatted dates</span><br><span class="line">        $reader-&gt;open($fileName);</span><br><span class="line">        $iterator = $reader-&gt;getSheetIterator();</span><br><span class="line">        $iterator-&gt;rewind();</span><br><span class="line">        $sheet1 = $iterator-&gt;current();</span><br><span class="line">        $rowIter = $sheet1-&gt;getRowIterator();</span><br><span class="line">        $fields = [];</span><br><span class="line">        $data = [];</span><br><span class="line"></span><br><span class="line">        if(!isset($option[&apos;header&apos;]))&#123;</span><br><span class="line">            foreach ($rowIter as $rowIndex =&gt; $row) &#123;</span><br><span class="line">                if($rowIndex == 1)&#123;</span><br><span class="line">                    $fields = array_map(function ($val)&#123;return trim($val);&#125;,$row);</span><br><span class="line">                    if (!empty($fieldvalidates) &amp;&amp; $diff = array_diff($fieldvalidates, $fields)) &#123;</span><br><span class="line">                        return [[102,current($diff).&quot; field colum not does exist&quot;],false];</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    $newRow = [];</span><br><span class="line">                    if(count($fields) == count($row)) &#123;</span><br><span class="line">                        $newRow = @array_combine($fields, $row);</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        foreach ($fields as $k =&gt; $v) &#123;</span><br><span class="line">                            @$newRow[$v] = $row[$k];</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    if (!empty($fieldvalidates)) &#123;</span><br><span class="line">                        foreach ($fieldvalidates as $field) &#123;</span><br><span class="line">                            if(empty($newRow[$field])) &#123;</span><br><span class="line">                                return [[103,&quot;&#123;$rowIndex&#125; lines &#123;$field&#125; field is empty&quot;],false];</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    $data[] = $newRow;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            foreach ($rowIter as $rowIndex =&gt; $row) &#123;</span><br><span class="line">                $data[] = $row;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        $reader-&gt;close();</span><br><span class="line">        return [$data,true];</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-        
-    
-        
-    
-        
-            
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yangleiweb.top/2019/02/20/linux-php开启zip-zlip/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="maidi yang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="In my life">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/20/linux-php开启zip-zlip/" itemprop="url">linux php开启zip,zlip</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-20T11:56:31+08:00">
-                2019-02-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/liunx/" itemprop="url" rel="index">
-                    <span itemprop="name">liunx</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/02/20/linux-php开启zip-zlip/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/20/linux-php开启zip-zlip/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>PHP各个版本下载地址：<a href="http://php.net/releases/" target="_blank" rel="noopener">http://php.net/releases/</a><br>解压压缩包：tar -xzvf  php-7.0.33.tar.gz<br>现在以安装zip扩展为例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /root/Downloads/php-7.0.33/ext/zip</span><br><span class="line">find / -name phpize</span><br><span class="line"></span><br><span class="line">/usr/local/php/bin/phpize</span><br></pre></td></tr></table></figure>
-<p>生成一些版本配置文件</p>
-<p>执行phpize，报错：“Cannot find config.m4.”，执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp config0.m4 config.m4</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">which php-config</span><br></pre></td></tr></table></figure>
-<p>/usr/local/bin/php-config</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure --with-php-config=/usr/local/php/bin/php-config</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<p>顺利的话，最终会提示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Installing shared extensions:  /usr/local/php/lib/php/extensions/no-debug-non-zts-20100525</span><br></pre></td></tr></table></figure></p>
-<p>修改php.ini</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/02/20/linux-php开启zip-zlip/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-        
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/Markdown/">Markdown</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/cakephp/">cakephp</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/">前端</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E6%96%87/">杂文</a></li></ul>
     </div>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+
+  
     
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="maidi yang">
-            
-              <p class="site-author-name" itemprop="name">maidi yang</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">29</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">13</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">22</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
-          
-
-          
-            <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/maidi-yang" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:254884797@qq.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
-            </div>
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cakephp/" rel="tag">cakephp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo%E5%91%BD%E4%BB%A4/" rel="tag">hexo命令</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js%EF%BC%8Cpdf%E7%94%9F%E6%88%90/" rel="tag">js，pdf生成</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A5%BD%E6%96%87/" rel="tag">好文</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%8C%E5%8D%95UnblockNeteaseMusic/" rel="tag">歌单UnblockNeteaseMusic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%B8%E6%88%8F/" rel="tag">游戏</a></li></ul>
     </div>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=26511658&auto=1&height=66"></iframe>
-  </aside>
+  </div>
 
 
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/cakephp/" style="font-size: 20px;">cakephp</a> <a href="/tags/hexo%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">hexo命令</a> <a href="/tags/js%EF%BC%8Cpdf%E7%94%9F%E6%88%90/" style="font-size: 10px;">js，pdf生成</a> <a href="/tags/%E5%A5%BD%E6%96%87/" style="font-size: 10px;">好文</a> <a href="/tags/%E6%AD%8C%E5%8D%95UnblockNeteaseMusic/" style="font-size: 10px;">歌单UnblockNeteaseMusic</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 10px;">游戏</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/12/07/CakePHP2-%E5%8D%87%E7%BA%A7PHP8-1%E6%B5%81%E7%A8%8B/">CakePHP2 升级PHP8.1流程</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/07/CakePHP-recursive-%E5%92%8Ccontain%E4%BD%BF%E7%94%A8/">CakePHP recursive 和contain使用</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/28/UnblockNeteaseMusic%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">UnblockNeteaseMusic使用教程</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/25/Markdown%E8%AF%A6%E7%BB%86%E8%AF%AD%E6%B3%95/">Markdown详细语法</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/14/%E6%B8%B8%E6%88%8F%E7%9A%84%E9%AD%94%E6%9C%AF/">游戏的魔术</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
         
       </div>
-    </main>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
-<img src="https://static.dy208.cn/o_1dfilp8ruo521thr1hvf18ji17soa.png">
-<a href="https://beian.miit.gov.cn/" style="color:#f72b07" target="_blank">湘ICP备17022086号-1</a>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">maidi yang</span>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
 
   
-</div>
-
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-    <span id="busuanzi_container_site_pv">
-        本站总访问量<span id="busuanzi_value_site_pv"></span>次
-    </span>
-
-    <span id="busuanzi_container_site_uv">
-      本站访客数<span id="busuanzi_value_site_uv"></span>人
-    </span>
+<script src="/fancybox/jquery.fancybox.min.js"></script>
 
 
 
 
-        
+<script src="/js/script.js"></script>
 
 
 
 
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
 
   </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'klek08bmrIrPwtrsHHMxcmmG-gzGzoHsz',
-        appKey: '4usFsW2qoL1DAyVzE0Y9J0uk',
-        placeholder: 'Just go go',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-
-  
-  
-
-  
-
-  
-
-  
-
-  <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/clicklove.js"></script>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</body>
 </html>
